@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A60FDC121EBB0EFB00E5826C /* AXDSlideAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A60FDC111EBB0EFB00E5826C /* AXDSlideAnimation.m */; };
+		A60FDC1B1EBB114100E5826C /* SlideOneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A60FDC1A1EBB114100E5826C /* SlideOneVC.m */; };
+		A60FDC1E1EBB114F00E5826C /* SlideTwoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A60FDC1D1EBB114F00E5826C /* SlideTwoVC.m */; };
+		A63809801EC2C08D00E24705 /* WMMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A63809771EC2C08D00E24705 /* WMMenuItem.m */; };
+		A63809811EC2C08D00E24705 /* WMMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = A63809791EC2C08D00E24705 /* WMMenuView.m */; };
+		A63809821EC2C08D00E24705 /* WMProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = A638097B1EC2C08D00E24705 /* WMProgressView.m */; };
+		A63809831EC2C08D00E24705 /* WMScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A638097D1EC2C08D00E24705 /* WMScrollView.m */; };
+		A63809841EC2C08D00E24705 /* WMPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = A638097F1EC2C08D00E24705 /* WMPageController.m */; };
 		A638B5CC1EB20DA900DD1C75 /* AXDPopUpAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A638B5CB1EB20DA900DD1C75 /* AXDPopUpAnimation.m */; };
 		A63B78A01EB1A3670067ED5E /* PopUpOneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A63B789F1EB1A3670067ED5E /* PopUpOneVC.m */; };
 		A63B78A31EB1A37B0067ED5E /* PopUpTwoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A63B78A21EB1A37B0067ED5E /* PopUpTwoVC.m */; };
@@ -86,6 +94,18 @@
 		A69EDB531EA06BB500DBEE20 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A69EDB461EA06BB500DBEE20 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		A69EDB541EA06BB500DBEE20 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A69EDB481EA06BB500DBEE20 /* View+MASAdditions.m */; };
 		A69EDB551EA06BB500DBEE20 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A69EDB4B1EA06BB500DBEE20 /* ViewController+MASAdditions.m */; };
+		A6B6515A1EC4429E00A9E5A7 /* YYMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B651591EC4429E00A9E5A7 /* YYMemoryCache.m */; };
+		A6B6516A1EC448BA00A9E5A7 /* AXDCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B6515E1EC448BA00A9E5A7 /* AXDCollectionView.m */; };
+		A6B6516B1EC448BA00A9E5A7 /* AXDContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B651601EC448BA00A9E5A7 /* AXDContentView.m */; };
+		A6B6516C1EC448BA00A9E5A7 /* AXDScrollPageConst.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B651621EC448BA00A9E5A7 /* AXDScrollPageConst.m */; };
+		A6B6516D1EC448BA00A9E5A7 /* AXDScrollPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B651641EC448BA00A9E5A7 /* AXDScrollPageView.m */; };
+		A6B6516E1EC448BA00A9E5A7 /* AXDScrollSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B651671EC448BA00A9E5A7 /* AXDScrollSegmentView.m */; };
+		A6B6516F1EC448BA00A9E5A7 /* AXDTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B651691EC448BA00A9E5A7 /* AXDTitleView.m */; };
+		A6B651721EC4491B00A9E5A7 /* PageControlMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B651711EC4491B00A9E5A7 /* PageControlMainVC.m */; };
+		A6B651751EC44A1000A9E5A7 /* PageControlReuseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B651741EC44A1000A9E5A7 /* PageControlReuseVC.m */; };
+		A6C4E9351EC169D900402208 /* ReusableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C4E9341EC169D900402208 /* ReusableViewController.m */; };
+		A6C4E9381EC16C9F00402208 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C4E9371EC16C9F00402208 /* MainViewController.m */; };
+		A6C4E93B1EC19F1900402208 /* MainViewNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C4E93A1EC19F1900402208 /* MainViewNavigator.m */; };
 		A6F934B01EADABF100BAAD82 /* AnimatorBaseOneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F934AF1EADABF100BAAD82 /* AnimatorBaseOneVC.m */; };
 		A6F934B31EADABFF00BAAD82 /* AnimatorBaseTwoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F934B21EADABFF00BAAD82 /* AnimatorBaseTwoVC.m */; };
 		A6F934BE1EADD4B800BAAD82 /* BasicListController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F934BD1EADD4B800BAAD82 /* BasicListController.m */; };
@@ -98,6 +118,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A60FDC101EBB0EFB00E5826C /* AXDSlideAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXDSlideAnimation.h; sourceTree = "<group>"; };
+		A60FDC111EBB0EFB00E5826C /* AXDSlideAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXDSlideAnimation.m; sourceTree = "<group>"; };
+		A60FDC191EBB114100E5826C /* SlideOneVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideOneVC.h; sourceTree = "<group>"; };
+		A60FDC1A1EBB114100E5826C /* SlideOneVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideOneVC.m; sourceTree = "<group>"; };
+		A60FDC1C1EBB114F00E5826C /* SlideTwoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideTwoVC.h; sourceTree = "<group>"; };
+		A60FDC1D1EBB114F00E5826C /* SlideTwoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideTwoVC.m; sourceTree = "<group>"; };
+		A63809761EC2C08D00E24705 /* WMMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMenuItem.h; sourceTree = "<group>"; };
+		A63809771EC2C08D00E24705 /* WMMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMenuItem.m; sourceTree = "<group>"; };
+		A63809781EC2C08D00E24705 /* WMMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMenuView.h; sourceTree = "<group>"; };
+		A63809791EC2C08D00E24705 /* WMMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMenuView.m; sourceTree = "<group>"; };
+		A638097A1EC2C08D00E24705 /* WMProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMProgressView.h; sourceTree = "<group>"; };
+		A638097B1EC2C08D00E24705 /* WMProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMProgressView.m; sourceTree = "<group>"; };
+		A638097C1EC2C08D00E24705 /* WMScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMScrollView.h; sourceTree = "<group>"; };
+		A638097D1EC2C08D00E24705 /* WMScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMScrollView.m; sourceTree = "<group>"; };
+		A638097E1EC2C08D00E24705 /* WMPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPageController.h; sourceTree = "<group>"; };
+		A638097F1EC2C08D00E24705 /* WMPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPageController.m; sourceTree = "<group>"; };
 		A638B5CA1EB20DA900DD1C75 /* AXDPopUpAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXDPopUpAnimation.h; sourceTree = "<group>"; };
 		A638B5CB1EB20DA900DD1C75 /* AXDPopUpAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXDPopUpAnimation.m; sourceTree = "<group>"; };
 		A63B789E1EB1A3670067ED5E /* PopUpOneVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopUpOneVC.h; sourceTree = "<group>"; };
@@ -259,6 +295,31 @@
 		A69EDB491EA06BB500DBEE20 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		A69EDB4A1EA06BB500DBEE20 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		A69EDB4B1EA06BB500DBEE20 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		A6B651581EC4429E00A9E5A7 /* YYMemoryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMemoryCache.h; sourceTree = "<group>"; };
+		A6B651591EC4429E00A9E5A7 /* YYMemoryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMemoryCache.m; sourceTree = "<group>"; };
+		A6B6515D1EC448BA00A9E5A7 /* AXDCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXDCollectionView.h; sourceTree = "<group>"; };
+		A6B6515E1EC448BA00A9E5A7 /* AXDCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXDCollectionView.m; sourceTree = "<group>"; };
+		A6B6515F1EC448BA00A9E5A7 /* AXDContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXDContentView.h; sourceTree = "<group>"; };
+		A6B651601EC448BA00A9E5A7 /* AXDContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXDContentView.m; sourceTree = "<group>"; };
+		A6B651611EC448BA00A9E5A7 /* AXDScrollPageConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXDScrollPageConst.h; sourceTree = "<group>"; };
+		A6B651621EC448BA00A9E5A7 /* AXDScrollPageConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXDScrollPageConst.m; sourceTree = "<group>"; };
+		A6B651631EC448BA00A9E5A7 /* AXDScrollPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXDScrollPageView.h; sourceTree = "<group>"; };
+		A6B651641EC448BA00A9E5A7 /* AXDScrollPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXDScrollPageView.m; sourceTree = "<group>"; };
+		A6B651651EC448BA00A9E5A7 /* AXDScrollPageViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXDScrollPageViewDelegate.h; sourceTree = "<group>"; };
+		A6B651661EC448BA00A9E5A7 /* AXDScrollSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXDScrollSegmentView.h; sourceTree = "<group>"; };
+		A6B651671EC448BA00A9E5A7 /* AXDScrollSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXDScrollSegmentView.m; sourceTree = "<group>"; };
+		A6B651681EC448BA00A9E5A7 /* AXDTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXDTitleView.h; sourceTree = "<group>"; };
+		A6B651691EC448BA00A9E5A7 /* AXDTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXDTitleView.m; sourceTree = "<group>"; };
+		A6B651701EC4491B00A9E5A7 /* PageControlMainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageControlMainVC.h; sourceTree = "<group>"; };
+		A6B651711EC4491B00A9E5A7 /* PageControlMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageControlMainVC.m; sourceTree = "<group>"; };
+		A6B651731EC44A1000A9E5A7 /* PageControlReuseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageControlReuseVC.h; sourceTree = "<group>"; };
+		A6B651741EC44A1000A9E5A7 /* PageControlReuseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageControlReuseVC.m; sourceTree = "<group>"; };
+		A6C4E9331EC169D900402208 /* ReusableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReusableViewController.h; sourceTree = "<group>"; };
+		A6C4E9341EC169D900402208 /* ReusableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReusableViewController.m; sourceTree = "<group>"; };
+		A6C4E9361EC16C9F00402208 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		A6C4E9371EC16C9F00402208 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		A6C4E9391EC19F1900402208 /* MainViewNavigator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewNavigator.h; sourceTree = "<group>"; };
+		A6C4E93A1EC19F1900402208 /* MainViewNavigator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewNavigator.m; sourceTree = "<group>"; };
 		A6F934AE1EADABF100BAAD82 /* AnimatorBaseOneVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatorBaseOneVC.h; sourceTree = "<group>"; };
 		A6F934AF1EADABF100BAAD82 /* AnimatorBaseOneVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatorBaseOneVC.m; sourceTree = "<group>"; };
 		A6F934B11EADABFF00BAAD82 /* AnimatorBaseTwoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatorBaseTwoVC.h; sourceTree = "<group>"; };
@@ -290,6 +351,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A63809741EC2C08D00E24705 /* WMPageController */ = {
+			isa = PBXGroup;
+			children = (
+				A63809751EC2C08D00E24705 /* WMMenuView */,
+				A638097E1EC2C08D00E24705 /* WMPageController.h */,
+				A638097F1EC2C08D00E24705 /* WMPageController.m */,
+			);
+			path = WMPageController;
+			sourceTree = "<group>";
+		};
+		A63809751EC2C08D00E24705 /* WMMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				A63809761EC2C08D00E24705 /* WMMenuItem.h */,
+				A63809771EC2C08D00E24705 /* WMMenuItem.m */,
+				A63809781EC2C08D00E24705 /* WMMenuView.h */,
+				A63809791EC2C08D00E24705 /* WMMenuView.m */,
+				A638097A1EC2C08D00E24705 /* WMProgressView.h */,
+				A638097B1EC2C08D00E24705 /* WMProgressView.m */,
+				A638097C1EC2C08D00E24705 /* WMScrollView.h */,
+				A638097D1EC2C08D00E24705 /* WMScrollView.m */,
+			);
+			path = WMMenuView;
+			sourceTree = "<group>";
+		};
 		A646CA241EA7501200415949 /* Transition */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +392,10 @@
 				A63B789F1EB1A3670067ED5E /* PopUpOneVC.m */,
 				A63B78A11EB1A37B0067ED5E /* PopUpTwoVC.h */,
 				A63B78A21EB1A37B0067ED5E /* PopUpTwoVC.m */,
+				A60FDC191EBB114100E5826C /* SlideOneVC.h */,
+				A60FDC1A1EBB114100E5826C /* SlideOneVC.m */,
+				A60FDC1C1EBB114F00E5826C /* SlideTwoVC.h */,
+				A60FDC1D1EBB114F00E5826C /* SlideTwoVC.m */,
 				A6F934BB1EADD48F00BAAD82 /* CoolAnimation */,
 				A6F935091EADFE9400BAAD82 /* FilterAnimation */,
 			);
@@ -370,7 +460,9 @@
 				A69EDB2F1EA06B3A00DBEE20 /* TableViewHeaderAnimation.m */,
 				A646CA211EA74FEA00415949 /* TransitionTableVC.h */,
 				A646CA221EA74FEA00415949 /* TransitionTableVC.m */,
+				A6B6515B1EC4488C00A9E5A7 /* PageControllerDemo */,
 				A646CA241EA7501200415949 /* Transition */,
+				A6C4E9311EC1693B00402208 /* AdvancedScrollV */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -378,6 +470,7 @@
 		A6542F6D1E9F2B3400CD0DBD /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				A6B6515C1EC448BA00A9E5A7 /* PageController */,
 				A677FD8C1EB1D286009491D3 /* TransitionAnimation */,
 				A6542F6E1E9F2B3400CD0DBD /* Category */,
 				A6542F7B1E9F2B3400CD0DBD /* dotteLine */,
@@ -575,6 +668,8 @@
 				A677FDA11EB1D286009491D3 /* AXDCircleSpreadAnimator.m */,
 				A638B5CA1EB20DA900DD1C75 /* AXDPopUpAnimation.h */,
 				A638B5CB1EB20DA900DD1C75 /* AXDPopUpAnimation.m */,
+				A60FDC101EBB0EFB00E5826C /* AXDSlideAnimation.h */,
+				A60FDC111EBB0EFB00E5826C /* AXDSlideAnimation.m */,
 			);
 			path = CustomAnimator;
 			sourceTree = "<group>";
@@ -634,6 +729,8 @@
 		A69EDB311EA06BB500DBEE20 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				A6B651571EC4429900A9E5A7 /* YYCache */,
+				A63809741EC2C08D00E24705 /* WMPageController */,
 				A69EDB321EA06BB500DBEE20 /* Masonry */,
 			);
 			path = ThirdParty;
@@ -669,6 +766,67 @@
 				A69EDB4B1EA06BB500DBEE20 /* ViewController+MASAdditions.m */,
 			);
 			path = Masonry;
+			sourceTree = "<group>";
+		};
+		A6B651571EC4429900A9E5A7 /* YYCache */ = {
+			isa = PBXGroup;
+			children = (
+				A6B651581EC4429E00A9E5A7 /* YYMemoryCache.h */,
+				A6B651591EC4429E00A9E5A7 /* YYMemoryCache.m */,
+			);
+			path = YYCache;
+			sourceTree = "<group>";
+		};
+		A6B6515B1EC4488C00A9E5A7 /* PageControllerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				A6B651701EC4491B00A9E5A7 /* PageControlMainVC.h */,
+				A6B651711EC4491B00A9E5A7 /* PageControlMainVC.m */,
+				A6B651731EC44A1000A9E5A7 /* PageControlReuseVC.h */,
+				A6B651741EC44A1000A9E5A7 /* PageControlReuseVC.m */,
+			);
+			path = PageControllerDemo;
+			sourceTree = "<group>";
+		};
+		A6B6515C1EC448BA00A9E5A7 /* PageController */ = {
+			isa = PBXGroup;
+			children = (
+				A6B6515D1EC448BA00A9E5A7 /* AXDCollectionView.h */,
+				A6B6515E1EC448BA00A9E5A7 /* AXDCollectionView.m */,
+				A6B6515F1EC448BA00A9E5A7 /* AXDContentView.h */,
+				A6B651601EC448BA00A9E5A7 /* AXDContentView.m */,
+				A6B651611EC448BA00A9E5A7 /* AXDScrollPageConst.h */,
+				A6B651621EC448BA00A9E5A7 /* AXDScrollPageConst.m */,
+				A6B651631EC448BA00A9E5A7 /* AXDScrollPageView.h */,
+				A6B651641EC448BA00A9E5A7 /* AXDScrollPageView.m */,
+				A6B651651EC448BA00A9E5A7 /* AXDScrollPageViewDelegate.h */,
+				A6B651661EC448BA00A9E5A7 /* AXDScrollSegmentView.h */,
+				A6B651671EC448BA00A9E5A7 /* AXDScrollSegmentView.m */,
+				A6B651681EC448BA00A9E5A7 /* AXDTitleView.h */,
+				A6B651691EC448BA00A9E5A7 /* AXDTitleView.m */,
+			);
+			path = PageController;
+			sourceTree = "<group>";
+		};
+		A6C4E9311EC1693B00402208 /* AdvancedScrollV */ = {
+			isa = PBXGroup;
+			children = (
+				A6C4E9321EC1693B00402208 /* ReuseScrollV */,
+			);
+			path = AdvancedScrollV;
+			sourceTree = "<group>";
+		};
+		A6C4E9321EC1693B00402208 /* ReuseScrollV */ = {
+			isa = PBXGroup;
+			children = (
+				A6C4E9331EC169D900402208 /* ReusableViewController.h */,
+				A6C4E9341EC169D900402208 /* ReusableViewController.m */,
+				A6C4E9361EC16C9F00402208 /* MainViewController.h */,
+				A6C4E9371EC16C9F00402208 /* MainViewController.m */,
+				A6C4E9391EC19F1900402208 /* MainViewNavigator.h */,
+				A6C4E93A1EC19F1900402208 /* MainViewNavigator.m */,
+			);
+			path = ReuseScrollV;
 			sourceTree = "<group>";
 		};
 		A6F934BB1EADD48F00BAAD82 /* CoolAnimation */ = {
@@ -778,17 +936,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6542FA71E9F2B3400CD0DBD /* AXDRouter.m in Sources */,
+				A60FDC1E1EBB114F00E5826C /* SlideTwoVC.m in Sources */,
 				A646CA231EA74FEA00415949 /* TransitionTableVC.m in Sources */,
+				A6B6516C1EC448BA00A9E5A7 /* AXDScrollPageConst.m in Sources */,
 				A677FDD91EB1D286009491D3 /* AXDFilterAnimator+Swipe.m in Sources */,
 				A677FDCD1EB1D286009491D3 /* AXDCoolAnimator+Scanning.m in Sources */,
+				A63809801EC2C08D00E24705 /* WMMenuItem.m in Sources */,
 				A677FDD71EB1D286009491D3 /* AXDFilterAnimator+PageCurl.m in Sources */,
+				A63809821EC2C08D00E24705 /* WMProgressView.m in Sources */,
 				A6542FA11E9F2B3400CD0DBD /* NSObject+XPSuperInvoker.m in Sources */,
 				A677FDDF1EB1D286009491D3 /* AXDBaseTransitionAnimator.m in Sources */,
+				A6C4E93B1EC19F1900402208 /* MainViewNavigator.m in Sources */,
 				A677FDD51EB1D286009491D3 /* AXDFilterAnimator+Mask.m in Sources */,
 				A677FDD11EB1D286009491D3 /* AXDFilterAnimator+BarSwipe.m in Sources */,
 				A677FDD41EB1D286009491D3 /* AXDFilterAnimator+Flash.m in Sources */,
 				A6542FAE1E9F2B3400CD0DBD /* JS_Tools.m in Sources */,
 				A677FDC91EB1D286009491D3 /* AXDCoolAnimator+Lines.m in Sources */,
+				A60FDC121EBB0EFB00E5826C /* AXDSlideAnimation.m in Sources */,
 				A6542FA61E9F2B3400CD0DBD /* LineDashView.m in Sources */,
 				A63B78A01EB1A3670067ED5E /* PopUpOneVC.m in Sources */,
 				A6F934B31EADABFF00BAAD82 /* AnimatorBaseTwoVC.m in Sources */,
@@ -797,11 +961,15 @@
 				A6542FAB1E9F2B3400CD0DBD /* JOShimmeringView.m in Sources */,
 				A6F935121EADFF0B00BAAD82 /* FilterTwoVC.m in Sources */,
 				A63B78A31EB1A37B0067ED5E /* PopUpTwoVC.m in Sources */,
+				A6B6516B1EC448BA00A9E5A7 /* AXDContentView.m in Sources */,
 				A6542FC41E9F33EF00CD0DBD /* TestShimmering.m in Sources */,
 				A6F934C41EADD5D700BAAD82 /* AXDCoolOneVC.m in Sources */,
 				A6542FAD1E9F2B3400CD0DBD /* _interface_jsapi.m in Sources */,
+				A6B651721EC4491B00A9E5A7 /* PageControlMainVC.m in Sources */,
 				A677FDCE1EB1D286009491D3 /* AXDCoolAnimator.m in Sources */,
 				A69EDB541EA06BB500DBEE20 /* View+MASAdditions.m in Sources */,
+				A6B6515A1EC4429E00A9E5A7 /* YYMemoryCache.m in Sources */,
+				A6B6516D1EC448BA00A9E5A7 /* AXDScrollPageView.m in Sources */,
 				A677FDC71EB1D286009491D3 /* AXDCoolAnimator+Explode.m in Sources */,
 				A6542FB61E9F2B9C00CD0DBD /* TestRouterVC.m in Sources */,
 				A677FDD31EB1D286009491D3 /* AXDFilterAnimator+CopyMachine.m in Sources */,
@@ -809,13 +977,19 @@
 				A677FDE71EB1D2CB009491D3 /* UIViewController+AXDTransition.m in Sources */,
 				A6542FA51E9F2B3400CD0DBD /* UIColor+Extension.m in Sources */,
 				A69EDB4E1EA06BB500DBEE20 /* MASConstraintMaker.m in Sources */,
+				A6B6516A1EC448BA00A9E5A7 /* AXDCollectionView.m in Sources */,
 				A69EDB521EA06BB500DBEE20 /* NSArray+MASAdditions.m in Sources */,
+				A6B6516F1EC448BA00A9E5A7 /* AXDTitleView.m in Sources */,
+				A6B6516E1EC448BA00A9E5A7 /* AXDScrollSegmentView.m in Sources */,
 				A646CA471EA76D0E00415949 /* CircleSpreadTwoVC.m in Sources */,
 				A69EDB511EA06BB500DBEE20 /* MASViewConstraint.m in Sources */,
+				A6C4E9351EC169D900402208 /* ReusableViewController.m in Sources */,
 				A677FDD21EB1D286009491D3 /* AXDFilterAnimator+BoxBlur.m in Sources */,
 				A646CA441EA76CFD00415949 /* CircleSpreadOneVC.m in Sources */,
+				A63809831EC2C08D00E24705 /* WMScrollView.m in Sources */,
 				A6542FA91E9F2B3400CD0DBD /* AXDRouter+LoginService.m in Sources */,
 				A6542F231E9F285100CD0DBD /* RootVC.m in Sources */,
+				A63809841EC2C08D00E24705 /* WMPageController.m in Sources */,
 				A6542FAA1E9F2B3400CD0DBD /* JOShimmeringLayer.m in Sources */,
 				A6542FC71E9F353B00CD0DBD /* TestDashLine.m in Sources */,
 				A6542FCA1E9F4B4600CD0DBD /* ReplicatorAnimation.m in Sources */,
@@ -832,6 +1006,7 @@
 				A6542FB31E9F2B3400CD0DBD /* _interface_login.m in Sources */,
 				A677FDCF1EB1D286009491D3 /* AXDCircleSpreadAnimator.m in Sources */,
 				A6542FB21E9F2B3400CD0DBD /* JSSuperPlugin.m in Sources */,
+				A6B651751EC44A1000A9E5A7 /* PageControlReuseVC.m in Sources */,
 				A69EDB531EA06BB500DBEE20 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				A69EDB4F1EA06BB500DBEE20 /* MASLayoutConstraint.m in Sources */,
 				A6F934C11EADD55200BAAD82 /* CoolTypeListController.m in Sources */,
@@ -841,12 +1016,14 @@
 				A6542FB01E9F2B3400CD0DBD /* JSPluginManager.m in Sources */,
 				A677FDC81EB1D286009491D3 /* AXDCoolAnimator+Fold.m in Sources */,
 				A6542FA81E9F2B3400CD0DBD /* AXDRouter+JSAPI.m in Sources */,
+				A6C4E9381EC16C9F00402208 /* MainViewController.m in Sources */,
 				A69EDB4D1EA06BB500DBEE20 /* MASConstraint.m in Sources */,
 				A6542FB11E9F2B3400CD0DBD /* JSResult.m in Sources */,
 				A6542FBC1E9F2C6D00CD0DBD /* RootItemModel.m in Sources */,
 				A6F934BE1EADD4B800BAAD82 /* BasicListController.m in Sources */,
 				A677FDE41EB1D2A9009491D3 /* UINavigationController+AXDTransition.m in Sources */,
 				A6F9350C1EADFEAA00BAAD82 /* FilterListVC.m in Sources */,
+				A60FDC1B1EBB114100E5826C /* SlideOneVC.m in Sources */,
 				A69EDB4C1EA06BB500DBEE20 /* MASCompositeConstraint.m in Sources */,
 				A677FDE01EB1D286009491D3 /* AXDInteractiveTransition.m in Sources */,
 				A6542F0F1E9F279E00CD0DBD /* AppDelegate.m in Sources */,
@@ -855,6 +1032,7 @@
 				A69EDB501EA06BB500DBEE20 /* MASViewAttribute.m in Sources */,
 				A677FDEA1EB1D2E0009491D3 /* UIView+Snapshot.m in Sources */,
 				A6542FA41E9F2B3400CD0DBD /* NSString+Extention.m in Sources */,
+				A63809811EC2C08D00E24705 /* WMMenuView.m in Sources */,
 				A6542F0C1E9F279E00CD0DBD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

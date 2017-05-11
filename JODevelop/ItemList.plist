@@ -38,5 +38,17 @@
 		<key>vc</key>
 		<string>TransitionTableVC</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>网易新闻scrollView</string>
+		<key>vc</key>
+		<string>MainViewController</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>网易新闻collectionView</string>
+		<key>vc</key>
+		<string>PageControlMainVC</string>
+	</dict>
 </array>
 </plist>

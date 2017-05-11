@@ -13,4 +13,6 @@
 + (nonnull instancetype)colorWithHexString:(nonnull NSString *)hexString;
 + (nonnull instancetype)colorWithHexString:(nonnull NSString *)hexString alpha:(CGFloat)alpha;
 
++ (nonnull instancetype)randomColor;
+
 @end

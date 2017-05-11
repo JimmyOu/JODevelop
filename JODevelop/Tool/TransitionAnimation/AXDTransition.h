@@ -15,5 +15,6 @@
 #import "AXDPopUpAnimation.h"
 #import "AXDCoolAnimator.h"
 #import "AXDFilterAnimator.h"
+#import "AXDSlideAnimation.h"
 
 #endif /* AXDTransition_h */

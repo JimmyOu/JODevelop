@@ -7,7 +7,7 @@
 //
 
 #import "AXDInteractiveTransition.h"
-#import <objc/runtime.h>
+//#import <objc/runtime.h>
 
 typedef struct {
     unsigned int willBegin :      1;
@@ -41,7 +41,8 @@ typedef struct {
         self.direction = direction;
         self.edgeSpacing = edgeSpacing;
         self.vertical = (direction == AXDInteractiveTransitionGestureDirectionDown) || (direction == AXDInteractiveTransitionGestureDirectionUp);
-        self.panValue = kAXDTransitionPanValue;
+        //self.panValue = kAXDTransitionPanValue;
+        self.panValue = [UIScreen mainScreen].bounds.size.width;
     }
     return self;
 }
@@ -93,9 +94,9 @@ typedef struct {
             
             CGFloat fraction ;
             if (self.vertical) {
-                fraction = fabs(translation.y / 200.0);
+                fraction = fabs(translation.y / self.panValue);
             } else {
-                fraction = fabs(translation.x / 200.0);
+                fraction = fabs(translation.x / self.panValue);
             }
             fraction = fminf(fmaxf(fraction, 0.0), 1.0);
             if (fraction >= 1.0) fraction = 0.99;

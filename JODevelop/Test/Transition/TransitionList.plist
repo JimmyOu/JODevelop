@@ -26,5 +26,11 @@
 		<key>vc</key>
 		<string>FilterListVC</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>SlideAnimator</string>
+		<key>vc</key>
+		<string>SlideOneVC</string>
+	</dict>
 </array>
 </plist>

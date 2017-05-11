@@ -24,6 +24,15 @@
     [self.view addSubview:self.tableView];
     self.tableView.frame = CGRectMake(0, 110, [UIScreen mainScreen].bounds.size.width, 200);
     
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeContactAdd];
+    [btn addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchUpInside];
+    btn.center = self.view.center;
+    [self.view addSubview:btn];
+    
+    
+}
+- (void)click:(UIButton *)btn {
+    
     
 }
 - (void)xw_transiton{

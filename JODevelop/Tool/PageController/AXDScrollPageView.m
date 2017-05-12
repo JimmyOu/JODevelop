@@ -14,17 +14,19 @@
 @property (weak, nonatomic) AXDContentView *contentView;
 
 @property (weak, nonatomic) UIViewController *parentViewController;
-@property (strong, nonatomic) NSArray *childVcs;
-@property (strong, nonatomic) NSArray *titlesArray;
+@property (strong, nonatomic) NSArray<Class> *childVcs;
+@property (strong, nonatomic) NSArray<NSString *> *titlesArray;
 
 @end
 @implementation AXDScrollPageView
 
-- (instancetype)initWithFrame:(CGRect)frame titles:(NSArray<NSString *> *)titles parentViewController:(UIViewController *)parentViewController delegate:(id<AXDScrollPageViewDelegate>)delegate {
+- (instancetype)initWithFrame:(CGRect)frame titles:(NSArray<NSString *> *)titles childVC:(NSArray<Class> *)childVcs parentViewController:(UIViewController *)parentViewController delegate:(id<AXDScrollPageViewDelegate>)delegate {
     if (self = [super initWithFrame:frame]) {
+        NSParameterAssert(childVcs.count == titles.count);
         self.delegate = delegate;
         self.parentViewController = parentViewController;
         self.titlesArray = titles.copy;
+        self.childVcs = childVcs.copy;
         [self commonInit];
     }
     return self;
@@ -64,7 +66,8 @@
 
 - (AXDContentView *)contentView {
     if (!_contentView) {
-        AXDContentView *content = [[AXDContentView alloc] initWithFrame:CGRectMake(0.0, CGRectGetMaxY(self.segmentView.frame), self.bounds.size.width, self.bounds.size.height - CGRectGetMaxY(self.segmentView.frame)) segmentView:self.segmentView parentViewController:self.parentViewController delegate:self.delegate];
+
+        AXDContentView *content = [[AXDContentView alloc] initWithFrame:CGRectMake(0.0, CGRectGetMaxY(self.segmentView.frame), self.bounds.size.width, self.bounds.size.height - CGRectGetMaxY(self.segmentView.frame)) segmentView:self.segmentView parentViewController:self.parentViewController delegate:self.delegate childVCs:self.childVcs];
         [self addSubview:content];
         _contentView = content;
     }
@@ -107,6 +110,20 @@
     self.segmentView.extraBtnOnClick = extraBtnOnClick;
 }
 
+- (void)setPreloadPolicy:(AXDPagePreloadPolicy)preloadPolicy {
+    if (_preloadPolicy != preloadPolicy) {
+        _preloadPolicy = preloadPolicy;
+        self.contentView.preloadPolicy = preloadPolicy;
+    }
+
+}
+
+- (void)setCachePolicy:(AXDPageCachePolicy)cachePolicy {
+    if (_cachePolicy != cachePolicy) {
+        _cachePolicy = cachePolicy;
+        self.contentView.cachePolicy = cachePolicy;
+    }
+}
 
 
 

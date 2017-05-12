@@ -13,7 +13,7 @@
 @interface PageControlMainVC ()<AXDScrollPageViewDelegate>
 
 @property(strong, nonatomic)NSArray<NSString *> *titles;
-@property(strong, nonatomic)NSArray<UIViewController *> *childVcs;
+@property(strong, nonatomic)NSMutableArray<Class > *childVcs;
 @property (nonatomic, strong) AXDScrollPageView *scrollPageView;
 
 @end
@@ -42,29 +42,20 @@
                     @"今日房价",
                     @"头像",
                     ];
+    
+    self.childVcs = [NSMutableArray array];
+    for (int i = 0; i < self.titles.count; i++) {
+        [self.childVcs addObject:[PageControlReuseVC class]];
+    }
     // 初始化
-    _scrollPageView = [[AXDScrollPageView alloc] initWithFrame:CGRectMake(0, 64.0, self.view.bounds.size.width, self.view.bounds.size.height - 64.0) titles:self.titles parentViewController:self delegate:self];
+    _scrollPageView= [[AXDScrollPageView alloc] initWithFrame:CGRectMake(0, 64.0, self.view.bounds.size.width, self.view.bounds.size.height - 64.0) titles:self.titles childVC:self.childVcs parentViewController:self delegate:self];
+    _scrollPageView.preloadPolicy = AXDPagePreloadPolicyNeighbour;
+    _scrollPageView.cachePolicy = AXDPageCachePolicyPolicyVeryHigh;
     
     [self.view addSubview:_scrollPageView];
-
-    
 }
 
-- (NSInteger)numberOfChildViewControllers {
-    return self.titles.count;
-}
 
-- (UIViewController<AXDScrollPageViewChildVcDelegate> *)childViewController:(UIViewController<AXDScrollPageViewChildVcDelegate> *)reuseViewController forIndex:(NSInteger)index {
-    UIViewController<AXDScrollPageViewChildVcDelegate> *childVc = reuseViewController;
-    
-    if (!childVc) {
-        childVc = [[PageControlReuseVC alloc] init];
-    }
-    
-    //    NSLog(@"%ld-----%@",(long)index, childVc);
-    
-    return childVc;
-}
 
 
 - (BOOL)shouldAutomaticallyForwardAppearanceMethods {

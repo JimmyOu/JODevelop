@@ -7,7 +7,6 @@
 // need to add ,缓存策略
 
 #import "AXDContentView.h"
-#import "YYMemoryCache.h"
 static NSString * const AXDScrollCellID = @"AXDScrollCellID";
 
 @interface AXDContentView ()<UIScrollViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource>
@@ -27,6 +26,8 @@ static NSString * const AXDScrollCellID = @"AXDScrollCellID";
 @property (strong, nonatomic) NSMutableDictionary<NSString *, UIViewController<AXDScrollPageViewChildVcDelegate> *> *childVcsDic;
 // 当前控制器
 @property (strong, nonatomic) UIViewController<AXDScrollPageViewChildVcDelegate> *currentChildVc;
+// 所有子控制器的类名
+@property (nonatomic, strong) NSArray <Class> *childVCs;
 
 
 @property (assign, nonatomic) NSInteger currentIndex;
@@ -43,12 +44,15 @@ static NSString * const AXDScrollCellID = @"AXDScrollCellID";
     NSInteger _sysVersion;
 }
 
-- (instancetype)initWithFrame:(CGRect)frame segmentView:(AXDScrollSegmentView *)segmentView parentViewController:(UIViewController *)parentViewController delegate:(id<AXDScrollPageViewDelegate>) delegate {
+- (instancetype)initWithFrame:(CGRect)frame segmentView:(AXDScrollSegmentView *)segmentView parentViewController:(UIViewController *)parentViewController delegate:(id<AXDScrollPageViewDelegate>) delegate childVCs:(NSArray <Class> *)childVCs{
     
     if (self = [super initWithFrame:frame]) {
         self.segmentView = segmentView;
         self.delegate = delegate;
         self.parentViewController = parentViewController;
+        self.childVCs = childVCs;
+        self.cachePolicy = AXDPageCachePolicyNoLimit;
+        self.preloadPolicy = AXDPagePreloadPolicyNeighbour;
         _needManageLifeCycle = ![parentViewController shouldAutomaticallyForwardAppearanceMethods];
         if (!_needManageLifeCycle) {
 #if DEBUG
@@ -71,13 +75,7 @@ static NSString * const AXDScrollCellID = @"AXDScrollCellID";
     _forbidTouchToAdjustPosition = NO;
     _isLoadFirstView = YES;
     _sysVersion = [[[UIDevice currentDevice] systemVersion] integerValue];
-    
-    if ([_delegate respondsToSelector:@selector(numberOfChildViewControllers)]) {
-        self.itemsCount = [_delegate numberOfChildViewControllers];
-    }
-    else {
-        NSAssert(NO, @"必须实现的代理方法");
-    }
+    self.itemsCount = self.childVCs.count;
     
     UINavigationController *navi = (UINavigationController *)self.parentViewController.parentViewController;
     
@@ -289,6 +287,8 @@ static NSString * const AXDScrollCellID = @"AXDScrollCellID";
 }
 
 - (void)didAppearWithIndex:(NSInteger)index {
+    
+    
     UIViewController<AXDScrollPageViewChildVcDelegate> *controller = [self.childVcsDic valueForKey:[NSString stringWithFormat:@"%ld", (long)index]];
     if (controller) {
         if ([controller respondsToSelector:@selector(viewDidAppearForIndex:)]) {
@@ -303,6 +303,60 @@ static NSString * const AXDScrollCellID = @"AXDScrollCellID";
             [_delegate scrollPageController:self.parentViewController childViewControllDidAppear:controller forIndex:index];
         }
     }
+    
+    //在停止滑动的时候预加载
+    // 根据 preloadPolicy 预加载控制器
+    
+    if (self.preloadPolicy != AXDPagePreloadPolicyNever) {
+        int length = (int)self.preloadPolicy;
+        int start = 0;
+        int end = (int)self.itemsCount - 1;
+        if (index > length) {
+            start = (int)index - length;
+        }
+        if (self.itemsCount - 1 > length + index) {
+            end = (int)index + length;
+        }
+        for (int i = start; i <= end; i++) {
+            // 如果已存在，不需要预加载
+            if (![self.childVcsDic objectForKey:[NSString stringWithFormat:@"%ld", (long)i]]) {
+                [self addViewControllerToCacheAtIndex:i];
+            }
+        }
+    };
+    
+    //在停止滑动的时候去除比较远的VC
+    // 根据 cachePolicy 移除载控制器
+    if (self.cachePolicy != AXDPageCachePolicyNoLimit) {
+        NSInteger length = (int)self.cachePolicy;
+        NSInteger left = index - length - 1;
+        NSInteger right = index + length + 1;
+        
+        for (int i = 0; i < self.itemsCount; i++) {
+            UIViewController *vc = [self.childVcsDic objectForKey:[NSString stringWithFormat:@"%ld", (long)i]];
+            if ((i <= left || i >= right) && vc) {
+                [AXDContentView removeChildVc:vc];
+                [self.childVcsDic removeObjectForKey:[NSString stringWithFormat:@"%ld", (long)i]];
+            }
+        }
+
+    }
+    
+}
+
+- (void)addViewControllerToCacheAtIndex:(NSInteger)index {
+
+    Class class = self.childVCs[index];
+    UIViewController <AXDScrollPageViewChildVcDelegate >*viewController = [[class alloc] init];
+    viewController.currentIndex = index;
+    [self.parentViewController addChildViewController:viewController];
+    CGRect frame = self.bounds;
+    viewController.view.frame = frame;
+    [viewController didMoveToParentViewController:self.parentViewController];
+    if (self.delegate &&[self.delegate respondsToSelector:@selector(viewDidLoadForIndex:)]) {
+        [viewController viewDidLoadForIndex:index];
+    }
+    [self.childVcsDic setObject:viewController forKey:[NSString stringWithFormat:@"%ld", (long)index]];
 }
 
 - (void)willDisappearWithIndex:(NSInteger)index {
@@ -372,18 +426,20 @@ static NSString * const AXDScrollCellID = @"AXDScrollCellID";
     _currentChildVc = [self.childVcsDic valueForKey:[NSString stringWithFormat:@"%ld", (long)indexPath.row]];
     BOOL isFirstLoaded = _currentChildVc == nil;
     
-    if (_delegate && [_delegate respondsToSelector:@selector(childViewController:forIndex:)]) {
+    if (_delegate) {
         if (_currentChildVc == nil) {
-            _currentChildVc = [_delegate childViewController:nil forIndex:indexPath.row];
+            _currentChildVc = [self childViewController:nil forIndex:indexPath.row];
             
             if (!_currentChildVc || ![_currentChildVc conformsToProtocol:@protocol(AXDScrollPageViewChildVcDelegate)]) {
-                NSAssert(NO, @"子控制器必须遵守ZJScrollPageViewChildVcDelegate协议");
+                NSAssert(NO, @"子控制器必须遵守AXDScrollPageViewChildVcDelegate协议");
             }
             // 设置当前下标
             _currentChildVc.currentIndex = indexPath.row;
             [self.childVcsDic setValue:_currentChildVc forKey:[NSString stringWithFormat:@"%ld", (long)indexPath.row]];
         } else {
-            [_delegate childViewController:_currentChildVc forIndex:indexPath.row];
+            // 设置当前下标
+            _currentChildVc.currentIndex = indexPath.row;
+            _currentChildVc = [self childViewController:_currentChildVc forIndex:indexPath.row];
         }
     } else {
         NSAssert(NO, @"必须设置代理和实现代理方法");
@@ -501,6 +557,17 @@ static NSString * const AXDScrollCellID = @"AXDScrollCellID";
     
 }
 
+- (UIViewController<AXDScrollPageViewChildVcDelegate> *)childViewController:(UIViewController<AXDScrollPageViewChildVcDelegate> *)reuseViewController forIndex:(NSInteger)row {
+    UIViewController<AXDScrollPageViewChildVcDelegate> *childVc = reuseViewController;
+    if (!childVc) {
+        if (self.childVCs.count > row) {
+            Class childVCClass = self.childVCs[row];
+            childVc = [[childVCClass alloc] init];
+        }
+    }
+    return childVc;
+}
+
 - (AXDCollectionView *)collectionView {
     if (_collectionView == nil) {
         AXDCollectionView *collectionView = [[AXDCollectionView alloc] initWithFrame:self.bounds collectionViewLayout:self.collectionViewLayout];
@@ -541,11 +608,5 @@ static NSString * const AXDScrollCellID = @"AXDScrollCellID";
     }
     return _childVcsDic;
 }
-
-
-
-
-
-
 
 @end

@@ -10,11 +10,6 @@
 		A60FDC121EBB0EFB00E5826C /* AXDSlideAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A60FDC111EBB0EFB00E5826C /* AXDSlideAnimation.m */; };
 		A60FDC1B1EBB114100E5826C /* SlideOneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A60FDC1A1EBB114100E5826C /* SlideOneVC.m */; };
 		A60FDC1E1EBB114F00E5826C /* SlideTwoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A60FDC1D1EBB114F00E5826C /* SlideTwoVC.m */; };
-		A63809801EC2C08D00E24705 /* WMMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A63809771EC2C08D00E24705 /* WMMenuItem.m */; };
-		A63809811EC2C08D00E24705 /* WMMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = A63809791EC2C08D00E24705 /* WMMenuView.m */; };
-		A63809821EC2C08D00E24705 /* WMProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = A638097B1EC2C08D00E24705 /* WMProgressView.m */; };
-		A63809831EC2C08D00E24705 /* WMScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A638097D1EC2C08D00E24705 /* WMScrollView.m */; };
-		A63809841EC2C08D00E24705 /* WMPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = A638097F1EC2C08D00E24705 /* WMPageController.m */; };
 		A638B5CC1EB20DA900DD1C75 /* AXDPopUpAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A638B5CB1EB20DA900DD1C75 /* AXDPopUpAnimation.m */; };
 		A63B78A01EB1A3670067ED5E /* PopUpOneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A63B789F1EB1A3670067ED5E /* PopUpOneVC.m */; };
 		A63B78A31EB1A37B0067ED5E /* PopUpTwoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A63B78A21EB1A37B0067ED5E /* PopUpTwoVC.m */; };
@@ -124,16 +119,6 @@
 		A60FDC1A1EBB114100E5826C /* SlideOneVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideOneVC.m; sourceTree = "<group>"; };
 		A60FDC1C1EBB114F00E5826C /* SlideTwoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideTwoVC.h; sourceTree = "<group>"; };
 		A60FDC1D1EBB114F00E5826C /* SlideTwoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideTwoVC.m; sourceTree = "<group>"; };
-		A63809761EC2C08D00E24705 /* WMMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMenuItem.h; sourceTree = "<group>"; };
-		A63809771EC2C08D00E24705 /* WMMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMenuItem.m; sourceTree = "<group>"; };
-		A63809781EC2C08D00E24705 /* WMMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMenuView.h; sourceTree = "<group>"; };
-		A63809791EC2C08D00E24705 /* WMMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMenuView.m; sourceTree = "<group>"; };
-		A638097A1EC2C08D00E24705 /* WMProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMProgressView.h; sourceTree = "<group>"; };
-		A638097B1EC2C08D00E24705 /* WMProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMProgressView.m; sourceTree = "<group>"; };
-		A638097C1EC2C08D00E24705 /* WMScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMScrollView.h; sourceTree = "<group>"; };
-		A638097D1EC2C08D00E24705 /* WMScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMScrollView.m; sourceTree = "<group>"; };
-		A638097E1EC2C08D00E24705 /* WMPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPageController.h; sourceTree = "<group>"; };
-		A638097F1EC2C08D00E24705 /* WMPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPageController.m; sourceTree = "<group>"; };
 		A638B5CA1EB20DA900DD1C75 /* AXDPopUpAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXDPopUpAnimation.h; sourceTree = "<group>"; };
 		A638B5CB1EB20DA900DD1C75 /* AXDPopUpAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXDPopUpAnimation.m; sourceTree = "<group>"; };
 		A63B789E1EB1A3670067ED5E /* PopUpOneVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopUpOneVC.h; sourceTree = "<group>"; };
@@ -351,31 +336,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A63809741EC2C08D00E24705 /* WMPageController */ = {
-			isa = PBXGroup;
-			children = (
-				A63809751EC2C08D00E24705 /* WMMenuView */,
-				A638097E1EC2C08D00E24705 /* WMPageController.h */,
-				A638097F1EC2C08D00E24705 /* WMPageController.m */,
-			);
-			path = WMPageController;
-			sourceTree = "<group>";
-		};
-		A63809751EC2C08D00E24705 /* WMMenuView */ = {
-			isa = PBXGroup;
-			children = (
-				A63809761EC2C08D00E24705 /* WMMenuItem.h */,
-				A63809771EC2C08D00E24705 /* WMMenuItem.m */,
-				A63809781EC2C08D00E24705 /* WMMenuView.h */,
-				A63809791EC2C08D00E24705 /* WMMenuView.m */,
-				A638097A1EC2C08D00E24705 /* WMProgressView.h */,
-				A638097B1EC2C08D00E24705 /* WMProgressView.m */,
-				A638097C1EC2C08D00E24705 /* WMScrollView.h */,
-				A638097D1EC2C08D00E24705 /* WMScrollView.m */,
-			);
-			path = WMMenuView;
-			sourceTree = "<group>";
-		};
 		A646CA241EA7501200415949 /* Transition */ = {
 			isa = PBXGroup;
 			children = (
@@ -730,7 +690,6 @@
 			isa = PBXGroup;
 			children = (
 				A6B651571EC4429900A9E5A7 /* YYCache */,
-				A63809741EC2C08D00E24705 /* WMPageController */,
 				A69EDB321EA06BB500DBEE20 /* Masonry */,
 			);
 			path = ThirdParty;
@@ -941,9 +900,7 @@
 				A6B6516C1EC448BA00A9E5A7 /* AXDScrollPageConst.m in Sources */,
 				A677FDD91EB1D286009491D3 /* AXDFilterAnimator+Swipe.m in Sources */,
 				A677FDCD1EB1D286009491D3 /* AXDCoolAnimator+Scanning.m in Sources */,
-				A63809801EC2C08D00E24705 /* WMMenuItem.m in Sources */,
 				A677FDD71EB1D286009491D3 /* AXDFilterAnimator+PageCurl.m in Sources */,
-				A63809821EC2C08D00E24705 /* WMProgressView.m in Sources */,
 				A6542FA11E9F2B3400CD0DBD /* NSObject+XPSuperInvoker.m in Sources */,
 				A677FDDF1EB1D286009491D3 /* AXDBaseTransitionAnimator.m in Sources */,
 				A6C4E93B1EC19F1900402208 /* MainViewNavigator.m in Sources */,
@@ -986,10 +943,8 @@
 				A6C4E9351EC169D900402208 /* ReusableViewController.m in Sources */,
 				A677FDD21EB1D286009491D3 /* AXDFilterAnimator+BoxBlur.m in Sources */,
 				A646CA441EA76CFD00415949 /* CircleSpreadOneVC.m in Sources */,
-				A63809831EC2C08D00E24705 /* WMScrollView.m in Sources */,
 				A6542FA91E9F2B3400CD0DBD /* AXDRouter+LoginService.m in Sources */,
 				A6542F231E9F285100CD0DBD /* RootVC.m in Sources */,
-				A63809841EC2C08D00E24705 /* WMPageController.m in Sources */,
 				A6542FAA1E9F2B3400CD0DBD /* JOShimmeringLayer.m in Sources */,
 				A6542FC71E9F353B00CD0DBD /* TestDashLine.m in Sources */,
 				A6542FCA1E9F4B4600CD0DBD /* ReplicatorAnimation.m in Sources */,
@@ -1032,7 +987,6 @@
 				A69EDB501EA06BB500DBEE20 /* MASViewAttribute.m in Sources */,
 				A677FDEA1EB1D2E0009491D3 /* UIView+Snapshot.m in Sources */,
 				A6542FA41E9F2B3400CD0DBD /* NSString+Extention.m in Sources */,
-				A63809811EC2C08D00E24705 /* WMMenuView.m in Sources */,
 				A6542F0C1E9F279E00CD0DBD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -21,8 +21,11 @@ typedef void(^ExtraBtnOnClick)(UIButton *extraBtn);
 @property (copy, nonatomic) ExtraBtnOnClick extraBtnOnClick;
 @property (weak, nonatomic, readonly) AXDContentView *contentView;
 @property (weak, nonatomic, readonly) AXDScrollSegmentView *segmentView;
-
-- (instancetype)initWithFrame:(CGRect)frame titles:(NSArray<NSString *> *)titles parentViewController:(UIViewController *)parentViewController delegate:(id<AXDScrollPageViewDelegate>) delegate ;
+/** 预加载机制，在停止滑动的时候预加载 n 页 */
+@property (nonatomic, assign) AXDPagePreloadPolicy preloadPolicy;
+/* 缓存策略 */
+@property (nonatomic, assign) AXDPageCachePolicy cachePolicy;
+- (instancetype)initWithFrame:(CGRect)frame titles:(NSArray<NSString *> *)titles childVC:(NSArray<Class> *)childVcs parentViewController:(UIViewController *)parentViewController delegate:(id<AXDScrollPageViewDelegate>)delegate ;
 
 /** 给外界设置选中的下标的方法 */
 - (void)setSelectedIndex:(NSInteger)selectedIndex animated:(BOOL)animated;

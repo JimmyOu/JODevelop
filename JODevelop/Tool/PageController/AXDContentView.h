@@ -10,6 +10,7 @@
 #import "AXDScrollSegmentView.h"
 #import "AXDScrollPageViewDelegate.h"
 #import "AXDCollectionView.h"
+#import "AXDScrollPageConst.h"
 
 
 @interface AXDContentView : UIView
@@ -20,10 +21,16 @@
 // 当前控制器
 @property (strong, nonatomic, readonly) UIViewController<AXDScrollPageViewChildVcDelegate> *currentChildVc;
 
+/** 预加载机制，在停止滑动的时候预加载 n 页 */
+@property (nonatomic, assign) AXDPagePreloadPolicy preloadPolicy;
+
+/* 缓存策略 */
+@property (nonatomic, assign) AXDPageCachePolicy cachePolicy;
+
 /*
  *初始化方法
  */
-- (instancetype)initWithFrame:(CGRect)frame segmentView:(AXDScrollSegmentView *)segmentView parentViewController:(UIViewController *)parentViewController delegate:(id<AXDScrollPageViewDelegate>) delegate;
+- (instancetype)initWithFrame:(CGRect)frame segmentView:(AXDScrollSegmentView *)segmentView parentViewController:(UIViewController *)parentViewController delegate:(id<AXDScrollPageViewDelegate>) delegate childVCs:(NSArray <Class> *)childVCs;
 
 /** 给外界可以设置ContentOffSet的方法 */
 - (void)setContentOffSet:(CGPoint)offset animated:(BOOL)animated;

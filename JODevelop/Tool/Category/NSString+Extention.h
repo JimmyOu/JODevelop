@@ -13,4 +13,6 @@
 - (NSURL *)toUrl;
 + (BOOL)isUrl:(NSString *)str;
 - (NSString *)md5;
+
+- (BOOL)isIdCard; //这个有时候会不准。很少发生。特定设备上会发生
 @end

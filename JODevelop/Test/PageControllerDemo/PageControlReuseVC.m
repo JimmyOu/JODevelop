@@ -72,18 +72,18 @@
     [super viewWillAppear:animated];
     NSLog(@"page = %ld,%s",self.currentIndexPage,__func__);
 }
-//- (void)viewDidAppear:(BOOL)animated {
-//    [super viewDidAppear:animated];
-//    NSLog(@"page = %ld,%s",self.currentIndexPage,__func__);
-//}
-//- (void)viewWillDisappear:(BOOL)animated {
-//    [super viewWillDisappear:animated];
-//    NSLog(@"page = %ld,%s",self.currentIndexPage,__func__);
-//}
-//
-//- (void)viewDidDisappear:(BOOL)animated{
-//    [super viewDidDisappear:animated];
-//    NSLog(@"page = %ld,%s",self.currentIndexPage,__func__);
-//}
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    NSLog(@"page = %ld,%s",self.currentIndexPage,__func__);
+}
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    NSLog(@"page = %ld,%s",self.currentIndexPage,__func__);
+}
+
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    NSLog(@"page = %ld,%s",self.currentIndexPage,__func__);
+}
 
 @end

@@ -50,5 +50,11 @@
 		<key>vc</key>
 		<string>PageControlMainVC</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>侧滑栏</string>
+		<key>vc</key>
+		<string>RevealVC</string>
+	</dict>
 </array>
 </plist>

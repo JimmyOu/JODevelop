@@ -119,6 +119,9 @@
     return 40;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 0) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
     
 }
 
@@ -170,6 +173,7 @@
 }
 
 #pragma mark – delegate (eg:UITableViewDataSource)
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }

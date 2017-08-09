@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <CoreSpotlight/CoreSpotlight.h>
+#import "MoviesService.h"
 
 @interface AppDelegate ()
 
@@ -19,8 +21,17 @@
     // Override point for customization after application launch.
     NSLog(@"%s",__func__);
     
+    //添加Spot light
+    [MoviesService setupSearchableContent];
+    //添加3D Touch
     [self setup3DTouch:application];
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray * _Nullable))restorationHandler {
+    [MoviesService restoreUserActivityState:userActivity];
+    return  YES;
+
 }
 - (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler {
     NSLog(@"%s",__func__);
@@ -60,10 +71,10 @@
      icon：icon图标 可以使用系统类型 也可以使用自定义的图片
      userInfo：用户信息字典 自定义参数，完成具体功能需求
      */
-        UIApplicationShortcutIcon *icon1 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"run"];
-       UIApplicationShortcutIcon *icon2 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"scan"];
-       UIApplicationShortcutIcon *icon3 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"wifi"];
-
+    UIApplicationShortcutIcon *icon1 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"run"];
+    UIApplicationShortcutIcon *icon2 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"scan"];
+    UIApplicationShortcutIcon *icon3 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"wifi"];
+    
     UIApplicationShortcutItem *runItem = [[UIApplicationShortcutItem alloc] initWithType:@"One" localizedTitle:@"跑步" localizedSubtitle:@"跑步详细信息" icon:icon1 userInfo:nil];
     
     UIApplicationShortcutItem *scanItem = [[UIApplicationShortcutItem alloc] initWithType:@"Two" localizedTitle:@"扫描" localizedSubtitle:@"无线详细信息" icon:icon2 userInfo:nil];
@@ -74,12 +85,12 @@
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
-NSLog(@"%s",__func__);
+    NSLog(@"%s",__func__);
 }
 
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-NSLog(@"%s",__func__);
+    NSLog(@"%s",__func__);
 }
 
 

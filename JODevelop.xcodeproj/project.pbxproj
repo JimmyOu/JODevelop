@@ -16,6 +16,17 @@
 		A623CD081F3967DB00B6C355 /* RevealVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A623CD071F3967DB00B6C355 /* RevealVC.m */; };
 		A623CD0B1F3968BB00B6C355 /* FrontVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A623CD0A1F3968BB00B6C355 /* FrontVC.m */; };
 		A623CD111F3968D800B6C355 /* RearVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A623CD101F3968D800B6C355 /* RearVC.m */; };
+		A623CD181F399E3600B6C355 /* MoviesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A623CD171F399E3600B6C355 /* MoviesVC.m */; };
+		A623CD1B1F399E4200B6C355 /* MoviesDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A623CD1A1F399E4200B6C355 /* MoviesDetailVC.m */; };
+		A623CD261F399EBF00B6C355 /* MoviesData.plist in Resources */ = {isa = PBXBuildFile; fileRef = A623CD201F399EBF00B6C355 /* MoviesData.plist */; };
+		A623CD271F399EBF00B6C355 /* jurassicworld.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A623CD211F399EBF00B6C355 /* jurassicworld.jpg */; };
+		A623CD281F399EBF00B6C355 /* pixels.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A623CD221F399EBF00B6C355 /* pixels.jpg */; };
+		A623CD291F399EBF00B6C355 /* spectre.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A623CD231F399EBF00B6C355 /* spectre.jpg */; };
+		A623CD2A1F399EBF00B6C355 /* terminatorgenisys.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A623CD241F399EBF00B6C355 /* terminatorgenisys.jpg */; };
+		A623CD2B1F399EBF00B6C355 /* themartian.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A623CD251F399EBF00B6C355 /* themartian.jpg */; };
+		A623CD2E1F39A05800B6C355 /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A623CD2D1F39A05800B6C355 /* MovieCell.m */; };
+		A623CD371F39A14400B6C355 /* MoviesService.m in Sources */ = {isa = PBXBuildFile; fileRef = A623CD361F39A14400B6C355 /* MoviesService.m */; };
+		A623CD3B1F39A43A00B6C355 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A623CD3A1F39A43A00B6C355 /* MovieCell.xib */; };
 		A638B5CC1EB20DA900DD1C75 /* AXDPopUpAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A638B5CB1EB20DA900DD1C75 /* AXDPopUpAnimation.m */; };
 		A63B78A01EB1A3670067ED5E /* PopUpOneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A63B789F1EB1A3670067ED5E /* PopUpOneVC.m */; };
 		A63B78A31EB1A37B0067ED5E /* PopUpTwoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A63B78A21EB1A37B0067ED5E /* PopUpTwoVC.m */; };
@@ -141,6 +152,21 @@
 		A623CD0A1F3968BB00B6C355 /* FrontVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrontVC.m; sourceTree = "<group>"; };
 		A623CD0F1F3968D800B6C355 /* RearVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RearVC.h; sourceTree = "<group>"; };
 		A623CD101F3968D800B6C355 /* RearVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RearVC.m; sourceTree = "<group>"; };
+		A623CD161F399E3600B6C355 /* MoviesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviesVC.h; sourceTree = "<group>"; };
+		A623CD171F399E3600B6C355 /* MoviesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesVC.m; sourceTree = "<group>"; };
+		A623CD191F399E4200B6C355 /* MoviesDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviesDetailVC.h; sourceTree = "<group>"; };
+		A623CD1A1F399E4200B6C355 /* MoviesDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesDetailVC.m; sourceTree = "<group>"; };
+		A623CD201F399EBF00B6C355 /* MoviesData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MoviesData.plist; sourceTree = "<group>"; };
+		A623CD211F399EBF00B6C355 /* jurassicworld.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jurassicworld.jpg; sourceTree = "<group>"; };
+		A623CD221F399EBF00B6C355 /* pixels.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pixels.jpg; sourceTree = "<group>"; };
+		A623CD231F399EBF00B6C355 /* spectre.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = spectre.jpg; sourceTree = "<group>"; };
+		A623CD241F399EBF00B6C355 /* terminatorgenisys.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = terminatorgenisys.jpg; sourceTree = "<group>"; };
+		A623CD251F399EBF00B6C355 /* themartian.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = themartian.jpg; sourceTree = "<group>"; };
+		A623CD2C1F39A05800B6C355 /* MovieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCell.h; sourceTree = "<group>"; };
+		A623CD2D1F39A05800B6C355 /* MovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
+		A623CD351F39A14400B6C355 /* MoviesService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviesService.h; sourceTree = "<group>"; };
+		A623CD361F39A14400B6C355 /* MoviesService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesService.m; sourceTree = "<group>"; };
+		A623CD3A1F39A43A00B6C355 /* MovieCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
 		A638B5CA1EB20DA900DD1C75 /* AXDPopUpAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXDPopUpAnimation.h; sourceTree = "<group>"; };
 		A638B5CB1EB20DA900DD1C75 /* AXDPopUpAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXDPopUpAnimation.m; sourceTree = "<group>"; };
 		A63B789E1EB1A3670067ED5E /* PopUpOneVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopUpOneVC.h; sourceTree = "<group>"; };
@@ -397,6 +423,36 @@
 			path = "侧滑栏";
 			sourceTree = "<group>";
 		};
+		A623CD151F399E2800B6C355 /* SpotLight */ = {
+			isa = PBXGroup;
+			children = (
+				A623CD1F1F399E8E00B6C355 /* dataSource */,
+				A623CD161F399E3600B6C355 /* MoviesVC.h */,
+				A623CD171F399E3600B6C355 /* MoviesVC.m */,
+				A623CD351F39A14400B6C355 /* MoviesService.h */,
+				A623CD361F39A14400B6C355 /* MoviesService.m */,
+				A623CD2C1F39A05800B6C355 /* MovieCell.h */,
+				A623CD2D1F39A05800B6C355 /* MovieCell.m */,
+				A623CD3A1F39A43A00B6C355 /* MovieCell.xib */,
+				A623CD191F399E4200B6C355 /* MoviesDetailVC.h */,
+				A623CD1A1F399E4200B6C355 /* MoviesDetailVC.m */,
+			);
+			path = SpotLight;
+			sourceTree = "<group>";
+		};
+		A623CD1F1F399E8E00B6C355 /* dataSource */ = {
+			isa = PBXGroup;
+			children = (
+				A623CD201F399EBF00B6C355 /* MoviesData.plist */,
+				A623CD211F399EBF00B6C355 /* jurassicworld.jpg */,
+				A623CD221F399EBF00B6C355 /* pixels.jpg */,
+				A623CD231F399EBF00B6C355 /* spectre.jpg */,
+				A623CD241F399EBF00B6C355 /* terminatorgenisys.jpg */,
+				A623CD251F399EBF00B6C355 /* themartian.jpg */,
+			);
+			path = dataSource;
+			sourceTree = "<group>";
+		};
 		A646CA241EA7501200415949 /* Transition */ = {
 			isa = PBXGroup;
 			children = (
@@ -485,6 +541,7 @@
 				A646CA241EA7501200415949 /* Transition */,
 				A6C4E9311EC1693B00402208 /* AdvancedScrollV */,
 				A623CD051F39677100B6C355 /* 侧滑栏 */,
+				A623CD151F399E2800B6C355 /* SpotLight */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -944,13 +1001,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A623CD3B1F39A43A00B6C355 /* MovieCell.xib in Resources */,
+				A623CD291F399EBF00B6C355 /* spectre.jpg in Resources */,
 				A6542F1A1E9F279E00CD0DBD /* LaunchScreen.storyboard in Resources */,
 				A6B7095B1ED80EE90072A22C /* tishi.png in Resources */,
 				A677FDDE1EB1D286009491D3 /* restrictedshine.tiff in Resources */,
 				A677FDDC1EB1D286009491D3 /* line.png in Resources */,
+				A623CD271F399EBF00B6C355 /* jurassicworld.jpg in Resources */,
+				A623CD2A1F399EBF00B6C355 /* terminatorgenisys.jpg in Resources */,
 				A6542FC01E9F2D7200CD0DBD /* ItemList.plist in Resources */,
 				A677FDDD1EB1D286009491D3 /* mask.jpg in Resources */,
+				A623CD261F399EBF00B6C355 /* MoviesData.plist in Resources */,
+				A623CD2B1F399EBF00B6C355 /* themartian.jpg in Resources */,
 				A6542FAC1E9F2B3400CD0DBD /* web.html in Resources */,
+				A623CD281F399EBF00B6C355 /* pixels.jpg in Resources */,
 				A646CA261EA7502B00415949 /* TransitionList.plist in Resources */,
 				A6542F171E9F279E00CD0DBD /* Assets.xcassets in Resources */,
 				A6542F151E9F279E00CD0DBD /* Main.storyboard in Resources */,
@@ -1030,7 +1094,9 @@
 				A61E959D1F0B93820049FAA4 /* JOCapturePreview.m in Sources */,
 				A677FDD61EB1D286009491D3 /* AXDFilterAnimator+Mod.m in Sources */,
 				A646CA381EA7622900415949 /* UIView+Extension.m in Sources */,
+				A623CD1B1F399E4200B6C355 /* MoviesDetailVC.m in Sources */,
 				A6F934B01EADABF100BAAD82 /* AnimatorBaseOneVC.m in Sources */,
+				A623CD181F399E3600B6C355 /* MoviesVC.m in Sources */,
 				A6F934C71EADD5E800BAAD82 /* AXDCoolTwoVC.m in Sources */,
 				A6542FB31E9F2B3400CD0DBD /* _interface_login.m in Sources */,
 				A677FDCF1EB1D286009491D3 /* AXDCircleSpreadAnimator.m in Sources */,
@@ -1058,11 +1124,13 @@
 				A60FDC1B1EBB114100E5826C /* SlideOneVC.m in Sources */,
 				A69EDB4C1EA06BB500DBEE20 /* MASCompositeConstraint.m in Sources */,
 				A677FDE01EB1D286009491D3 /* AXDInteractiveTransition.m in Sources */,
+				A623CD371F39A14400B6C355 /* MoviesService.m in Sources */,
 				A6542F0F1E9F279E00CD0DBD /* AppDelegate.m in Sources */,
 				A677FDCA1EB1D286009491D3 /* AXDCoolAnimator+MiddlePageFlip.m in Sources */,
 				A677FDDA1EB1D286009491D3 /* AXDFilterAnimator.m in Sources */,
 				A61E95A11F0B93D80049FAA4 /* JOCapture.m in Sources */,
 				A69EDB501EA06BB500DBEE20 /* MASViewAttribute.m in Sources */,
+				A623CD2E1F39A05800B6C355 /* MovieCell.m in Sources */,
 				A677FDEA1EB1D2E0009491D3 /* UIView+Snapshot.m in Sources */,
 				A6542FA41E9F2B3400CD0DBD /* NSString+Extention.m in Sources */,
 				A6542F0C1E9F279E00CD0DBD /* main.m in Sources */,

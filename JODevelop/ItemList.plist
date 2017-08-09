@@ -56,5 +56,11 @@
 		<key>vc</key>
 		<string>RevealVC</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>movies</string>
+		<key>vc</key>
+		<string>MoviesVC</string>
+	</dict>
 </array>
 </plist>

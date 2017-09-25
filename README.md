@@ -19,4 +19,4 @@ A collection of self-learning projects
 
 #### 7.3Dtouch支持 
 
-#### 8.转场动画
+#### 8.转场动画,有些效果只有真机可以正常显示

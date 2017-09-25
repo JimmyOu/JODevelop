@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>模块化测试</string>
+		<key>vc</key>
+		<string>TestRouterVC</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>shimmering</string>
+		<key>vc</key>
+		<string>TestShimmering</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>线段</string>
+		<key>vc</key>
+		<string>TestDashLine</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Replicator动画</string>
+		<key>vc</key>
+		<string>ReplicatorAnimation</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>twitterHead</string>
+		<key>vc</key>
+		<string>TableViewHeaderAnimation</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>转场动画</string>
+		<key>vc</key>
+		<string>TransitionTableVC</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>网易新闻scrollView</string>
+		<key>vc</key>
+		<string>MainViewController</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>网易新闻collectionView</string>
+		<key>vc</key>
+		<string>PageControlMainVC</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>侧滑栏</string>
+		<key>vc</key>
+		<string>RevealVC</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>movies</string>
+		<key>vc</key>
+		<string>MoviesVC</string>
+	</dict>
+</array>
+</plist>

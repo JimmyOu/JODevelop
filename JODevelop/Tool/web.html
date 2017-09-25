@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+    function postMessage(msg) {
+        var appJS = (window.appJS) ? window.appJS : window.webkit.messageHandlers.appJS;
+        appJS.postMessage(msg);
+    }
+
+    function alertMessage(msg) {
+        setTimeout(function() {
+            alert(msg);
+        }, 100);
+    }
+
+    function callback(result) {
+        var jsonString = JSON.stringify(result);
+        alertMessage(jsonString);
+    }
+
+    function callApp() {
+        postMessage({
+            module:'Tools',
+            method:'login',
+            params: {
+              params1:'hahahahhaa',                      //原生页面标识
+            },
+            callback: 'callback'
+        });
+        // postMessage({
+        //     module: 'executor',
+        //     method: 'batchExecute',
+        //     params: {
+        //         commands: [{
+        //             module: 'webview',
+        //             method: 'close',
+        //             params: {},
+        //             callback: ''
+        //         }, {
+        //             module: 'navigation',
+        //             method: 'goPage',
+        //             params: {
+        //                 page: 'subject',
+        //                 loginFirst: false,
+        //                 closeToRoot: true,
+        //                 rootPage: 1
+        //             },
+        //             callback: ''
+        //         }]
+        //     },
+        //     callback: 'callback'
+        // });
+    }
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <style type="text/css">
+    body {
+        font-size: 8px;
+    }
+
+    button {
+        width: 200px;
+        height: 40px;
+        margin: 10px auto;
+        font-size: 1.0rem;
+        display: block;
+    }
+    </style>
+</head>
+
+<body>
+    <button type="button" onclick="callApp()">GetSomething</button>
+</body>
+
+</html>

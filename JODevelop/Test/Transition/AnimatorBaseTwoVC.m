@@ -17,7 +17,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    self.view.layer.contents = (__bridge id)[UIImage imageNamed:@"p2.JPG"].CGImage;
+    UIImageView *img = [[UIImageView alloc] init];
+    img.contentMode = UIViewContentModeScaleAspectFit;
+    img.userInteractionEnabled = YES;
+    img.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width,  [UIScreen mainScreen].bounds.size.height);
+    img.image = [UIImage imageNamed:@"p12.JPG"];
+    [self.view addSubview:img];
+//    self.view.layer.contents = (__bridge id)[UIImage imageNamed:@"p2.JPG"].CGImage;
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     _button = button;
     button.titleLabel.font = [UIFont systemFontOfSize:13];

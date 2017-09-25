@@ -21,7 +21,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    self.view.layer.contents = (__bridge id)[UIImage imageNamed:@"p1.JPG"].CGImage;
+    UIImageView *img = [[UIImageView alloc] init];
+    img.contentMode = UIViewContentModeScaleAspectFit;
+    img.userInteractionEnabled = YES;
+    img.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width,  [UIScreen mainScreen].bounds.size.height);
+    img.image = [UIImage imageNamed:@"p11.JPG"];
+    
+    [self.view addSubview:img];
+//    self.view.layer.contents = (__bridge id)[UIImage imageNamed:@"p1.JPG"].CGImage;
     UISwitch *pushOrPresntSwitch = [UISwitch new];
     _pushOrPresntSwitch = pushOrPresntSwitch;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:pushOrPresntSwitch];

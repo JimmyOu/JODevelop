@@ -121,6 +121,7 @@
 		A6C4E9351EC169D900402208 /* ReusableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C4E9341EC169D900402208 /* ReusableViewController.m */; };
 		A6C4E9381EC16C9F00402208 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C4E9371EC16C9F00402208 /* MainViewController.m */; };
 		A6C4E93B1EC19F1900402208 /* MainViewNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C4E93A1EC19F1900402208 /* MainViewNavigator.m */; };
+		A6CB64581FC57E5700264F18 /* GCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CB64571FC57E5700264F18 /* GCDTimer.m */; };
 		A6F934B01EADABF100BAAD82 /* AnimatorBaseOneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F934AF1EADABF100BAAD82 /* AnimatorBaseOneVC.m */; };
 		A6F934B31EADABFF00BAAD82 /* AnimatorBaseTwoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F934B21EADABFF00BAAD82 /* AnimatorBaseTwoVC.m */; };
 		A6F934BE1EADD4B800BAAD82 /* BasicListController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F934BD1EADD4B800BAAD82 /* BasicListController.m */; };
@@ -358,6 +359,8 @@
 		A6C4E9371EC16C9F00402208 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		A6C4E9391EC19F1900402208 /* MainViewNavigator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewNavigator.h; sourceTree = "<group>"; };
 		A6C4E93A1EC19F1900402208 /* MainViewNavigator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewNavigator.m; sourceTree = "<group>"; };
+		A6CB64561FC57E5700264F18 /* GCDTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDTimer.h; sourceTree = "<group>"; };
+		A6CB64571FC57E5700264F18 /* GCDTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDTimer.m; sourceTree = "<group>"; };
 		A6F934AE1EADABF100BAAD82 /* AnimatorBaseOneVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatorBaseOneVC.h; sourceTree = "<group>"; };
 		A6F934AF1EADABF100BAAD82 /* AnimatorBaseOneVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatorBaseOneVC.m; sourceTree = "<group>"; };
 		A6F934B11EADABFF00BAAD82 /* AnimatorBaseTwoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatorBaseTwoVC.h; sourceTree = "<group>"; };
@@ -549,6 +552,7 @@
 		A6542F6D1E9F2B3400CD0DBD /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				A6CB64551FC57E1600264F18 /* GCDTimer */,
 				A623CD011F39639000B6C355 /* Side */,
 				A61E959A1F0B93750049FAA4 /* 相机 */,
 				A6B6515C1EC448BA00A9E5A7 /* PageController */,
@@ -914,6 +918,15 @@
 			path = ReuseScrollV;
 			sourceTree = "<group>";
 		};
+		A6CB64551FC57E1600264F18 /* GCDTimer */ = {
+			isa = PBXGroup;
+			children = (
+				A6CB64561FC57E5700264F18 /* GCDTimer.h */,
+				A6CB64571FC57E5700264F18 /* GCDTimer.m */,
+			);
+			path = GCDTimer;
+			sourceTree = "<group>";
+		};
 		A6F934BB1EADD48F00BAAD82 /* CoolAnimation */ = {
 			isa = PBXGroup;
 			children = (
@@ -1033,6 +1046,7 @@
 				A646CA231EA74FEA00415949 /* TransitionTableVC.m in Sources */,
 				A6B6516C1EC448BA00A9E5A7 /* AXDScrollPageConst.m in Sources */,
 				A677FDD91EB1D286009491D3 /* AXDFilterAnimator+Swipe.m in Sources */,
+				A6CB64581FC57E5700264F18 /* GCDTimer.m in Sources */,
 				A677FDCD1EB1D286009491D3 /* AXDCoolAnimator+Scanning.m in Sources */,
 				A677FDD71EB1D286009491D3 /* AXDFilterAnimator+PageCurl.m in Sources */,
 				A6542FA11E9F2B3400CD0DBD /* NSObject+XPSuperInvoker.m in Sources */,

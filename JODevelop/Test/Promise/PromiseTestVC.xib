@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PromiseTestVC">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gGS-SB-rhT">
+                    <rect key="frame" x="37" y="133" width="300" height="400"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jtq-4o-pLq">
+                            <rect key="frame" x="119.5" y="0.0" width="61" height="50"/>
+                            <state key="normal" title="testThen"/>
+                            <connections>
+                                <action selector="testThen" destination="-1" eventType="touchUpInside" id="H4A-BX-njR"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eel-5P-Zih">
+                            <rect key="frame" x="110.5" y="50" width="79" height="50"/>
+                            <state key="normal" title="TestAsyncs"/>
+                            <connections>
+                                <action selector="testAsyns" destination="-1" eventType="touchUpInside" id="4Fu-eF-9cy"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97M-rI-ors">
+                            <rect key="frame" x="87.5" y="100" width="125" height="50"/>
+                            <state key="normal" title="testAsynWithError"/>
+                            <connections>
+                                <action selector="testAsynWithError" destination="-1" eventType="touchUpInside" id="1I1-x5-hqM"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TxP-Qo-MHz">
+                            <rect key="frame" x="120" y="150" width="60" height="50"/>
+                            <state key="normal" title="testAfter"/>
+                            <connections>
+                                <action selector="testAfter:" destination="-1" eventType="touchUpInside" id="JiU-Kd-xfe"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKc-yE-nvF">
+                            <rect key="frame" x="109" y="200" width="82" height="50"/>
+                            <state key="normal" title="testTimeout"/>
+                            <connections>
+                                <action selector="testTimeout:" destination="-1" eventType="touchUpInside" id="xsl-Jh-DL1"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJx-2Z-CcK">
+                            <rect key="frame" x="118.5" y="250" width="63" height="50"/>
+                            <state key="normal" title="testRetry"/>
+                            <connections>
+                                <action selector="testRetry" destination="-1" eventType="touchUpInside" id="BND-0i-lbq"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MiU-WM-BkR">
+                            <rect key="frame" x="128" y="300" width="44" height="50"/>
+                            <state key="normal" title="testAll"/>
+                            <connections>
+                                <action selector="testAll" destination="-1" eventType="touchUpInside" id="smx-P3-gHL"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwH-dc-bxQ">
+                            <rect key="frame" x="119.5" y="350" width="61" height="50"/>
+                            <state key="normal" title="testRace"/>
+                            <connections>
+                                <action selector="testRace" destination="-1" eventType="touchUpInside" id="l1m-0W-JIf"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="EM7-S5-rJd"/>
+                        <constraint firstAttribute="height" constant="400" id="Rtv-VU-Xqv"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="gGS-SB-rhT" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="0c3-q7-gYH"/>
+                <constraint firstItem="gGS-SB-rhT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="v5w-Is-pzF"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+        </view>
+    </objects>
+</document>

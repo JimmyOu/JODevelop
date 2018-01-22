@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A603BE31200DA83200BBA29D /* NSError+JOPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = A603BE30200DA83200BBA29D /* NSError+JOPromise.m */; };
+		A603BE34200DAA0700BBA29D /* JOPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = A603BE33200DAA0700BBA29D /* JOPromise.m */; };
+		A603BE37200DD8A900BBA29D /* JOPromise_impl_then.m in Sources */ = {isa = PBXBuildFile; fileRef = A603BE36200DD8A900BBA29D /* JOPromise_impl_then.m */; };
+		A603BE39200DE11A00BBA29D /* JOPromise_impl_timeout.m in Sources */ = {isa = PBXBuildFile; fileRef = A603BE38200DE11A00BBA29D /* JOPromise_impl_timeout.m */; };
+		A603BE3B200DE29000BBA29D /* JOPromise_impl_after.m in Sources */ = {isa = PBXBuildFile; fileRef = A603BE3A200DE29000BBA29D /* JOPromise_impl_after.m */; };
 		A60FDC121EBB0EFB00E5826C /* AXDSlideAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A60FDC111EBB0EFB00E5826C /* AXDSlideAnimation.m */; };
 		A60FDC1B1EBB114100E5826C /* SlideOneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A60FDC1A1EBB114100E5826C /* SlideOneVC.m */; };
 		A60FDC1E1EBB114F00E5826C /* SlideTwoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A60FDC1D1EBB114F00E5826C /* SlideTwoVC.m */; };
@@ -30,6 +35,15 @@
 		A638B5CC1EB20DA900DD1C75 /* AXDPopUpAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A638B5CB1EB20DA900DD1C75 /* AXDPopUpAnimation.m */; };
 		A63B78A01EB1A3670067ED5E /* PopUpOneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A63B789F1EB1A3670067ED5E /* PopUpOneVC.m */; };
 		A63B78A31EB1A37B0067ED5E /* PopUpTwoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A63B78A21EB1A37B0067ED5E /* PopUpTwoVC.m */; };
+		A643154320106EE3002DD1A7 /* JOPromise_impl_all.m in Sources */ = {isa = PBXBuildFile; fileRef = A643154220106EE3002DD1A7 /* JOPromise_impl_all.m */; };
+		A6431545201071F2002DD1A7 /* JOPromise_impl_catch.m in Sources */ = {isa = PBXBuildFile; fileRef = A6431544201071F2002DD1A7 /* JOPromise_impl_catch.m */; };
+		A6431547201072B7002DD1A7 /* JOPromise_impl_filter.m in Sources */ = {isa = PBXBuildFile; fileRef = A6431546201072B7002DD1A7 /* JOPromise_impl_filter.m */; };
+		A643154920107338002DD1A7 /* JOPromise_impl_finally.m in Sources */ = {isa = PBXBuildFile; fileRef = A643154820107338002DD1A7 /* JOPromise_impl_finally.m */; };
+		A643154B20107388002DD1A7 /* JOPromise_impl_map.m in Sources */ = {isa = PBXBuildFile; fileRef = A643154A20107388002DD1A7 /* JOPromise_impl_map.m */; };
+		A643154F20107415002DD1A7 /* JOPromise_impl_progress.m in Sources */ = {isa = PBXBuildFile; fileRef = A643154E20107415002DD1A7 /* JOPromise_impl_progress.m */; };
+		A6431551201076EA002DD1A7 /* JOPromise_impl_race.m in Sources */ = {isa = PBXBuildFile; fileRef = A6431550201076EA002DD1A7 /* JOPromise_impl_race.m */; };
+		A6431553201077F6002DD1A7 /* JOPromise_impl_reduce.m in Sources */ = {isa = PBXBuildFile; fileRef = A6431552201077F6002DD1A7 /* JOPromise_impl_reduce.m */; };
+		A643155520107849002DD1A7 /* JOPromise_impl_retry.m in Sources */ = {isa = PBXBuildFile; fileRef = A643155420107849002DD1A7 /* JOPromise_impl_retry.m */; };
 		A646CA231EA74FEA00415949 /* TransitionTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A646CA221EA74FEA00415949 /* TransitionTableVC.m */; };
 		A646CA261EA7502B00415949 /* TransitionList.plist in Resources */ = {isa = PBXBuildFile; fileRef = A646CA251EA7502B00415949 /* TransitionList.plist */; };
 		A646CA381EA7622900415949 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A646CA371EA7622900415949 /* UIView+Extension.m */; };
@@ -96,6 +110,8 @@
 		A677FDE41EB1D2A9009491D3 /* UINavigationController+AXDTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = A677FDE31EB1D2A9009491D3 /* UINavigationController+AXDTransition.m */; };
 		A677FDE71EB1D2CB009491D3 /* UIViewController+AXDTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = A677FDE61EB1D2CB009491D3 /* UIViewController+AXDTransition.m */; };
 		A677FDEA1EB1D2E0009491D3 /* UIView+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = A677FDE91EB1D2E0009491D3 /* UIView+Snapshot.m */; };
+		A679D3082015A80B008DF50F /* PromiseTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A679D3062015A80B008DF50F /* PromiseTestVC.m */; };
+		A679D3092015A80B008DF50F /* PromiseTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A679D3072015A80B008DF50F /* PromiseTestVC.xib */; };
 		A68451881F0E1CE100776169 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A68451871F0E1CE100776169 /* UIImage+Extension.m */; };
 		A69EDB301EA06B3A00DBEE20 /* TableViewHeaderAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A69EDB2F1EA06B3A00DBEE20 /* TableViewHeaderAnimation.m */; };
 		A69EDB4C1EA06BB500DBEE20 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A69EDB341EA06BB500DBEE20 /* MASCompositeConstraint.m */; };
@@ -134,6 +150,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A603BE2F200DA83200BBA29D /* NSError+JOPromise.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSError+JOPromise.h"; sourceTree = "<group>"; };
+		A603BE30200DA83200BBA29D /* NSError+JOPromise.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSError+JOPromise.m"; sourceTree = "<group>"; };
+		A603BE32200DAA0700BBA29D /* JOPromise.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JOPromise.h; sourceTree = "<group>"; };
+		A603BE33200DAA0700BBA29D /* JOPromise.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JOPromise.m; sourceTree = "<group>"; };
+		A603BE35200DCB2900BBA29D /* JOPromise_impl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JOPromise_impl.h; sourceTree = "<group>"; };
+		A603BE36200DD8A900BBA29D /* JOPromise_impl_then.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JOPromise_impl_then.m; sourceTree = "<group>"; };
+		A603BE38200DE11A00BBA29D /* JOPromise_impl_timeout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JOPromise_impl_timeout.m; sourceTree = "<group>"; };
+		A603BE3A200DE29000BBA29D /* JOPromise_impl_after.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JOPromise_impl_after.m; sourceTree = "<group>"; };
 		A60FDC101EBB0EFB00E5826C /* AXDSlideAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXDSlideAnimation.h; sourceTree = "<group>"; };
 		A60FDC111EBB0EFB00E5826C /* AXDSlideAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXDSlideAnimation.m; sourceTree = "<group>"; };
 		A60FDC191EBB114100E5826C /* SlideOneVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideOneVC.h; sourceTree = "<group>"; };
@@ -174,6 +198,15 @@
 		A63B789F1EB1A3670067ED5E /* PopUpOneVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopUpOneVC.m; sourceTree = "<group>"; };
 		A63B78A11EB1A37B0067ED5E /* PopUpTwoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopUpTwoVC.h; sourceTree = "<group>"; };
 		A63B78A21EB1A37B0067ED5E /* PopUpTwoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopUpTwoVC.m; sourceTree = "<group>"; };
+		A643154220106EE3002DD1A7 /* JOPromise_impl_all.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JOPromise_impl_all.m; sourceTree = "<group>"; };
+		A6431544201071F2002DD1A7 /* JOPromise_impl_catch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JOPromise_impl_catch.m; sourceTree = "<group>"; };
+		A6431546201072B7002DD1A7 /* JOPromise_impl_filter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JOPromise_impl_filter.m; sourceTree = "<group>"; };
+		A643154820107338002DD1A7 /* JOPromise_impl_finally.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JOPromise_impl_finally.m; sourceTree = "<group>"; };
+		A643154A20107388002DD1A7 /* JOPromise_impl_map.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JOPromise_impl_map.m; sourceTree = "<group>"; };
+		A643154E20107415002DD1A7 /* JOPromise_impl_progress.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JOPromise_impl_progress.m; sourceTree = "<group>"; };
+		A6431550201076EA002DD1A7 /* JOPromise_impl_race.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JOPromise_impl_race.m; sourceTree = "<group>"; };
+		A6431552201077F6002DD1A7 /* JOPromise_impl_reduce.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JOPromise_impl_reduce.m; sourceTree = "<group>"; };
+		A643155420107849002DD1A7 /* JOPromise_impl_retry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JOPromise_impl_retry.m; sourceTree = "<group>"; };
 		A646CA211EA74FEA00415949 /* TransitionTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionTableVC.h; sourceTree = "<group>"; };
 		A646CA221EA74FEA00415949 /* TransitionTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionTableVC.m; sourceTree = "<group>"; };
 		A646CA251EA7502B00415949 /* TransitionList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TransitionList.plist; sourceTree = "<group>"; };
@@ -304,6 +337,9 @@
 		A677FDE61EB1D2CB009491D3 /* UIViewController+AXDTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AXDTransition.m"; sourceTree = "<group>"; };
 		A677FDE81EB1D2E0009491D3 /* UIView+Snapshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Snapshot.h"; sourceTree = "<group>"; };
 		A677FDE91EB1D2E0009491D3 /* UIView+Snapshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Snapshot.m"; sourceTree = "<group>"; };
+		A679D3052015A80B008DF50F /* PromiseTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PromiseTestVC.h; sourceTree = "<group>"; };
+		A679D3062015A80B008DF50F /* PromiseTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PromiseTestVC.m; sourceTree = "<group>"; };
+		A679D3072015A80B008DF50F /* PromiseTestVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromiseTestVC.xib; sourceTree = "<group>"; };
 		A68451861F0E1CE100776169 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
 		A68451871F0E1CE100776169 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
 		A69EDB2E1EA06B3A00DBEE20 /* TableViewHeaderAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewHeaderAnimation.h; sourceTree = "<group>"; };
@@ -392,6 +428,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A603BE2E200DA7F300BBA29D /* Promise */ = {
+			isa = PBXGroup;
+			children = (
+				A603BE2F200DA83200BBA29D /* NSError+JOPromise.h */,
+				A603BE30200DA83200BBA29D /* NSError+JOPromise.m */,
+				A603BE32200DAA0700BBA29D /* JOPromise.h */,
+				A603BE33200DAA0700BBA29D /* JOPromise.m */,
+				A603BE35200DCB2900BBA29D /* JOPromise_impl.h */,
+				A603BE36200DD8A900BBA29D /* JOPromise_impl_then.m */,
+				A603BE3A200DE29000BBA29D /* JOPromise_impl_after.m */,
+				A603BE38200DE11A00BBA29D /* JOPromise_impl_timeout.m */,
+				A643154220106EE3002DD1A7 /* JOPromise_impl_all.m */,
+				A6431544201071F2002DD1A7 /* JOPromise_impl_catch.m */,
+				A6431546201072B7002DD1A7 /* JOPromise_impl_filter.m */,
+				A643154820107338002DD1A7 /* JOPromise_impl_finally.m */,
+				A643154A20107388002DD1A7 /* JOPromise_impl_map.m */,
+				A643154E20107415002DD1A7 /* JOPromise_impl_progress.m */,
+				A6431550201076EA002DD1A7 /* JOPromise_impl_race.m */,
+				A6431552201077F6002DD1A7 /* JOPromise_impl_reduce.m */,
+				A643155420107849002DD1A7 /* JOPromise_impl_retry.m */,
+			);
+			path = Promise;
+			sourceTree = "<group>";
+		};
 		A61E959A1F0B93750049FAA4 /* 相机 */ = {
 			isa = PBXGroup;
 			children = (
@@ -545,6 +605,7 @@
 				A6C4E9311EC1693B00402208 /* AdvancedScrollV */,
 				A623CD051F39677100B6C355 /* 侧滑栏 */,
 				A623CD151F399E2800B6C355 /* SpotLight */,
+				A679D2FC2015A5FE008DF50F /* Promise */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -552,6 +613,7 @@
 		A6542F6D1E9F2B3400CD0DBD /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				A603BE2E200DA7F300BBA29D /* Promise */,
 				A6CB64551FC57E1600264F18 /* GCDTimer */,
 				A623CD011F39639000B6C355 /* Side */,
 				A61E959A1F0B93750049FAA4 /* 相机 */,
@@ -816,6 +878,16 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		A679D2FC2015A5FE008DF50F /* Promise */ = {
+			isa = PBXGroup;
+			children = (
+				A679D3052015A80B008DF50F /* PromiseTestVC.h */,
+				A679D3062015A80B008DF50F /* PromiseTestVC.m */,
+				A679D3072015A80B008DF50F /* PromiseTestVC.xib */,
+			);
+			path = Promise;
+			sourceTree = "<group>";
+		};
 		A69EDB311EA06BB500DBEE20 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
@@ -1030,6 +1102,7 @@
 				A623CD281F399EBF00B6C355 /* pixels.jpg in Resources */,
 				A646CA261EA7502B00415949 /* TransitionList.plist in Resources */,
 				A6542F171E9F279E00CD0DBD /* Assets.xcassets in Resources */,
+				A679D3092015A80B008DF50F /* PromiseTestVC.xib in Resources */,
 				A6542F151E9F279E00CD0DBD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1054,6 +1127,7 @@
 				A677FDDF1EB1D286009491D3 /* AXDBaseTransitionAnimator.m in Sources */,
 				A6C4E93B1EC19F1900402208 /* MainViewNavigator.m in Sources */,
 				A677FDD51EB1D286009491D3 /* AXDFilterAnimator+Mask.m in Sources */,
+				A603BE34200DAA0700BBA29D /* JOPromise.m in Sources */,
 				A677FDD11EB1D286009491D3 /* AXDFilterAnimator+BarSwipe.m in Sources */,
 				A677FDD41EB1D286009491D3 /* AXDFilterAnimator+Flash.m in Sources */,
 				A6542FAE1E9F2B3400CD0DBD /* JS_Tools.m in Sources */,
@@ -1074,15 +1148,20 @@
 				A6B651721EC4491B00A9E5A7 /* PageControlMainVC.m in Sources */,
 				A677FDCE1EB1D286009491D3 /* AXDCoolAnimator.m in Sources */,
 				A69EDB541EA06BB500DBEE20 /* View+MASAdditions.m in Sources */,
+				A643154920107338002DD1A7 /* JOPromise_impl_finally.m in Sources */,
 				A6B6515A1EC4429E00A9E5A7 /* YYMemoryCache.m in Sources */,
 				A6B6516D1EC448BA00A9E5A7 /* AXDScrollPageView.m in Sources */,
 				A677FDC71EB1D286009491D3 /* AXDCoolAnimator+Explode.m in Sources */,
+				A603BE37200DD8A900BBA29D /* JOPromise_impl_then.m in Sources */,
 				A6542FB61E9F2B9C00CD0DBD /* TestRouterVC.m in Sources */,
 				A677FDD31EB1D286009491D3 /* AXDFilterAnimator+CopyMachine.m in Sources */,
+				A643154F20107415002DD1A7 /* JOPromise_impl_progress.m in Sources */,
+				A643154320106EE3002DD1A7 /* JOPromise_impl_all.m in Sources */,
 				A6542FA31E9F2B3400CD0DBD /* NSDictionary+Extension.m in Sources */,
 				A677FDE71EB1D2CB009491D3 /* UIViewController+AXDTransition.m in Sources */,
 				A6542FA51E9F2B3400CD0DBD /* UIColor+Extension.m in Sources */,
 				A69EDB4E1EA06BB500DBEE20 /* MASConstraintMaker.m in Sources */,
+				A6431551201076EA002DD1A7 /* JOPromise_impl_race.m in Sources */,
 				A6B6516A1EC448BA00A9E5A7 /* AXDCollectionView.m in Sources */,
 				A623CD041F39639600B6C355 /* SWRevealViewController.m in Sources */,
 				A69EDB521EA06BB500DBEE20 /* NSArray+MASAdditions.m in Sources */,
@@ -1103,6 +1182,7 @@
 				A623CD081F3967DB00B6C355 /* RevealVC.m in Sources */,
 				A6542FAF1E9F2B3400CD0DBD /* JSBridge.m in Sources */,
 				A69EDB301EA06B3A00DBEE20 /* TableViewHeaderAnimation.m in Sources */,
+				A643154B20107388002DD1A7 /* JOPromise_impl_map.m in Sources */,
 				A638B5CC1EB20DA900DD1C75 /* AXDPopUpAnimation.m in Sources */,
 				A677FDD81EB1D286009491D3 /* AXDFilterAnimator+Ripple.m in Sources */,
 				A61E959D1F0B93820049FAA4 /* JOCapturePreview.m in Sources */,
@@ -1114,6 +1194,7 @@
 				A6F934C71EADD5E800BAAD82 /* AXDCoolTwoVC.m in Sources */,
 				A6542FB31E9F2B3400CD0DBD /* _interface_login.m in Sources */,
 				A677FDCF1EB1D286009491D3 /* AXDCircleSpreadAnimator.m in Sources */,
+				A6431547201072B7002DD1A7 /* JOPromise_impl_filter.m in Sources */,
 				A6542FB21E9F2B3400CD0DBD /* JSSuperPlugin.m in Sources */,
 				A6B651751EC44A1000A9E5A7 /* PageControlReuseVC.m in Sources */,
 				A69EDB531EA06BB500DBEE20 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
@@ -1123,28 +1204,35 @@
 				A65DC9E31F0B312B0086C855 /* UIDevice+Extention.m in Sources */,
 				A677FDCB1EB1D286009491D3 /* AXDCoolAnimator+PageFlip.m in Sources */,
 				A677FDE11EB1D286009491D3 /* AXDTransitionConst.m in Sources */,
+				A6431553201077F6002DD1A7 /* JOPromise_impl_reduce.m in Sources */,
 				A677FDDB1EB1D286009491D3 /* AXDFilterTransitionView.m in Sources */,
+				A6431545201071F2002DD1A7 /* JOPromise_impl_catch.m in Sources */,
 				A6542FB01E9F2B3400CD0DBD /* JSPluginManager.m in Sources */,
 				A677FDC81EB1D286009491D3 /* AXDCoolAnimator+Fold.m in Sources */,
+				A643155520107849002DD1A7 /* JOPromise_impl_retry.m in Sources */,
 				A6542FA81E9F2B3400CD0DBD /* AXDRouter+JSAPI.m in Sources */,
 				A6C4E9381EC16C9F00402208 /* MainViewController.m in Sources */,
 				A623CD111F3968D800B6C355 /* RearVC.m in Sources */,
 				A69EDB4D1EA06BB500DBEE20 /* MASConstraint.m in Sources */,
+				A603BE3B200DE29000BBA29D /* JOPromise_impl_after.m in Sources */,
 				A6542FB11E9F2B3400CD0DBD /* JSResult.m in Sources */,
 				A6542FBC1E9F2C6D00CD0DBD /* RootItemModel.m in Sources */,
 				A6F934BE1EADD4B800BAAD82 /* BasicListController.m in Sources */,
+				A679D3082015A80B008DF50F /* PromiseTestVC.m in Sources */,
 				A677FDE41EB1D2A9009491D3 /* UINavigationController+AXDTransition.m in Sources */,
 				A6F9350C1EADFEAA00BAAD82 /* FilterListVC.m in Sources */,
 				A60FDC1B1EBB114100E5826C /* SlideOneVC.m in Sources */,
 				A69EDB4C1EA06BB500DBEE20 /* MASCompositeConstraint.m in Sources */,
 				A677FDE01EB1D286009491D3 /* AXDInteractiveTransition.m in Sources */,
 				A623CD371F39A14400B6C355 /* MoviesService.m in Sources */,
+				A603BE39200DE11A00BBA29D /* JOPromise_impl_timeout.m in Sources */,
 				A6542F0F1E9F279E00CD0DBD /* AppDelegate.m in Sources */,
 				A677FDCA1EB1D286009491D3 /* AXDCoolAnimator+MiddlePageFlip.m in Sources */,
 				A677FDDA1EB1D286009491D3 /* AXDFilterAnimator.m in Sources */,
 				A61E95A11F0B93D80049FAA4 /* JOCapture.m in Sources */,
 				A69EDB501EA06BB500DBEE20 /* MASViewAttribute.m in Sources */,
 				A623CD2E1F39A05800B6C355 /* MovieCell.m in Sources */,
+				A603BE31200DA83200BBA29D /* NSError+JOPromise.m in Sources */,
 				A677FDEA1EB1D2E0009491D3 /* UIView+Snapshot.m in Sources */,
 				A6542FA41E9F2B3400CD0DBD /* NSString+Extention.m in Sources */,
 				A6542F0C1E9F279E00CD0DBD /* main.m in Sources */,
@@ -1270,7 +1358,7 @@
 				DEVELOPMENT_TEAM = 3G8QFYT436;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/JODevelop/PrefixHeader.pch";
 				INFOPLIST_FILE = JODevelop/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JimmyOu.JODevelop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1284,7 +1372,7 @@
 				DEVELOPMENT_TEAM = 3G8QFYT436;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/JODevelop/PrefixHeader.pch";
 				INFOPLIST_FILE = JODevelop/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JimmyOu.JODevelop;
 				PRODUCT_NAME = "$(TARGET_NAME)";

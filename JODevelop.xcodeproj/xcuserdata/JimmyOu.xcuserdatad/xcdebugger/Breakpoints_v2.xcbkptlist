@@ -11,14 +11,6 @@
             continueAfterRunningActions = "No"
             scope = "0"
             stopOnStyle = "0">
-            <Actions>
-               <BreakpointActionProxy
-                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
-                  <ActionContent
-                     consoleCommand = "">
-                  </ActionContent>
-               </BreakpointActionProxy>
-            </Actions>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -27,13 +19,61 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "JODevelop/Test/&#x4fa7;&#x6ed1;&#x680f;/FrontVC.m"
-            timestampString = "523865712.757419"
+            filePath = "JODevelop/Tool/Player/PlayCache/JOVideoPlayerCacheFile.m"
+            timestampString = "548578748.720674"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "216"
+            endingLineNumber = "216"
+            landmarkName = "-checkIsCompleted"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JODevelop/Test/PlayAndCache/Player/JOPlayer.m"
+            timestampString = "548585750.473794"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "-playWithUrl:showView:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JODevelop/Test/PlayAndCache/Player/JOPlayer.m"
+            timestampString = "548585752.154304"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "-playWithUrl:showView:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JODevelop/Test/PlayAndCache/Player/JOPlayer.m"
+            timestampString = "548585753.899947"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
+            landmarkName = "-playWithUrl:showView:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

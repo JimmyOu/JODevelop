@@ -135,8 +135,8 @@
     CGFloat absoluteTop = 0;
     CGFloat absoluteBottom = scrollView.contentSize.height - scrollView.frame.size.height;
     
-    BOOL isScrollingDown = (scrollDiff > 0) && (scrollView.contentOffset.y > absoluteTop&&scrollView.contentOffset.y < 1.1 *range);
-    BOOL isScrollingUp = (scrollDiff < 0) && (scrollView.contentOffset.y < absoluteBottom &&scrollView.contentOffset.y < range * 1.1);
+    BOOL isScrollingDown = (scrollDiff > 0) && (scrollView.contentOffset.y > absoluteTop&&scrollView.contentOffset.y < range);
+    BOOL isScrollingUp = (scrollDiff < 0) && (scrollView.contentOffset.y < absoluteBottom &&scrollView.contentOffset.y < range);
     
     if (isScrollingDown) {  //scroll down
         newHeight -= fabs(scrollDiff);

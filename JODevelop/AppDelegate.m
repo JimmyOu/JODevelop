@@ -9,8 +9,11 @@
 #import "AppDelegate.h"
 #import <CoreSpotlight/CoreSpotlight.h>
 #import "MoviesService.h"
+#import "Reachability.h"
 
 @interface AppDelegate ()
+
+@property (strong, nonatomic) Reachability *reach;
 
 @end
 
@@ -25,6 +28,10 @@
     [MoviesService setupSearchableContent];
     //添加3D Touch
     [self setup3DTouch:application];
+    
+    //网络监听
+    self.reach = [Reachability reachabilityForInternetConnection];
+    [self.reach startNotifier];
     return YES;
 }
 

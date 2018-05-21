@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface UIView (Extension)
 
 @property (nonatomic) CGFloat left;
@@ -25,4 +27,13 @@
 
 - (void)setAnchorPointTo:(CGPoint)point;
 
+- (BOOL)isDisplayedInScreen;
+
+#pragma mark - 点击及长按事件
+- (void)clicked:(nonnull void(^)(void))clicked;
+- (void)doubleClick:(nonnull void(^)(void))doubleClick;
+- (void)longPressed:(nonnull void(^)(UITapGestureRecognizer *gesture))longPressed;
+
 @end
+
+NS_ASSUME_NONNULL_END

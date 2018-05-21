@@ -341,7 +341,7 @@
     })
     .catch(^(NSError* error) { //一旦有一个异步操作出现错误，就会调用catch来捕捉错误。
         NSLog(@"error = %@",error);
-    });;
+    });
 }
 
 //测试race

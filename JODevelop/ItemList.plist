@@ -68,5 +68,23 @@
 		<key>vc</key>
 		<string>PromiseTestVC</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>播放器</string>
+		<key>vc</key>
+		<string>PlayerViewController</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>emoji</string>
+		<key>vc</key>
+		<string>EmojiViewController</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>边下边播</string>
+		<key>vc</key>
+		<string>PlayAndCacheVC</string>
+	</dict>
 </array>
 </plist>

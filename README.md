@@ -22,3 +22,5 @@ A collection of self-learning projects
 #### 8.转场动画,有些效果只有真机可以正常显示
 
 #### 9.Promise库和测试用例
+
+#### 10.边下边播模块及其测试用例

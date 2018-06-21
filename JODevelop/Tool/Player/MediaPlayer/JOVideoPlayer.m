@@ -61,7 +61,7 @@
 
 
 #pragma mark - Public
-- (BOOL)playLocalFileWithURL:(NSURL *)url options:(JOVideoPlayerOptions)options showOnLayer:(CALayer *)showLayer completion:(JOPlayVideoConfigurationCompletion)completion{
+- (JOPlayerModel *)playLocalFileWithURL:(NSURL *)url options:(JOVideoPlayerOptions)options showOnLayer:(CALayer *)showLayer completion:(JOPlayVideoConfigurationCompletion)completion{
     
     if (url.absoluteString.length == 0) {
         [self callDelegateMethodWithError:JOErrorWithDescription(@"local url is disable")];

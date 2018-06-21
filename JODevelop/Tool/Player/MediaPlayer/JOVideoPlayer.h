@@ -68,7 +68,7 @@ shouldAutoReplayVideoForURL:(nonnull NSURL *)videoURL;
  @param showLayer 显示在哪里
  @param completion 初始化完成
  */
-- (BOOL)playLocalFileWithURL:(NSURL *)url options:(JOVideoPlayerOptions)options showOnLayer:(CALayer *)showLayer completion:(JOPlayVideoConfigurationCompletion)completion;
+- (JOPlayerModel *)playLocalFileWithURL:(NSURL *)url options:(JOVideoPlayerOptions)options showOnLayer:(CALayer *)showLayer completion:(JOPlayVideoConfigurationCompletion)completion;
 
 /**
  播放web url

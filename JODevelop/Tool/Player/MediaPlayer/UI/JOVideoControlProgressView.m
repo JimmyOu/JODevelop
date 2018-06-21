@@ -46,7 +46,7 @@ static const CGFloat kJOideoPlayerCachedProgressViewHeight = 2;
     [self addSubview:self.trackProgressView];
     [self.trackProgressView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self).offset(kJOVideoPlayerDragSliderLeftEdge);
-        make.centerY.mas_equalTo(self);
+        make.centerY.mas_equalTo(self).offset(1);
         make.right.mas_equalTo(self).offset(-kJOVideoPlayerDragSliderLeftEdge);
         make.height.mas_equalTo(kJOideoPlayerCachedProgressViewHeight);
     }];
@@ -72,7 +72,7 @@ static const CGFloat kJOideoPlayerCachedProgressViewHeight = 2;
         _cachedProgressView = [UIView new];
         _cachedProgressView.clipsToBounds = YES;
         _cachedProgressView.layer.cornerRadius = 1;
-        _cachedProgressView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.3];
+        _cachedProgressView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.7];
     }
     return _cachedProgressView;
 }

@@ -215,7 +215,6 @@ didReceiveResponse:(NSURLResponse *)response
 - (void)URLSession:(NSURLSession *)session
           dataTask:(NSURLSessionDataTask *)dataTask
     didReceiveData:(NSData *)data {
-#warning this could be leading to new problems
     // may runningTask is dealloc in main-thread and this method called in sub-thread.
     if(!self.runningTask){
         [self reset];

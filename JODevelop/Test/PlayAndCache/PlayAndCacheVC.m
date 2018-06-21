@@ -8,8 +8,8 @@
 
 #import "PlayAndCacheVC.h"
 
-#import "JOPlayer.h"
 #import "JOVideoPlayerCachePath.h"
+#import "UIView+JOWebVideoPlayer.h"
 
 //   https://r2---sn-i3belnez.googlevideo.com/videoplayback?signature=E08C138D227411FDBEC09CEE820A188F5D6B7150.8201041F84C991BF72B125DB4D2E3CDFD0A85EAC&requiressl=yes&sparams=dur,ei,id,initcwndbps,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,ratebypass,requiressl,source,expire&initcwndbps=1903750&fvip=2&fexp=23724337&source=youtube&mime=video/mp4&key=yt6&expire=1525854068&c=WEB&ei=FFvyWvmZIs7bgAOizYSIAQ&lmt=1521254475452279&pl=26&id=o-AKMY1eebBf57PxaVbejHYHj6lJJIMiSxKLwmhjCsZBgG&dur=218.337&mt=1525832334&mv=m&itag=22&ms=au,onr&ip=103.65.40.65&mm=31,26&mn=sn-i3belnez,sn-npoe7n7z&ipbits=0&ratebypass=yes&signature=(null)
 
@@ -36,8 +36,8 @@ static NSString *url = @"https://easyreadfs.nosdn.127.net/1520239274501/98634cb4
     NSLog(@"document: %@",[JOVideoPlayerCachePath videoCachePath]);
     
     self.showView = [[UIView alloc] init];
-    self.showView.backgroundColor = [UIColor whiteColor];
-    self.showView.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
+    self.showView.backgroundColor = [UIColor redColor];
+    self.showView.frame = CGRectMake(0, 200, kScreenWidth, 200);
     [self.view addSubview:self.showView];
     
     self.buttonArray = [NSMutableArray array];
@@ -73,13 +73,11 @@ static NSString *url = @"https://easyreadfs.nosdn.127.net/1520239274501/98634cb4
     [self.buttonArray addObject:button2];
     [self.buttonArray addObject:button3];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fullScreen) name:kJOPlayerFullScreenNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(halfScreen) name:kJOPlayerHalfScreenNotification object:nil];
-
 }
 
 - (void)playClick {
-    [[JOPlayer sharedInstance] playWithUrl:[NSURL URLWithString:url] showView:self.showView];
+//    [[JOPlayer sharedInstance] playWithUrl:[NSURL URLWithString:url] showView:self.showView];
+    [self.showView jo_playVideoWithURL:[NSURL URLWithString:url]];
 }
 - (void)clearLocal {
     NSString *dir = [JOVideoPlayerCachePath videoCachePath];
@@ -90,7 +88,7 @@ static NSString *url = @"https://easyreadfs.nosdn.127.net/1520239274501/98634cb4
     
     NSString *localFile = [JOVideoPlayerCachePath videoCachePathForKey:url];
     NSURL *localURL = [NSURL fileURLWithPath:localFile];
-    [[JOPlayer sharedInstance] playWithUrl:localURL showView:self.showView];
+//    [[JOPlayer sharedInstance] playWithUrl:localURL showView:self.showView];
 }
 
 - (void)fullScreen {

@@ -9,10 +9,13 @@
 #import "RootVC.h"
 #import "RootItemModel.h"
 #import "NSString+Extention.h"
+#import <FLEX/FLEXManager.h>
+
 
 @interface RootVC ()
 
 @property (nonatomic, strong) NSMutableArray <RootItemModel *>*names;
+@property (strong, nonatomic) UIButton *flexButton;
 
 @end
 
@@ -20,12 +23,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self addFlexButton];
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 #pragma mark - Table view data source
 
@@ -74,6 +80,34 @@
         }
     }
     return _names;
+}
+
+- (void)addFlexButton
+{
+    UIWindow *keywindow = [UIApplication sharedApplication].keyWindow;
+#ifdef DEBUG
+    if (self.flexButton != nil) {
+        [keywindow bringSubviewToFront:self.flexButton];
+        return;
+    }
+    self.flexButton = [[UIButton alloc] init];
+    CGFloat buttonW = 20;
+    CGFloat buttonH = 20;
+    self.flexButton.frame = CGRectMake([UIScreen mainScreen].bounds.size.width - buttonW, [UIScreen mainScreen].bounds.size.height - buttonH, buttonW, buttonH);
+    self.flexButton.titleLabel.font = [UIFont systemFontOfSize:7];
+    self.flexButton.backgroundColor = [UIColor darkGrayColor];
+    [self.flexButton setTitle:@"FLEX" forState:UIControlStateNormal];
+    [self.flexButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.flexButton addTarget:self action:@selector(showFlexExplorer:) forControlEvents:UIControlEventTouchUpInside];
+    [keywindow addSubview:self.flexButton];
+#endif
+}
+
+- (void)showFlexExplorer:(UIButton *)sender
+{
+#ifdef DEBUG
+    [[FLEXManager sharedManager] showExplorer];
+#endif
 }
 
 @end

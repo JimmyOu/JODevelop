@@ -9,11 +9,32 @@
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 #import <UIKit/UIKit.h>
+@class JOPlayerModel;
+
+typedef NS_ENUM(NSInteger, JOVideoPlayViewInterfaceOrientation) {
+    JOVideoPlayViewInterfaceOrientationUnknown = 0,
+    JOVideoPlayViewInterfaceOrientationPortrait,
+    JOVideoPlayViewInterfaceOrientationLandscape,
+};
+
+typedef NS_ENUM(NSUInteger, JOVideoPlayerStatus)  { //播放器状态
+    JOVideoPlayerStatusUnknown = 0,
+    JOVideoPlayerStatusBuffering, //缓冲中
+    JOVideoPlayerStatusReadyToPlay,//可以播放
+    JOVideoPlayerStatusPlaying,//正在播放
+    JOVideoPlayerStatusPause,//暂停
+    JOVideoPlayerStatusFailed,//播放失败
+    JOVideoPlayerStatusStop,//停止播放
+};
+typedef void(^JOPlayVideoConfigurationCompletion)(UIView *_Nonnull view, JOPlayerModel *_Nonnull playerModel);
 
 UIKIT_EXTERN NSString *const JOVideoPlayerDownloadStartNotification;
 UIKIT_EXTERN NSString *const JOVideoPlayerDownloadReceiveResponseNotification;
 UIKIT_EXTERN NSString *const JOVideoPlayerDownloadStopNotification;
 UIKIT_EXTERN NSString *const JOVideoPlayerDownloadFinishNotification;
+UIKIT_EXTERN NSString *const JOVideoPlayerControlUserDidStartDragNotification;
+UIKIT_EXTERN NSString *const JOVideoPlayerControlUserDidEndDragNotification;
+UIKIT_EXTERN const CGFloat kJOVideoPlayerControlBarHeight;
 
 UIKIT_EXTERN NSString *const JOVideoPlayerErrorDomain;
 FOUNDATION_EXTERN const NSRange JOInvalidRange;
@@ -32,6 +53,7 @@ NSString* JORangeToHTTPRangeHeader(NSRange range);
 NSError *JOErrorWithDescription(NSString *description);
 
 #define JOMainThreadAssert NSParameterAssert([[NSThread currentThread] isMainThread])
+#define JOImage(name) [UIImage imageNamed:name]
 
 #define Init_PThread_Lock(lock)\
         pthread_mutexattr_t mutexattr;\
@@ -59,6 +81,51 @@ typedef NS_OPTIONS(NSUInteger, JOVideoDownloaderOptions) {
     JOVideoDownloaderAllowInvalidSSLCertificates = 1 << 3,
 
 };
+
+typedef NS_OPTIONS(NSUInteger, JOVideoPlayerOptions) {
+    /**
+     * By default, when a URL fail to be downloaded, the URL is blacklisted so the library won't keep trying.
+     * This flag disable this blacklisting.
+     */
+    JOVideoPlayerRetryFailed = 1 << 0,
+    
+    /**
+     play in background
+     */
+    JOVideoPlayerContinueInBackground = 1 << 1,
+    
+    /**
+     should handle cookies
+     */
+    JOVideoPlayerHandleCookies = 1 << 2,
+    
+    /**
+     enable to allow untrusted ssl certificates
+     */
+    JOVideoPlayerAllowInvalidSSLCertificates = 1 << 3,
+    
+    /**
+     * Playing video muted.
+     */
+    JOVideoPlayerMutedPlay = 1 << 4,
+    
+    /**
+     * Stretch to fill layer bounds.
+     */
+    JOVideoPlayerLayerVideoGravityResize = 1 << 5,
+    
+    /**
+     * Preserve aspect ratio; fit within layer bounds.
+     * Default value.
+     */
+    JOVideoPlayerLayerVideoGravityResizeAspect = 1 << 6,
+    
+    /**
+     * Preserve aspect ratio; fill layer bounds.
+     */
+    JOVideoPlayerLayerVideoGravityResizeAspectFill = 1 << 7,
+};
+
 
 @interface NSURL (StripQuery)
 

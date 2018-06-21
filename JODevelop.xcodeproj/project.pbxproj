@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D84B378CCDC3DD9AA59ABEE /* libPods-JODevelop.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FBD4E84695F9932BACD7706 /* libPods-JODevelop.a */; };
 		A603BE31200DA83200BBA29D /* NSError+JOPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = A603BE30200DA83200BBA29D /* NSError+JOPromise.m */; };
 		A603BE34200DAA0700BBA29D /* JOPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = A603BE33200DAA0700BBA29D /* JOPromise.m */; };
 		A603BE37200DD8A900BBA29D /* JOPromise_impl_then.m in Sources */ = {isa = PBXBuildFile; fileRef = A603BE36200DD8A900BBA29D /* JOPromise_impl_then.m */; };
@@ -110,6 +111,25 @@
 		A6542FC41E9F33EF00CD0DBD /* TestShimmering.m in Sources */ = {isa = PBXBuildFile; fileRef = A6542FC31E9F33EF00CD0DBD /* TestShimmering.m */; };
 		A6542FC71E9F353B00CD0DBD /* TestDashLine.m in Sources */ = {isa = PBXBuildFile; fileRef = A6542FC61E9F353B00CD0DBD /* TestDashLine.m */; };
 		A6542FCA1E9F4B4600CD0DBD /* ReplicatorAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A6542FC91E9F4B4600CD0DBD /* ReplicatorAnimation.m */; };
+		A65A6AEB20D9F208004DDC6E /* JOVideoControlProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = A65A6AEA20D9F208004DDC6E /* JOVideoControlProgressView.m */; };
+		A65A6AEE20D9F230004DDC6E /* JOVideoControlBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A65A6AED20D9F230004DDC6E /* JOVideoControlBar.m */; };
+		A65A6AF120D9F257004DDC6E /* JOVideoControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = A65A6AF020D9F257004DDC6E /* JOVideoControlView.m */; };
+		A65A6AF420D9F28D004DDC6E /* JOVideoProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = A65A6AF320D9F28D004DDC6E /* JOVideoProgressView.m */; };
+		A65A6AF720D9F29F004DDC6E /* JOVideoBufferingIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = A65A6AF620D9F29F004DDC6E /* JOVideoBufferingIndicator.m */; };
+		A65A6B0A20D9FDB9004DDC6E /* jo_videoplayer_blur@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A65A6AFC20D9FDB8004DDC6E /* jo_videoplayer_blur@3x.png */; };
+		A65A6B0B20D9FDB9004DDC6E /* jo_videoplayer_play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A65A6AFD20D9FDB8004DDC6E /* jo_videoplayer_play@2x.png */; };
+		A65A6B0C20D9FDB9004DDC6E /* jo_videoplayer_portrait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A65A6AFE20D9FDB8004DDC6E /* jo_videoplayer_portrait@2x.png */; };
+		A65A6B0D20D9FDB9004DDC6E /* jo_videoplayer_landscape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A65A6AFF20D9FDB8004DDC6E /* jo_videoplayer_landscape@2x.png */; };
+		A65A6B0E20D9FDB9004DDC6E /* jo_videoplayer_progress_handler_normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A65A6B0020D9FDB8004DDC6E /* jo_videoplayer_progress_handler_normal@3x.png */; };
+		A65A6B0F20D9FDB9004DDC6E /* jo_videoplayer_blur@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A65A6B0120D9FDB9004DDC6E /* jo_videoplayer_blur@2x.png */; };
+		A65A6B1020D9FDB9004DDC6E /* jo_videoplayer_portrait@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A65A6B0220D9FDB9004DDC6E /* jo_videoplayer_portrait@3x.png */; };
+		A65A6B1120D9FDB9004DDC6E /* jo_videoplayer_play@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A65A6B0320D9FDB9004DDC6E /* jo_videoplayer_play@3x.png */; };
+		A65A6B1220D9FDB9004DDC6E /* jo_videoplayer_pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A65A6B0420D9FDB9004DDC6E /* jo_videoplayer_pause@2x.png */; };
+		A65A6B1320D9FDB9004DDC6E /* jo_videoplayer_progress_handler_hightlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A65A6B0520D9FDB9004DDC6E /* jo_videoplayer_progress_handler_hightlight@2x.png */; };
+		A65A6B1420D9FDB9004DDC6E /* jo_videoplayer_pause@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A65A6B0620D9FDB9004DDC6E /* jo_videoplayer_pause@3x.png */; };
+		A65A6B1520D9FDB9004DDC6E /* jo_videoplayer_progress_handler_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A65A6B0720D9FDB9004DDC6E /* jo_videoplayer_progress_handler_normal@2x.png */; };
+		A65A6B1620D9FDB9004DDC6E /* jo_videoplayer_landscape@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A65A6B0820D9FDB9004DDC6E /* jo_videoplayer_landscape@3x.png */; };
+		A65A6B1720D9FDB9004DDC6E /* jo_videoplayer_progress_handler_hightlight@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A65A6B0920D9FDB9004DDC6E /* jo_videoplayer_progress_handler_hightlight@3x.png */; };
 		A65CCB4D20284BF2000A6A4B /* SRInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = A65CCB4C20284BF2000A6A4B /* SRInputView.m */; };
 		A65CCB5020284CA9000A6A4B /* emoji.txt in Resources */ = {isa = PBXBuildFile; fileRef = A65CCB4F20284CA9000A6A4B /* emoji.txt */; };
 		A65CCB5E20284D95000A6A4B /* SREmojiCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A65CCB5D20284D95000A6A4B /* SREmojiCell.m */; };
@@ -196,8 +216,12 @@
 		A6C4E9381EC16C9F00402208 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C4E9371EC16C9F00402208 /* MainViewController.m */; };
 		A6C4E93B1EC19F1900402208 /* MainViewNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C4E93A1EC19F1900402208 /* MainViewNavigator.m */; };
 		A6CB64581FC57E5700264F18 /* GCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CB64571FC57E5700264F18 /* GCDTimer.m */; };
+		A6D342FB20CF9D3600D3CF1C /* JOVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D342FA20CF9D3600D3CF1C /* JOVideoPlayer.m */; };
+		A6D3430920CFA61A00D3CF1C /* JOPlayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D3430820CFA61A00D3CF1C /* JOPlayerModel.m */; };
+		A6D6831320D367A400FCDA33 /* JOVideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6831220D367A400FCDA33 /* JOVideoPlayerView.m */; };
+		A6E7080320D2474A00E802D3 /* JOPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E7080220D2474A00E802D3 /* JOPlayerManager.m */; };
+		A6E7080620D25EE000E802D3 /* UIView+JOWebVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E7080520D25EE000E802D3 /* UIView+JOWebVideoPlayer.m */; };
 		A6ED67D320B2BD8E009A486C /* PlayAndCacheVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED67D220B2BD8E009A486C /* PlayAndCacheVC.m */; };
-		A6ED67DB20B2BE4F009A486C /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED67D720B2BE4E009A486C /* UIColor+Extension.m */; };
 		A6ED67DC20B2BE4F009A486C /* NSString+FormatTime.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED67D820B2BE4E009A486C /* NSString+FormatTime.m */; };
 		A6ED67E120B2BE5C009A486C /* HUDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED67DE20B2BE5C009A486C /* HUDHelper.m */; };
 		A6ED67E220B2BE5C009A486C /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED67DF20B2BE5C009A486C /* MBProgressHUD.m */; };
@@ -216,6 +240,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		326C052799ED2CC7479F076D /* Pods-JODevelop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JODevelop.release.xcconfig"; path = "Pods/Target Support Files/Pods-JODevelop/Pods-JODevelop.release.xcconfig"; sourceTree = "<group>"; };
+		3CFFDF928EAA49ED16C9D1B7 /* Pods-JODevelop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JODevelop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JODevelop/Pods-JODevelop.debug.xcconfig"; sourceTree = "<group>"; };
+		8FBD4E84695F9932BACD7706 /* libPods-JODevelop.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JODevelop.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A603BE2F200DA83200BBA29D /* NSError+JOPromise.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSError+JOPromise.h"; sourceTree = "<group>"; };
 		A603BE30200DA83200BBA29D /* NSError+JOPromise.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSError+JOPromise.m"; sourceTree = "<group>"; };
 		A603BE32200DAA0700BBA29D /* JOPromise.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JOPromise.h; sourceTree = "<group>"; };
@@ -406,6 +433,30 @@
 		A6542FC61E9F353B00CD0DBD /* TestDashLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDashLine.m; sourceTree = "<group>"; };
 		A6542FC81E9F4B4600CD0DBD /* ReplicatorAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplicatorAnimation.h; sourceTree = "<group>"; };
 		A6542FC91E9F4B4600CD0DBD /* ReplicatorAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplicatorAnimation.m; sourceTree = "<group>"; };
+		A65A6AE920D9F208004DDC6E /* JOVideoControlProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JOVideoControlProgressView.h; sourceTree = "<group>"; };
+		A65A6AEA20D9F208004DDC6E /* JOVideoControlProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JOVideoControlProgressView.m; sourceTree = "<group>"; };
+		A65A6AEC20D9F230004DDC6E /* JOVideoControlBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JOVideoControlBar.h; sourceTree = "<group>"; };
+		A65A6AED20D9F230004DDC6E /* JOVideoControlBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JOVideoControlBar.m; sourceTree = "<group>"; };
+		A65A6AEF20D9F257004DDC6E /* JOVideoControlView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JOVideoControlView.h; sourceTree = "<group>"; };
+		A65A6AF020D9F257004DDC6E /* JOVideoControlView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JOVideoControlView.m; sourceTree = "<group>"; };
+		A65A6AF220D9F28D004DDC6E /* JOVideoProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JOVideoProgressView.h; sourceTree = "<group>"; };
+		A65A6AF320D9F28D004DDC6E /* JOVideoProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JOVideoProgressView.m; sourceTree = "<group>"; };
+		A65A6AF520D9F29F004DDC6E /* JOVideoBufferingIndicator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JOVideoBufferingIndicator.h; sourceTree = "<group>"; };
+		A65A6AF620D9F29F004DDC6E /* JOVideoBufferingIndicator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JOVideoBufferingIndicator.m; sourceTree = "<group>"; };
+		A65A6AFC20D9FDB8004DDC6E /* jo_videoplayer_blur@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jo_videoplayer_blur@3x.png"; sourceTree = "<group>"; };
+		A65A6AFD20D9FDB8004DDC6E /* jo_videoplayer_play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jo_videoplayer_play@2x.png"; sourceTree = "<group>"; };
+		A65A6AFE20D9FDB8004DDC6E /* jo_videoplayer_portrait@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jo_videoplayer_portrait@2x.png"; sourceTree = "<group>"; };
+		A65A6AFF20D9FDB8004DDC6E /* jo_videoplayer_landscape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jo_videoplayer_landscape@2x.png"; sourceTree = "<group>"; };
+		A65A6B0020D9FDB8004DDC6E /* jo_videoplayer_progress_handler_normal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jo_videoplayer_progress_handler_normal@3x.png"; sourceTree = "<group>"; };
+		A65A6B0120D9FDB9004DDC6E /* jo_videoplayer_blur@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jo_videoplayer_blur@2x.png"; sourceTree = "<group>"; };
+		A65A6B0220D9FDB9004DDC6E /* jo_videoplayer_portrait@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jo_videoplayer_portrait@3x.png"; sourceTree = "<group>"; };
+		A65A6B0320D9FDB9004DDC6E /* jo_videoplayer_play@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jo_videoplayer_play@3x.png"; sourceTree = "<group>"; };
+		A65A6B0420D9FDB9004DDC6E /* jo_videoplayer_pause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jo_videoplayer_pause@2x.png"; sourceTree = "<group>"; };
+		A65A6B0520D9FDB9004DDC6E /* jo_videoplayer_progress_handler_hightlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jo_videoplayer_progress_handler_hightlight@2x.png"; sourceTree = "<group>"; };
+		A65A6B0620D9FDB9004DDC6E /* jo_videoplayer_pause@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jo_videoplayer_pause@3x.png"; sourceTree = "<group>"; };
+		A65A6B0720D9FDB9004DDC6E /* jo_videoplayer_progress_handler_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jo_videoplayer_progress_handler_normal@2x.png"; sourceTree = "<group>"; };
+		A65A6B0820D9FDB9004DDC6E /* jo_videoplayer_landscape@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jo_videoplayer_landscape@3x.png"; sourceTree = "<group>"; };
+		A65A6B0920D9FDB9004DDC6E /* jo_videoplayer_progress_handler_hightlight@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jo_videoplayer_progress_handler_hightlight@3x.png"; sourceTree = "<group>"; };
 		A65CCB4B20284BF2000A6A4B /* SRInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRInputView.h; sourceTree = "<group>"; };
 		A65CCB4C20284BF2000A6A4B /* SRInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRInputView.m; sourceTree = "<group>"; };
 		A65CCB4F20284CA9000A6A4B /* emoji.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = emoji.txt; sourceTree = "<group>"; };
@@ -563,12 +614,21 @@
 		A6C4E93A1EC19F1900402208 /* MainViewNavigator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewNavigator.m; sourceTree = "<group>"; };
 		A6CB64561FC57E5700264F18 /* GCDTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDTimer.h; sourceTree = "<group>"; };
 		A6CB64571FC57E5700264F18 /* GCDTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDTimer.m; sourceTree = "<group>"; };
+		A6D342F920CF9D3600D3CF1C /* JOVideoPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JOVideoPlayer.h; sourceTree = "<group>"; };
+		A6D342FA20CF9D3600D3CF1C /* JOVideoPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JOVideoPlayer.m; sourceTree = "<group>"; };
+		A6D3430620CF9F6800D3CF1C /* JOVideoPlayerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JOVideoPlayerProtocol.h; sourceTree = "<group>"; };
+		A6D3430720CFA61A00D3CF1C /* JOPlayerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JOPlayerModel.h; sourceTree = "<group>"; };
+		A6D3430820CFA61A00D3CF1C /* JOPlayerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JOPlayerModel.m; sourceTree = "<group>"; };
+		A6D6831120D367A400FCDA33 /* JOVideoPlayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JOVideoPlayerView.h; sourceTree = "<group>"; };
+		A6D6831220D367A400FCDA33 /* JOVideoPlayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JOVideoPlayerView.m; sourceTree = "<group>"; };
+		A6E7080120D2474A00E802D3 /* JOPlayerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JOPlayerManager.h; sourceTree = "<group>"; };
+		A6E7080220D2474A00E802D3 /* JOPlayerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JOPlayerManager.m; sourceTree = "<group>"; };
+		A6E7080420D25EE000E802D3 /* UIView+JOWebVideoPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+JOWebVideoPlayer.h"; sourceTree = "<group>"; };
+		A6E7080520D25EE000E802D3 /* UIView+JOWebVideoPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+JOWebVideoPlayer.m"; sourceTree = "<group>"; };
 		A6ED67D120B2BD8E009A486C /* PlayAndCacheVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayAndCacheVC.h; sourceTree = "<group>"; };
 		A6ED67D220B2BD8E009A486C /* PlayAndCacheVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayAndCacheVC.m; sourceTree = "<group>"; };
-		A6ED67D720B2BE4E009A486C /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
 		A6ED67D820B2BE4E009A486C /* NSString+FormatTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FormatTime.m"; sourceTree = "<group>"; };
 		A6ED67D920B2BE4E009A486C /* NSString+FormatTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FormatTime.h"; sourceTree = "<group>"; };
-		A6ED67DA20B2BE4F009A486C /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
 		A6ED67DD20B2BE5B009A486C /* HUDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDHelper.h; sourceTree = "<group>"; };
 		A6ED67DE20B2BE5C009A486C /* HUDHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUDHelper.m; sourceTree = "<group>"; };
 		A6ED67DF20B2BE5C009A486C /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
@@ -604,12 +664,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D84B378CCDC3DD9AA59ABEE /* libPods-JODevelop.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		210677FAA59986DF48290B72 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8FBD4E84695F9932BACD7706 /* libPods-JODevelop.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A603BE2E200DA7F300BBA29D /* Promise */ = {
 			isa = PBXGroup;
 			children = (
@@ -802,6 +871,8 @@
 			children = (
 				A6542F091E9F279E00CD0DBD /* JODevelop */,
 				A6542F081E9F279E00CD0DBD /* Products */,
+				D0F20BE2836BD3ED4D5BE5CA /* Pods */,
+				210677FAA59986DF48290B72 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1029,6 +1100,45 @@
 			path = Root;
 			sourceTree = "<group>";
 		};
+		A65A6AE520D9F15A004DDC6E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A65A6AE920D9F208004DDC6E /* JOVideoControlProgressView.h */,
+				A65A6AEA20D9F208004DDC6E /* JOVideoControlProgressView.m */,
+				A65A6AEC20D9F230004DDC6E /* JOVideoControlBar.h */,
+				A65A6AED20D9F230004DDC6E /* JOVideoControlBar.m */,
+				A65A6AEF20D9F257004DDC6E /* JOVideoControlView.h */,
+				A65A6AF020D9F257004DDC6E /* JOVideoControlView.m */,
+				A65A6AF220D9F28D004DDC6E /* JOVideoProgressView.h */,
+				A65A6AF320D9F28D004DDC6E /* JOVideoProgressView.m */,
+				A65A6AF520D9F29F004DDC6E /* JOVideoBufferingIndicator.h */,
+				A65A6AF620D9F29F004DDC6E /* JOVideoBufferingIndicator.m */,
+				A65A6AFB20D9FA5E004DDC6E /* resources */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		A65A6AFB20D9FA5E004DDC6E /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				A65A6B0120D9FDB9004DDC6E /* jo_videoplayer_blur@2x.png */,
+				A65A6AFC20D9FDB8004DDC6E /* jo_videoplayer_blur@3x.png */,
+				A65A6AFF20D9FDB8004DDC6E /* jo_videoplayer_landscape@2x.png */,
+				A65A6B0820D9FDB9004DDC6E /* jo_videoplayer_landscape@3x.png */,
+				A65A6B0420D9FDB9004DDC6E /* jo_videoplayer_pause@2x.png */,
+				A65A6B0620D9FDB9004DDC6E /* jo_videoplayer_pause@3x.png */,
+				A65A6AFD20D9FDB8004DDC6E /* jo_videoplayer_play@2x.png */,
+				A65A6B0320D9FDB9004DDC6E /* jo_videoplayer_play@3x.png */,
+				A65A6AFE20D9FDB8004DDC6E /* jo_videoplayer_portrait@2x.png */,
+				A65A6B0220D9FDB9004DDC6E /* jo_videoplayer_portrait@3x.png */,
+				A65A6B0520D9FDB9004DDC6E /* jo_videoplayer_progress_handler_hightlight@2x.png */,
+				A65A6B0920D9FDB9004DDC6E /* jo_videoplayer_progress_handler_hightlight@3x.png */,
+				A65A6B0720D9FDB9004DDC6E /* jo_videoplayer_progress_handler_normal@2x.png */,
+				A65A6B0020D9FDB8004DDC6E /* jo_videoplayer_progress_handler_normal@3x.png */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
 		A65CCB4720284B31000A6A4B /* EmojiKeyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -1229,6 +1339,8 @@
 			children = (
 				A685BA9720AA7DE300840478 /* MediaPlayer */,
 				A685BA9820AA7DE300840478 /* PlayCache */,
+				A6E7080420D25EE000E802D3 /* UIView+JOWebVideoPlayer.h */,
+				A6E7080520D25EE000E802D3 /* UIView+JOWebVideoPlayer.m */,
 			);
 			path = Player;
 			sourceTree = "<group>";
@@ -1236,6 +1348,16 @@
 		A685BA9720AA7DE300840478 /* MediaPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				A65A6AE520D9F15A004DDC6E /* UI */,
+				A6D3430620CF9F6800D3CF1C /* JOVideoPlayerProtocol.h */,
+				A6D342F920CF9D3600D3CF1C /* JOVideoPlayer.h */,
+				A6D342FA20CF9D3600D3CF1C /* JOVideoPlayer.m */,
+				A6D3430720CFA61A00D3CF1C /* JOPlayerModel.h */,
+				A6D3430820CFA61A00D3CF1C /* JOPlayerModel.m */,
+				A6E7080120D2474A00E802D3 /* JOPlayerManager.h */,
+				A6E7080220D2474A00E802D3 /* JOPlayerManager.m */,
+				A6D6831120D367A400FCDA33 /* JOVideoPlayerView.h */,
+				A6D6831220D367A400FCDA33 /* JOVideoPlayerView.m */,
 			);
 			path = MediaPlayer;
 			sourceTree = "<group>";
@@ -1424,8 +1546,6 @@
 			children = (
 				A6ED67D920B2BE4E009A486C /* NSString+FormatTime.h */,
 				A6ED67D820B2BE4E009A486C /* NSString+FormatTime.m */,
-				A6ED67DA20B2BE4F009A486C /* UIColor+Extension.h */,
-				A6ED67D720B2BE4E009A486C /* UIColor+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1469,6 +1589,15 @@
 			path = FilterAnimation;
 			sourceTree = "<group>";
 		};
+		D0F20BE2836BD3ED4D5BE5CA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3CFFDF928EAA49ED16C9D1B7 /* Pods-JODevelop.debug.xcconfig */,
+				326C052799ED2CC7479F076D /* Pods-JODevelop.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1476,6 +1605,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A6542F1E1E9F279E00CD0DBD /* Build configuration list for PBXNativeTarget "JODevelop" */;
 			buildPhases = (
+				652432D10475570CF0F3E921 /* [CP] Check Pods Manifest.lock */,
 				A6542F031E9F279E00CD0DBD /* Sources */,
 				A6542F041E9F279E00CD0DBD /* Frameworks */,
 				A6542F051E9F279E00CD0DBD /* Resources */,
@@ -1533,6 +1663,8 @@
 				A65CCB9A202AE086000A6A4B /* emoji_keyboard_selected@3x.png in Resources */,
 				A65CCB9C202AE086000A6A4B /* emoji_keyboard@3x.png in Resources */,
 				A623CD3B1F39A43A00B6C355 /* MovieCell.xib in Resources */,
+				A65A6B1420D9FDB9004DDC6E /* jo_videoplayer_pause@3x.png in Resources */,
+				A65A6B1620D9FDB9004DDC6E /* jo_videoplayer_landscape@3x.png in Resources */,
 				A623CD291F399EBF00B6C355 /* spectre.jpg in Resources */,
 				A65CCBA7202AE092000A6A4B /* emojiBtn_normal@2x.png in Resources */,
 				A6542F1A1E9F279E00CD0DBD /* LaunchScreen.storyboard in Resources */,
@@ -1543,20 +1675,29 @@
 				A677FDDC1EB1D286009491D3 /* line.png in Resources */,
 				A623CD271F399EBF00B6C355 /* jurassicworld.jpg in Resources */,
 				A623CD2A1F399EBF00B6C355 /* terminatorgenisys.jpg in Resources */,
+				A65A6B0A20D9FDB9004DDC6E /* jo_videoplayer_blur@3x.png in Resources */,
+				A65A6B0C20D9FDB9004DDC6E /* jo_videoplayer_portrait@2x.png in Resources */,
 				A65CCBAA202AE092000A6A4B /* emojiBtn_selected@2x.png in Resources */,
 				A65CCB9D202AE086000A6A4B /* emoji_dot_on@2x.png in Resources */,
 				A6542FC01E9F2D7200CD0DBD /* ItemList.plist in Resources */,
 				A677FDDD1EB1D286009491D3 /* mask.jpg in Resources */,
 				A65CCB98202AE085000A6A4B /* emoji_delete_press@2x.png in Resources */,
+				A65A6B0D20D9FDB9004DDC6E /* jo_videoplayer_landscape@2x.png in Resources */,
+				A65A6B1520D9FDB9004DDC6E /* jo_videoplayer_progress_handler_normal@2x.png in Resources */,
+				A65A6B1320D9FDB9004DDC6E /* jo_videoplayer_progress_handler_hightlight@2x.png in Resources */,
 				A623CD261F399EBF00B6C355 /* MoviesData.plist in Resources */,
 				A65CCBA0202AE086000A6A4B /* emoji_keyboard@2x.png in Resources */,
+				A65A6B0B20D9FDB9004DDC6E /* jo_videoplayer_play@2x.png in Resources */,
 				A65CCB5020284CA9000A6A4B /* emoji.txt in Resources */,
+				A65A6B0E20D9FDB9004DDC6E /* jo_videoplayer_progress_handler_normal@3x.png in Resources */,
 				A65CCBA8202AE092000A6A4B /* emojiBtn_selected@3x.png in Resources */,
 				A65CCB99202AE086000A6A4B /* emoji_delete_press@3x.png in Resources */,
 				A65CCBA9202AE092000A6A4B /* emojiBtn_normal@3x.png in Resources */,
+				A65A6B1720D9FDB9004DDC6E /* jo_videoplayer_progress_handler_hightlight@3x.png in Resources */,
 				A623CD2B1F399EBF00B6C355 /* themartian.jpg in Resources */,
 				A65CCB9F202AE086000A6A4B /* emoji_keyboard_selected@2x.png in Resources */,
 				A65CCBA2202AE086000A6A4B /* emoji_delete@3x.png in Resources */,
+				A65A6B0F20D9FDB9004DDC6E /* jo_videoplayer_blur@2x.png in Resources */,
 				A6542FAC1E9F2B3400CD0DBD /* web.html in Resources */,
 				A623CD281F399EBF00B6C355 /* pixels.jpg in Resources */,
 				A65CCB9B202AE086000A6A4B /* emoji_dot_off@3x.png in Resources */,
@@ -1565,10 +1706,34 @@
 				A6542F171E9F279E00CD0DBD /* Assets.xcassets in Resources */,
 				A679D3092015A80B008DF50F /* PromiseTestVC.xib in Resources */,
 				A6542F151E9F279E00CD0DBD /* Main.storyboard in Resources */,
+				A65A6B1120D9FDB9004DDC6E /* jo_videoplayer_play@3x.png in Resources */,
+				A65A6B1220D9FDB9004DDC6E /* jo_videoplayer_pause@2x.png in Resources */,
+				A65A6B1020D9FDB9004DDC6E /* jo_videoplayer_portrait@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		652432D10475570CF0F3E921 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JODevelop-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A6542F031E9F279E00CD0DBD /* Sources */ = {
@@ -1576,12 +1741,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6542FA71E9F2B3400CD0DBD /* AXDRouter.m in Sources */,
+				A65A6AF120D9F257004DDC6E /* JOVideoControlView.m in Sources */,
 				A60FDC1E1EBB114F00E5826C /* SlideTwoVC.m in Sources */,
 				A646CA231EA74FEA00415949 /* TransitionTableVC.m in Sources */,
 				A6B6516C1EC448BA00A9E5A7 /* AXDScrollPageConst.m in Sources */,
 				A677FDD91EB1D286009491D3 /* AXDFilterAnimator+Swipe.m in Sources */,
 				A6CB64581FC57E5700264F18 /* GCDTimer.m in Sources */,
 				A677FDCD1EB1D286009491D3 /* AXDCoolAnimator+Scanning.m in Sources */,
+				A6E7080620D25EE000E802D3 /* UIView+JOWebVideoPlayer.m in Sources */,
 				A677FDD71EB1D286009491D3 /* AXDFilterAnimator+PageCurl.m in Sources */,
 				A6542FA11E9F2B3400CD0DBD /* NSObject+XPSuperInvoker.m in Sources */,
 				A642C1AA208D793C00A0B5BD /* DBBaseModel.m in Sources */,
@@ -1608,20 +1775,23 @@
 				A642C1A7208D775700A0B5BD /* FMResultSet.m in Sources */,
 				A60668E0201ACD280001949C /* SDWebImageDecoder.m in Sources */,
 				A6542FAB1E9F2B3400CD0DBD /* JOShimmeringView.m in Sources */,
+				A6D3430920CFA61A00D3CF1C /* JOPlayerModel.m in Sources */,
 				A6F935121EADFF0B00BAAD82 /* FilterTwoVC.m in Sources */,
 				A63B78A31EB1A37B0067ED5E /* PopUpTwoVC.m in Sources */,
 				A6B6516B1EC448BA00A9E5A7 /* AXDContentView.m in Sources */,
 				A642C1A3208D775700A0B5BD /* FMDatabaseQueue.m in Sources */,
-				A6ED67DB20B2BE4F009A486C /* UIColor+Extension.m in Sources */,
 				A6542FC41E9F33EF00CD0DBD /* TestShimmering.m in Sources */,
+				A65A6AEB20D9F208004DDC6E /* JOVideoControlProgressView.m in Sources */,
 				A6F934C41EADD5D700BAAD82 /* AXDCoolOneVC.m in Sources */,
 				A698BF98204CE7BE00908130 /* DebugSlider.m in Sources */,
 				A6542FAD1E9F2B3400CD0DBD /* _interface_jsapi.m in Sources */,
 				A6B651721EC4491B00A9E5A7 /* PageControlMainVC.m in Sources */,
 				A677FDCE1EB1D286009491D3 /* AXDCoolAnimator.m in Sources */,
 				A69EDB541EA06BB500DBEE20 /* View+MASAdditions.m in Sources */,
+				A65A6AEE20D9F230004DDC6E /* JOVideoControlBar.m in Sources */,
 				A643154920107338002DD1A7 /* JOPromise_impl_finally.m in Sources */,
 				A6B6515A1EC4429E00A9E5A7 /* YYMemoryCache.m in Sources */,
+				A65A6AF720D9F29F004DDC6E /* JOVideoBufferingIndicator.m in Sources */,
 				A64755CB20AA7EFD009DFBDC /* JOVideoLoadingRequestTask.m in Sources */,
 				A6B6516D1EC448BA00A9E5A7 /* AXDScrollPageView.m in Sources */,
 				A677FDC71EB1D286009491D3 /* AXDCoolAnimator+Explode.m in Sources */,
@@ -1634,6 +1804,7 @@
 				A64755CE20AA7F1A009DFBDC /* JOResourceLoadingLocalTask.m in Sources */,
 				A643154320106EE3002DD1A7 /* JOPromise_impl_all.m in Sources */,
 				A6542FA31E9F2B3400CD0DBD /* NSDictionary+Extension.m in Sources */,
+				A6E7080320D2474A00E802D3 /* JOPlayerManager.m in Sources */,
 				A677FDE71EB1D2CB009491D3 /* UIViewController+AXDTransition.m in Sources */,
 				A6542FA51E9F2B3400CD0DBD /* UIColor+Extension.m in Sources */,
 				A69EDB4E1EA06BB500DBEE20 /* MASConstraintMaker.m in Sources */,
@@ -1653,6 +1824,7 @@
 				A65CCB5E20284D95000A6A4B /* SREmojiCell.m in Sources */,
 				A65CCB7220285860000A6A4B /* NEPageControl.m in Sources */,
 				A6C4E9351EC169D900402208 /* ReusableViewController.m in Sources */,
+				A6D342FB20CF9D3600D3CF1C /* JOVideoPlayer.m in Sources */,
 				A677FDD21EB1D286009491D3 /* AXDFilterAnimator+BoxBlur.m in Sources */,
 				A68E6D0B20A152820045C03F /* AddWaterMarkViewController.m in Sources */,
 				A60668DF201ACD280001949C /* SDWebImageManager.m in Sources */,
@@ -1712,6 +1884,7 @@
 				A6542FA81E9F2B3400CD0DBD /* AXDRouter+JSAPI.m in Sources */,
 				A6C4E9381EC16C9F00402208 /* MainViewController.m in Sources */,
 				A6ED67E120B2BE5C009A486C /* HUDHelper.m in Sources */,
+				A6D6831320D367A400FCDA33 /* JOVideoPlayerView.m in Sources */,
 				A623CD111F3968D800B6C355 /* RearVC.m in Sources */,
 				A6C0D0352048F5510022DFD3 /* JOCameraController.swift in Sources */,
 				A69EDB4D1EA06BB500DBEE20 /* MASConstraint.m in Sources */,
@@ -1730,6 +1903,7 @@
 				A69EDB4C1EA06BB500DBEE20 /* MASCompositeConstraint.m in Sources */,
 				A60668E2201ACD280001949C /* SDWebImageDownloader.m in Sources */,
 				A677FDE01EB1D286009491D3 /* AXDInteractiveTransition.m in Sources */,
+				A65A6AF420D9F28D004DDC6E /* JOVideoProgressView.m in Sources */,
 				A623CD371F39A14400B6C355 /* MoviesService.m in Sources */,
 				A603BE39200DE11A00BBA29D /* JOPromise_impl_timeout.m in Sources */,
 				A65CCB69202857F7000A6A4B /* SREmojiContainer.m in Sources */,
@@ -1863,6 +2037,7 @@
 		};
 		A6542F1F1E9F279E00CD0DBD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CFFDF928EAA49ED16C9D1B7 /* Pods-JODevelop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1881,6 +2056,7 @@
 		};
 		A6542F201E9F279E00CD0DBD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 326C052799ED2CC7479F076D /* Pods-JODevelop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

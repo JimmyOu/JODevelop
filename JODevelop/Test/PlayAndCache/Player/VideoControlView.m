@@ -32,13 +32,13 @@
 - (void)setupUI {
     if (!self.navBar) {
         self.navBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 44)];
-        self.navBar.backgroundColor = [UIColor colorWithHex:0x000000 alpha:0.5];
+        self.navBar.backgroundColor = [UIColor colorWithHexString:@"000000" alpha:0.5];
         [self addSubview:self.navBar];
     }
     //当前时间
     if (!self.currentTimeLabel) {
         self.currentTimeLabel = [[UILabel alloc] init];
-        _currentTimeLabel.textColor = [UIColor colorWithHex:0xffffff alpha:1.0];
+        _currentTimeLabel.textColor = [UIColor colorWithHexString:@"ffffff" alpha:1.0];
         _currentTimeLabel.font = [UIFont systemFontOfSize:10.0];
         _currentTimeLabel.frame = CGRectMake(30, 0, 52, 44);
         _currentTimeLabel.textAlignment = NSTextAlignmentRight;
@@ -49,7 +49,7 @@
     //总时间
     if (!self.totolTimeLabel) {
         self.totolTimeLabel = [[UILabel alloc] init];
-        _totolTimeLabel.textColor = [UIColor colorWithHex:0xffffff alpha:1.0];
+        _totolTimeLabel.textColor = [UIColor colorWithHexString:@"ffffff" alpha:1.0];
         _totolTimeLabel.font = [UIFont systemFontOfSize:10.0];
         _totolTimeLabel.frame = CGRectMake(kScreenWidth-52-15, 0, 52, 44);
         _totolTimeLabel.textAlignment = NSTextAlignmentLeft;
@@ -60,8 +60,8 @@
     //进度条
     if (!self.videoProgressView) {
         self.videoProgressView = [[UIProgressView alloc] init];
-        _videoProgressView.progressTintColor = [UIColor colorWithHex:0xffffff alpha:1.0];  //填充部分颜色
-        _videoProgressView.trackTintColor = [UIColor colorWithHex:0xffffff alpha:0.18];   // 未填充部分颜色
+        _videoProgressView.progressTintColor = [UIColor colorWithHexString:@"ffffff" alpha:1.0];  //填充部分颜色
+        _videoProgressView.trackTintColor = [UIColor colorWithHexString:@"ffffff" alpha:0.18];   // 未填充部分颜色
         _videoProgressView.frame = CGRectMake(62+30, 21, kScreenWidth-124-44, 20);
         _videoProgressView.layer.cornerRadius = 1.5;
         _videoProgressView.layer.masksToBounds = YES;

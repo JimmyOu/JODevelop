@@ -13,7 +13,11 @@ NSString *const JOVideoPlayerDownloadStartNotification = @"JOVideoPlayerDownload
 NSString *const JOVideoPlayerDownloadReceiveResponseNotification = @"JOVideoPlayerDownloadReceiveResponseNotification";
 NSString *const JOVideoPlayerDownloadStopNotification = @"JOVideoPlayerDownloadStartNotification";
 NSString *const JOVideoPlayerDownloadFinishNotification = @"JOVideoPlayerDownloadStartNotification";
+NSString *const JOVideoPlayerControlUserDidStartDragNotification = @"JOVideoPlayerControlUserDidStartDragNotification";
+NSString *const JOVideoPlayerControlUserDidEndDragNotification = @"JOVideoPlayerControlUserDidEndDragNotification";
 NSString *const JOVideoPlayerErrorDomain = @"com.joVideoPlayer.www";
+const CGFloat kJOVideoPlayerControlBarHeight = 38;
+
 const NSRange JOInvalidRange = {NSNotFound, 0};
 
 void JODispatchSyncOnMainThread(dispatch_block_t block) {

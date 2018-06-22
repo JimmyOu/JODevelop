@@ -174,7 +174,12 @@ static const CGFloat kJOideoPlayerCachedProgressViewHeight = 2;
 }
 
 
-#pragma mark - JPVideoPlayerControlProgressProtocol
+#pragma mark - JOVideoPlayerControlProgressProtocol
+
+- (void)viewWillPrepareToReuse {
+    [self cacheRangeDidChange:@[] videoURL:[NSURL new]];
+    [self playProgressDidChangeElapsedSeconds:0 totalSeconds:1 videoURL:[NSURL new]];
+}
 
 - (void)viewWillAddToPlayerView:(UIView *)playerView {
     self.playerView = playerView;

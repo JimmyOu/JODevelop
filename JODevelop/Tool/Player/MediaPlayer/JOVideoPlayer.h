@@ -12,7 +12,7 @@
 #import "JOVideoPlayerCompat.h"
 #import "JOPlayerModel.h"
 @class JOVideoPlayer;
-@protocol JPVideoPlayerDelegate<NSObject>
+@protocol JOVideoPlayerDelegate<NSObject>
 
 /**
  收到一个下载任务
@@ -44,7 +44,7 @@ shouldAutoReplayVideoForURL:(nonnull NSURL *)videoURL;
 @interface JOVideoPlayer : NSObject<JOVideoPlayerPlayProtocol>
 
 
-@property (nonatomic, weak, nullable) id<JPVideoPlayerDelegate> delegate;
+@property (nonatomic, weak, nullable) id<JOVideoPlayerDelegate> delegate;
 /*
  播放信息
  */

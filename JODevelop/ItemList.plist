@@ -84,7 +84,7 @@
 		<key>name</key>
 		<string>边下边播</string>
 		<key>vc</key>
-		<string>PlayAndCacheVC</string>
+		<string>JOVideoListViewController</string>
 	</dict>
 </array>
 </plist>

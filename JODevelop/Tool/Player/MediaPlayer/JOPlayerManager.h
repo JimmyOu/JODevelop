@@ -79,11 +79,9 @@ shouldPausePlaybackWhenReceiveAudioSessionInterruptionNotificationForURL:(NSURL 
 - (nonnull instancetype)initWithCache:(nonnull JOVideoPlayerCache *)cache
                            downloader:(nonnull JOVideoPlayerDownloader *)downloader NS_DESIGNATED_INITIALIZER;
 
-- (void)downloadVideoWithRequestTask:(JOResourceLoadingWebTask *)webTask downloadOptions:(JOVideoDownloaderOptions)options;
-
 # pragma mark - Play Video
 - (void)playVideoWithURL:(NSURL *)url
-             showOnLayer:(CALayer *)showLayer
+             showOnLayer:(CALayer *)layer
                  options:(JOVideoPlayerOptions)options
  configurationCompletion:(JOPlayVideoConfigurationCompletion)configurationCompletion;
 

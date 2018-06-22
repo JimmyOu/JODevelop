@@ -21,7 +21,7 @@
 @implementation JOPlayerManagerModel
 @end
 
-@interface JOPlayerManager()<JOVideoPlayerDownloaderDelegate, JPVideoPlayerDelegate>
+@interface JOPlayerManager()<JOVideoPlayerDownloaderDelegate, JOVideoPlayerDelegate>
 @property (strong, nonatomic) JOVideoPlayerCache *videoCache;
 @property (strong, nonatomic) JOVideoPlayerDownloader *videoDownloader;
 @property (strong, nonatomic) NSMutableSet <NSURL *> *failedURLs;
@@ -80,8 +80,10 @@
 }
 
 #pragma mark - public
-
-- (void)playVideoWithURL:(NSURL *)url showOnLayer:(CALayer *)showLayer options:(JOVideoPlayerOptions)options configurationCompletion:(JOPlayVideoConfigurationCompletion)configurationCompletion {
+- (void)playVideoWithURL:(NSURL *)url
+             showOnLayer:(CALayer *)showLayer
+                 options:(JOVideoPlayerOptions)options
+ configurationCompletion:(JOPlayVideoConfigurationCompletion)configurationCompletion{
     JOMainThreadAssert;
     NSParameterAssert(showLayer);
     if (!url || !showLayer) {
@@ -453,7 +455,7 @@ didCompleteWithError:(NSError *)error {
     }
 }
 
-#pragma mark - JPVideoPlayerDelegate
+#pragma mark - JOVideoPlayerDelegate
 
 /**
  播放器状态改变通知

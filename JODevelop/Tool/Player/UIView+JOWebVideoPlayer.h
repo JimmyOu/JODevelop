@@ -11,7 +11,7 @@
 #import "JOVideoPlayerView.h"
 #import "JOPlayerManager.h"
 
-@protocol JOVideoPlayerDelegate<NSObject>
+@protocol JOWebVideoPlayerDelegate<NSObject>
 - (BOOL)shouldAutoReplayForURL:(NSURL *)url;
 - (BOOL)shouldAutoHideControlContainerViewWhenUserTaping;
 - (BOOL)shouldPausePlayWhenApplicationDidEnterBackground;
@@ -26,7 +26,7 @@
 @end
 @interface UIView (JOWebVideoPlayer)<JOPlayerManagerDelegate>
 
-@property (weak, nonatomic) id<JOVideoPlayerDelegate> jo_videoPlayerDelegate;
+@property (weak, nonatomic) id<JOWebVideoPlayerDelegate> jo_videoPlayerDelegate;
 @property (readonly, nonatomic) JOVideoPlayViewInterfaceOrientation jo_InterfaceOrientation;
 @property (readonly, nonatomic) JOVideoPlayerStatus jo_videoPlayerStatus;
 @property (readonly, nonatomic) JOVideoPlayerView *jo_videoPlayerView;

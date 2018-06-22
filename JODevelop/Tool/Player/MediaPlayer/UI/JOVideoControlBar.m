@@ -153,6 +153,10 @@ static const CGFloat kJOVideoPlayerControlBarTimeLabelWidth = 68;
 }
 
 #pragma mark - JOVideoPlayerControlProgressProtocol
+- (void)viewWillPrepareToReuse {
+    [self updateTimeLabelWithElapsedSeconds:0 totalSeconds:0];
+    [self.progressView viewWillPrepareToReuse];
+}
 
 - (void)viewWillAddToPlayerView:(UIView *)playerView {
     self.playerView = playerView;

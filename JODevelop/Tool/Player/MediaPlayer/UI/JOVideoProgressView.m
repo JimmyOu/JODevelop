@@ -62,6 +62,13 @@ const CGFloat JOVideoPlayerProgressViewElementHeight = 2;
 
 #pragma mark - JOVideoPlayerProtocol
 
+- (void)viewWillPrepareToReuse {
+    [self cacheRangeDidChange:@[] videoURL:[NSURL new]];
+    [self playProgressDidChangeElapsedSeconds:0
+                                 totalSeconds:1
+                                     videoURL:[NSURL new]];
+}
+
 /**
  called when the downloader fetched the file length or read from disk.
  */

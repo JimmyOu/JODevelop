@@ -51,6 +51,10 @@
 
 #pragma JOVideoPlayerProtocol
 
+- (void)viewWillPrepareToReuse {
+    [self.controlBar viewWillPrepareToReuse];
+}
+
 - (void)viewWillAddToPlayerView:(UIView *)playerView {
     [self.controlBar viewWillAddToPlayerView:playerView];
 }

@@ -103,10 +103,21 @@
         });
         return;
     }
+    
+    //handle UI state when view is reused on cell
+    if(self.jo_progressView && [self.jo_progressView respondsToSelector:@selector(viewWillPrepareToReuse)]){
+        [self.jo_progressView viewWillPrepareToReuse];
+    }
+    if(self.jo_controlView && [self.jo_controlView respondsToSelector:@selector(viewWillPrepareToReuse)]){
+        [self.jo_controlView viewWillPrepareToReuse];
+    }
+    
     //stop buffer animation
     [self callFinishBufferingDelegate];
     [JOPlayerManager sharedInstance].delegate = self;
     self.helper.videoPlayerView.hidden = NO;
+
+    
     //1. add bufferingView
     if (self.jo_buffuringView && !self.jo_buffuringView.superview) {
 //        self.jo_buffuringView.frame = self.bounds;
@@ -310,6 +321,11 @@
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
     CGRect bounds = CGRectMake(0, 0, CGRectGetHeight(screenBounds), CGRectGetWidth(screenBounds));
     CGPoint center = CGPointMake(CGRectGetMidX(screenBounds), CGRectGetMidY(screenBounds));
+    if (@available(iOS 11.0, *)) {
+        UIEdgeInsets insets = self.window.safeAreaInsets;
+        bounds = CGRectMake(0, 0, CGRectGetHeight(screenBounds) - insets.top - insets.bottom, CGRectGetWidth(screenBounds));
+        center = CGPointMake(CGRectGetMidX(screenBounds),insets.top + 0.5 * (screenBounds.size.height - insets.top - insets.bottom));
+    }
     videoPlayerView.bounds = bounds;
     videoPlayerView.center = center;
     videoPlayerView.transform = CGAffineTransformMakeRotation(M_PI_2);

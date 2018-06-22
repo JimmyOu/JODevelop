@@ -32,6 +32,14 @@
 		A60FDC121EBB0EFB00E5826C /* AXDSlideAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A60FDC111EBB0EFB00E5826C /* AXDSlideAnimation.m */; };
 		A60FDC1B1EBB114100E5826C /* SlideOneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A60FDC1A1EBB114100E5826C /* SlideOneVC.m */; };
 		A60FDC1E1EBB114F00E5826C /* SlideTwoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A60FDC1D1EBB114F00E5826C /* SlideTwoVC.m */; };
+		A612D6BF20DB7ECA00267933 /* UITableViewCell+JOVideoPlay.m in Sources */ = {isa = PBXBuildFile; fileRef = A612D6BE20DB7ECA00267933 /* UITableViewCell+JOVideoPlay.m */; };
+		A612D6C220DB811400267933 /* UITableView+JOVideoPlay.m in Sources */ = {isa = PBXBuildFile; fileRef = A612D6C120DB811400267933 /* UITableView+JOVideoPlay.m */; };
+		A612D6C520DB871E00267933 /* JOVideoPlayerTableViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A612D6C420DB871E00267933 /* JOVideoPlayerTableViewHelper.m */; };
+		A612D6CB20DB99B100267933 /* JOVideoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A612D6C920DB99B100267933 /* JOVideoListViewController.m */; };
+		A612D6CC20DB99B100267933 /* JOVideoListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A612D6CA20DB99B100267933 /* JOVideoListViewController.xib */; };
+		A612D6D020DB9A4A00267933 /* JOVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A612D6CE20DB9A4A00267933 /* JOVideoCell.m */; };
+		A612D6D120DB9A4A00267933 /* JOVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A612D6CF20DB9A4A00267933 /* JOVideoCell.xib */; };
+		A612D6D320DB9B9B00267933 /* designedByAppleInCalifornia.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A612D6D220DB9B9B00267933 /* designedByAppleInCalifornia.mp4 */; };
 		A61A99DF208DAFCE00293E35 /* DBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A61A99DE208DAFCE00293E35 /* DBHelper.m */; };
 		A623CD041F39639600B6C355 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A623CD031F39639600B6C355 /* SWRevealViewController.m */; };
 		A623CD081F3967DB00B6C355 /* RevealVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A623CD071F3967DB00B6C355 /* RevealVC.m */; };
@@ -222,12 +230,6 @@
 		A6E7080320D2474A00E802D3 /* JOPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E7080220D2474A00E802D3 /* JOPlayerManager.m */; };
 		A6E7080620D25EE000E802D3 /* UIView+JOWebVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E7080520D25EE000E802D3 /* UIView+JOWebVideoPlayer.m */; };
 		A6ED67D320B2BD8E009A486C /* PlayAndCacheVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED67D220B2BD8E009A486C /* PlayAndCacheVC.m */; };
-		A6ED67DC20B2BE4F009A486C /* NSString+FormatTime.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED67D820B2BE4E009A486C /* NSString+FormatTime.m */; };
-		A6ED67E120B2BE5C009A486C /* HUDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED67DE20B2BE5C009A486C /* HUDHelper.m */; };
-		A6ED67E220B2BE5C009A486C /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED67DF20B2BE5C009A486C /* MBProgressHUD.m */; };
-		A6ED67E920B2BE82009A486C /* JOPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED67E420B2BE81009A486C /* JOPlayer.m */; };
-		A6ED67EA20B2BE82009A486C /* JOConst.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED67E720B2BE82009A486C /* JOConst.m */; };
-		A6ED67EB20B2BE82009A486C /* VideoControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED67E820B2BE82009A486C /* VideoControlView.m */; };
 		A6F934B01EADABF100BAAD82 /* AnimatorBaseOneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F934AF1EADABF100BAAD82 /* AnimatorBaseOneVC.m */; };
 		A6F934B31EADABFF00BAAD82 /* AnimatorBaseTwoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F934B21EADABFF00BAAD82 /* AnimatorBaseTwoVC.m */; };
 		A6F934BE1EADD4B800BAAD82 /* BasicListController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F934BD1EADD4B800BAAD82 /* BasicListController.m */; };
@@ -290,6 +292,20 @@
 		A60FDC1A1EBB114100E5826C /* SlideOneVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideOneVC.m; sourceTree = "<group>"; };
 		A60FDC1C1EBB114F00E5826C /* SlideTwoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideTwoVC.h; sourceTree = "<group>"; };
 		A60FDC1D1EBB114F00E5826C /* SlideTwoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideTwoVC.m; sourceTree = "<group>"; };
+		A612D6BD20DB7ECA00267933 /* UITableViewCell+JOVideoPlay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+JOVideoPlay.h"; sourceTree = "<group>"; };
+		A612D6BE20DB7ECA00267933 /* UITableViewCell+JOVideoPlay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+JOVideoPlay.m"; sourceTree = "<group>"; };
+		A612D6C020DB811400267933 /* UITableView+JOVideoPlay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+JOVideoPlay.h"; sourceTree = "<group>"; };
+		A612D6C120DB811400267933 /* UITableView+JOVideoPlay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+JOVideoPlay.m"; sourceTree = "<group>"; };
+		A612D6C320DB871E00267933 /* JOVideoPlayerTableViewHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JOVideoPlayerTableViewHelper.h; sourceTree = "<group>"; };
+		A612D6C420DB871E00267933 /* JOVideoPlayerTableViewHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JOVideoPlayerTableViewHelper.m; sourceTree = "<group>"; };
+		A612D6C720DB958D00267933 /* JOWebVideoPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JOWebVideoPlayer.h; sourceTree = "<group>"; };
+		A612D6C820DB99B100267933 /* JOVideoListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JOVideoListViewController.h; sourceTree = "<group>"; };
+		A612D6C920DB99B100267933 /* JOVideoListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JOVideoListViewController.m; sourceTree = "<group>"; };
+		A612D6CA20DB99B100267933 /* JOVideoListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JOVideoListViewController.xib; sourceTree = "<group>"; };
+		A612D6CD20DB9A4A00267933 /* JOVideoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JOVideoCell.h; sourceTree = "<group>"; };
+		A612D6CE20DB9A4A00267933 /* JOVideoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JOVideoCell.m; sourceTree = "<group>"; };
+		A612D6CF20DB9A4A00267933 /* JOVideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JOVideoCell.xib; sourceTree = "<group>"; };
+		A612D6D220DB9B9B00267933 /* designedByAppleInCalifornia.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = designedByAppleInCalifornia.mp4; sourceTree = "<group>"; };
 		A61A99DD208DAFCE00293E35 /* DBHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBHelper.h; sourceTree = "<group>"; };
 		A61A99DE208DAFCE00293E35 /* DBHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBHelper.m; sourceTree = "<group>"; };
 		A623CD021F39639600B6C355 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -627,18 +643,6 @@
 		A6E7080520D25EE000E802D3 /* UIView+JOWebVideoPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+JOWebVideoPlayer.m"; sourceTree = "<group>"; };
 		A6ED67D120B2BD8E009A486C /* PlayAndCacheVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayAndCacheVC.h; sourceTree = "<group>"; };
 		A6ED67D220B2BD8E009A486C /* PlayAndCacheVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayAndCacheVC.m; sourceTree = "<group>"; };
-		A6ED67D820B2BE4E009A486C /* NSString+FormatTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FormatTime.m"; sourceTree = "<group>"; };
-		A6ED67D920B2BE4E009A486C /* NSString+FormatTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FormatTime.h"; sourceTree = "<group>"; };
-		A6ED67DD20B2BE5B009A486C /* HUDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDHelper.h; sourceTree = "<group>"; };
-		A6ED67DE20B2BE5C009A486C /* HUDHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUDHelper.m; sourceTree = "<group>"; };
-		A6ED67DF20B2BE5C009A486C /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		A6ED67E020B2BE5C009A486C /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		A6ED67E320B2BE81009A486C /* JOPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JOPlayer.h; sourceTree = "<group>"; };
-		A6ED67E420B2BE81009A486C /* JOPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JOPlayer.m; sourceTree = "<group>"; };
-		A6ED67E520B2BE81009A486C /* VideoControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoControlView.h; sourceTree = "<group>"; };
-		A6ED67E620B2BE82009A486C /* JOConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JOConst.h; sourceTree = "<group>"; };
-		A6ED67E720B2BE82009A486C /* JOConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JOConst.m; sourceTree = "<group>"; };
-		A6ED67E820B2BE82009A486C /* VideoControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoControlView.m; sourceTree = "<group>"; };
 		A6F934AE1EADABF100BAAD82 /* AnimatorBaseOneVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatorBaseOneVC.h; sourceTree = "<group>"; };
 		A6F934AF1EADABF100BAAD82 /* AnimatorBaseOneVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatorBaseOneVC.m; sourceTree = "<group>"; };
 		A6F934B11EADABFF00BAAD82 /* AnimatorBaseTwoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatorBaseTwoVC.h; sourceTree = "<group>"; };
@@ -748,6 +752,19 @@
 				A60668DD201ACD280001949C /* UIImage+GIF.h */,
 			);
 			path = SDWebImage;
+			sourceTree = "<group>";
+		};
+		A612D6BC20DB7EA200267933 /* UITableViewCellPlay */ = {
+			isa = PBXGroup;
+			children = (
+				A612D6BD20DB7ECA00267933 /* UITableViewCell+JOVideoPlay.h */,
+				A612D6BE20DB7ECA00267933 /* UITableViewCell+JOVideoPlay.m */,
+				A612D6C020DB811400267933 /* UITableView+JOVideoPlay.h */,
+				A612D6C120DB811400267933 /* UITableView+JOVideoPlay.m */,
+				A612D6C320DB871E00267933 /* JOVideoPlayerTableViewHelper.h */,
+				A612D6C420DB871E00267933 /* JOVideoPlayerTableViewHelper.m */,
+			);
+			path = UITableViewCellPlay;
 			sourceTree = "<group>";
 		};
 		A61E959A1F0B93750049FAA4 /* 相机 */ = {
@@ -1341,6 +1358,7 @@
 				A685BA9820AA7DE300840478 /* PlayCache */,
 				A6E7080420D25EE000E802D3 /* UIView+JOWebVideoPlayer.h */,
 				A6E7080520D25EE000E802D3 /* UIView+JOWebVideoPlayer.m */,
+				A612D6C720DB958D00267933 /* JOWebVideoPlayer.h */,
 			);
 			path = Player;
 			sourceTree = "<group>";
@@ -1348,6 +1366,7 @@
 		A685BA9720AA7DE300840478 /* MediaPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				A612D6BC20DB7EA200267933 /* UITableViewCellPlay */,
 				A65A6AE520D9F15A004DDC6E /* UI */,
 				A6D3430620CF9F6800D3CF1C /* JOVideoPlayerProtocol.h */,
 				A6D342F920CF9D3600D3CF1C /* JOVideoPlayer.h */,
@@ -1519,46 +1538,17 @@
 		A6ED67D020B2BD40009A486C /* PlayAndCache */ = {
 			isa = PBXGroup;
 			children = (
-				A6ED67D420B2BE3F009A486C /* Player */,
+				A612D6D220DB9B9B00267933 /* designedByAppleInCalifornia.mp4 */,
 				A6ED67D120B2BD8E009A486C /* PlayAndCacheVC.h */,
 				A6ED67D220B2BD8E009A486C /* PlayAndCacheVC.m */,
+				A612D6C820DB99B100267933 /* JOVideoListViewController.h */,
+				A612D6C920DB99B100267933 /* JOVideoListViewController.m */,
+				A612D6CA20DB99B100267933 /* JOVideoListViewController.xib */,
+				A612D6CD20DB9A4A00267933 /* JOVideoCell.h */,
+				A612D6CE20DB9A4A00267933 /* JOVideoCell.m */,
+				A612D6CF20DB9A4A00267933 /* JOVideoCell.xib */,
 			);
 			path = PlayAndCache;
-			sourceTree = "<group>";
-		};
-		A6ED67D420B2BE3F009A486C /* Player */ = {
-			isa = PBXGroup;
-			children = (
-				A6ED67E620B2BE82009A486C /* JOConst.h */,
-				A6ED67E720B2BE82009A486C /* JOConst.m */,
-				A6ED67E320B2BE81009A486C /* JOPlayer.h */,
-				A6ED67E420B2BE81009A486C /* JOPlayer.m */,
-				A6ED67E520B2BE81009A486C /* VideoControlView.h */,
-				A6ED67E820B2BE82009A486C /* VideoControlView.m */,
-				A6ED67D520B2BE3F009A486C /* Category */,
-				A6ED67D620B2BE3F009A486C /* HUD */,
-			);
-			path = Player;
-			sourceTree = "<group>";
-		};
-		A6ED67D520B2BE3F009A486C /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				A6ED67D920B2BE4E009A486C /* NSString+FormatTime.h */,
-				A6ED67D820B2BE4E009A486C /* NSString+FormatTime.m */,
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
-		A6ED67D620B2BE3F009A486C /* HUD */ = {
-			isa = PBXGroup;
-			children = (
-				A6ED67DD20B2BE5B009A486C /* HUDHelper.h */,
-				A6ED67DE20B2BE5C009A486C /* HUDHelper.m */,
-				A6ED67E020B2BE5C009A486C /* MBProgressHUD.h */,
-				A6ED67DF20B2BE5C009A486C /* MBProgressHUD.m */,
-			);
-			path = HUD;
 			sourceTree = "<group>";
 		};
 		A6F934BB1EADD48F00BAAD82 /* CoolAnimation */ = {
@@ -1665,11 +1655,13 @@
 				A623CD3B1F39A43A00B6C355 /* MovieCell.xib in Resources */,
 				A65A6B1420D9FDB9004DDC6E /* jo_videoplayer_pause@3x.png in Resources */,
 				A65A6B1620D9FDB9004DDC6E /* jo_videoplayer_landscape@3x.png in Resources */,
+				A612D6CC20DB99B100267933 /* JOVideoListViewController.xib in Resources */,
 				A623CD291F399EBF00B6C355 /* spectre.jpg in Resources */,
 				A65CCBA7202AE092000A6A4B /* emojiBtn_normal@2x.png in Resources */,
 				A6542F1A1E9F279E00CD0DBD /* LaunchScreen.storyboard in Resources */,
 				A6B7095B1ED80EE90072A22C /* tishi.png in Resources */,
 				A65CCBA1202AE086000A6A4B /* emoji_dot_off@2x.png in Resources */,
+				A612D6D120DB9A4A00267933 /* JOVideoCell.xib in Resources */,
 				A65CCB9E202AE086000A6A4B /* emoji_delete@2x.png in Resources */,
 				A677FDDE1EB1D286009491D3 /* restrictedshine.tiff in Resources */,
 				A677FDDC1EB1D286009491D3 /* line.png in Resources */,
@@ -1679,6 +1671,7 @@
 				A65A6B0C20D9FDB9004DDC6E /* jo_videoplayer_portrait@2x.png in Resources */,
 				A65CCBAA202AE092000A6A4B /* emojiBtn_selected@2x.png in Resources */,
 				A65CCB9D202AE086000A6A4B /* emoji_dot_on@2x.png in Resources */,
+				A612D6D320DB9B9B00267933 /* designedByAppleInCalifornia.mp4 in Resources */,
 				A6542FC01E9F2D7200CD0DBD /* ItemList.plist in Resources */,
 				A677FDDD1EB1D286009491D3 /* mask.jpg in Resources */,
 				A65CCB98202AE085000A6A4B /* emoji_delete_press@2x.png in Resources */,
@@ -1762,8 +1755,10 @@
 				A64755DA20AA8F94009DFBDC /* JOVideoPlayerCompat.m in Sources */,
 				A677FDD41EB1D286009491D3 /* AXDFilterAnimator+Flash.m in Sources */,
 				A6542FAE1E9F2B3400CD0DBD /* JS_Tools.m in Sources */,
+				A612D6C220DB811400267933 /* UITableView+JOVideoPlay.m in Sources */,
 				A677FDC91EB1D286009491D3 /* AXDCoolAnimator+Lines.m in Sources */,
 				A64755C820AA7EE7009DFBDC /* JOVideoPlayerResourceLoader.m in Sources */,
+				A612D6D020DB9A4A00267933 /* JOVideoCell.m in Sources */,
 				A60668EB201ACD280001949C /* UIView+WebCacheOperation.m in Sources */,
 				A60FDC121EBB0EFB00E5826C /* AXDSlideAnimation.m in Sources */,
 				A6542FA61E9F2B3400CD0DBD /* LineDashView.m in Sources */,
@@ -1800,7 +1795,6 @@
 				A6542FB61E9F2B9C00CD0DBD /* TestRouterVC.m in Sources */,
 				A677FDD31EB1D286009491D3 /* AXDFilterAnimator+CopyMachine.m in Sources */,
 				A643154F20107415002DD1A7 /* JOPromise_impl_progress.m in Sources */,
-				A6ED67E220B2BE5C009A486C /* MBProgressHUD.m in Sources */,
 				A64755CE20AA7F1A009DFBDC /* JOResourceLoadingLocalTask.m in Sources */,
 				A643154320106EE3002DD1A7 /* JOPromise_impl_all.m in Sources */,
 				A6542FA31E9F2B3400CD0DBD /* NSDictionary+Extension.m in Sources */,
@@ -1808,6 +1802,7 @@
 				A677FDE71EB1D2CB009491D3 /* UIViewController+AXDTransition.m in Sources */,
 				A6542FA51E9F2B3400CD0DBD /* UIColor+Extension.m in Sources */,
 				A69EDB4E1EA06BB500DBEE20 /* MASConstraintMaker.m in Sources */,
+				A612D6C520DB871E00267933 /* JOVideoPlayerTableViewHelper.m in Sources */,
 				A6431551201076EA002DD1A7 /* JOPromise_impl_race.m in Sources */,
 				A6B6516A1EC448BA00A9E5A7 /* AXDCollectionView.m in Sources */,
 				A60668E7201ACD280001949C /* SDImageCache.m in Sources */,
@@ -1830,7 +1825,6 @@
 				A60668DF201ACD280001949C /* SDWebImageManager.m in Sources */,
 				A646CA441EA76CFD00415949 /* CircleSpreadOneVC.m in Sources */,
 				A6542FA91E9F2B3400CD0DBD /* AXDRouter+LoginService.m in Sources */,
-				A6ED67E920B2BE82009A486C /* JOPlayer.m in Sources */,
 				A6542F231E9F285100CD0DBD /* RootVC.m in Sources */,
 				A61A99DF208DAFCE00293E35 /* DBHelper.m in Sources */,
 				A6542FAA1E9F2B3400CD0DBD /* JOShimmeringLayer.m in Sources */,
@@ -1851,7 +1845,6 @@
 				A638B5CC1EB20DA900DD1C75 /* AXDPopUpAnimation.m in Sources */,
 				A605F95E201F1E9A00511127 /* PlayerViewController.m in Sources */,
 				A677FDD81EB1D286009491D3 /* AXDFilterAnimator+Ripple.m in Sources */,
-				A6ED67EA20B2BE82009A486C /* JOConst.m in Sources */,
 				A677FDD61EB1D286009491D3 /* AXDFilterAnimator+Mod.m in Sources */,
 				A646CA381EA7622900415949 /* UIView+Extension.m in Sources */,
 				A623CD1B1F399E4200B6C355 /* MoviesDetailVC.m in Sources */,
@@ -1866,6 +1859,7 @@
 				A6B651751EC44A1000A9E5A7 /* PageControlReuseVC.m in Sources */,
 				A69EDB531EA06BB500DBEE20 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				A69EDB4F1EA06BB500DBEE20 /* MASLayoutConstraint.m in Sources */,
+				A612D6BF20DB7ECA00267933 /* UITableViewCell+JOVideoPlay.m in Sources */,
 				A68451881F0E1CE100776169 /* UIImage+Extension.m in Sources */,
 				A6F934C11EADD55200BAAD82 /* CoolTypeListController.m in Sources */,
 				A65DC9E31F0B312B0086C855 /* UIDevice+Extention.m in Sources */,
@@ -1877,13 +1871,11 @@
 				A677FDDB1EB1D286009491D3 /* AXDFilterTransitionView.m in Sources */,
 				A6431545201071F2002DD1A7 /* JOPromise_impl_catch.m in Sources */,
 				A642C1A6208D775700A0B5BD /* FMDatabasePool.m in Sources */,
-				A6ED67DC20B2BE4F009A486C /* NSString+FormatTime.m in Sources */,
 				A6542FB01E9F2B3400CD0DBD /* JSPluginManager.m in Sources */,
 				A677FDC81EB1D286009491D3 /* AXDCoolAnimator+Fold.m in Sources */,
 				A643155520107849002DD1A7 /* JOPromise_impl_retry.m in Sources */,
 				A6542FA81E9F2B3400CD0DBD /* AXDRouter+JSAPI.m in Sources */,
 				A6C4E9381EC16C9F00402208 /* MainViewController.m in Sources */,
-				A6ED67E120B2BE5C009A486C /* HUDHelper.m in Sources */,
 				A6D6831320D367A400FCDA33 /* JOVideoPlayerView.m in Sources */,
 				A623CD111F3968D800B6C355 /* RearVC.m in Sources */,
 				A6C0D0352048F5510022DFD3 /* JOCameraController.swift in Sources */,
@@ -1897,13 +1889,13 @@
 				A679D3082015A80B008DF50F /* PromiseTestVC.m in Sources */,
 				A677FDE41EB1D2A9009491D3 /* UINavigationController+AXDTransition.m in Sources */,
 				A6F9350C1EADFEAA00BAAD82 /* FilterListVC.m in Sources */,
-				A6ED67EB20B2BE82009A486C /* VideoControlView.m in Sources */,
 				A65CCB89202ADB5A000A6A4B /* Emoji2ViewController.m in Sources */,
 				A60FDC1B1EBB114100E5826C /* SlideOneVC.m in Sources */,
 				A69EDB4C1EA06BB500DBEE20 /* MASCompositeConstraint.m in Sources */,
 				A60668E2201ACD280001949C /* SDWebImageDownloader.m in Sources */,
 				A677FDE01EB1D286009491D3 /* AXDInteractiveTransition.m in Sources */,
 				A65A6AF420D9F28D004DDC6E /* JOVideoProgressView.m in Sources */,
+				A612D6CB20DB99B100267933 /* JOVideoListViewController.m in Sources */,
 				A623CD371F39A14400B6C355 /* MoviesService.m in Sources */,
 				A603BE39200DE11A00BBA29D /* JOPromise_impl_timeout.m in Sources */,
 				A65CCB69202857F7000A6A4B /* SREmojiContainer.m in Sources */,

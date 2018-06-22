@@ -18,6 +18,11 @@
 @protocol JOVideoPlayerProtocol<NSObject>
 @optional
 
+/**
+ reset view when view is reused in tableView
+ */
+- (void)viewWillPrepareToReuse;
+
 - (void)viewWillAddToPlayerView:(UIView *)playerView;
 /**
  called when the downloader fetched the file length or read from disk.

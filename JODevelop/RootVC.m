@@ -10,12 +10,15 @@
 #import "RootItemModel.h"
 #import "NSString+Extention.h"
 #import <FLEX/FLEXManager.h>
+#import "NEAppMonitor.h"
+#import "NEMonitorToast.h"
 
 
 @interface RootVC ()
 
 @property (nonatomic, strong) NSMutableArray <RootItemModel *>*names;
 @property (strong, nonatomic) UIButton *flexButton;
+@property (strong, nonatomic) NEAppMonitor *appMonitor;
 
 @end
 
@@ -24,6 +27,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self addFlexButton];
+    //添加fps监听
+
+    self.appMonitor = [NEAppMonitor sharedInstance];
+    self.appMonitor.enableMonitor = YES;
+    self.appMonitor.showDebugView = YES;
+    self.appMonitor.enableFulencyMonitor = YES;
+    [self.appMonitor startMonitor];
     
 }
 

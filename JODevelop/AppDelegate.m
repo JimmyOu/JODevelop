@@ -32,6 +32,8 @@
     //网络监听
     self.reach = [Reachability reachabilityForInternetConnection];
     [self.reach startNotifier];
+    
+
     return YES;
 }
 

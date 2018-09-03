@@ -14,6 +14,10 @@
 		A603BE39200DE11A00BBA29D /* JOPromise_impl_timeout.m in Sources */ = {isa = PBXBuildFile; fileRef = A603BE38200DE11A00BBA29D /* JOPromise_impl_timeout.m */; };
 		A603BE3B200DE29000BBA29D /* JOPromise_impl_after.m in Sources */ = {isa = PBXBuildFile; fileRef = A603BE3A200DE29000BBA29D /* JOPromise_impl_after.m */; };
 		A605F95E201F1E9A00511127 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A605F95D201F1E9A00511127 /* PlayerViewController.m */; };
+		A6061A7A211BD7A500BD42A1 /* NEFilesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6061A79211BD7A500BD42A1 /* NEFilesViewController.m */; };
+		A6061A7D211BD7B700BD42A1 /* NEFilePreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6061A7C211BD7B700BD42A1 /* NEFilePreviewViewController.m */; };
+		A6061A80211BD90600BD42A1 /* NEFileData.m in Sources */ = {isa = PBXBuildFile; fileRef = A6061A7F211BD90600BD42A1 /* NEFileData.m */; };
+		A6061A83211BECAA00BD42A1 /* NEMonitorToast.m in Sources */ = {isa = PBXBuildFile; fileRef = A6061A82211BECAA00BD42A1 /* NEMonitorToast.m */; };
 		A60668DE201ACD280001949C /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = A60668BF201ACD280001949C /* UIImage+WebP.m */; };
 		A60668DF201ACD280001949C /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A60668C2201ACD280001949C /* SDWebImageManager.m */; };
 		A60668E0201ACD280001949C /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = A60668C3201ACD280001949C /* SDWebImageDecoder.m */; };
@@ -29,6 +33,10 @@
 		A60668EA201ACD280001949C /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A60668D5201ACD280001949C /* UIImageView+WebCache.m */; };
 		A60668EB201ACD280001949C /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A60668D8201ACD280001949C /* UIView+WebCacheOperation.m */; };
 		A60668EC201ACD290001949C /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A60668DC201ACD280001949C /* UIButton+WebCache.m */; };
+		A606A37521197637006D1678 /* NEMonitorUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A606A37421197637006D1678 /* NEMonitorUtils.m */; };
+		A606A378211978B8006D1678 /* NEMonitorDataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A606A377211978B8006D1678 /* NEMonitorDataCenter.m */; };
+		A606A37E21199243006D1678 /* NEIndicatorWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A606A37D21199243006D1678 /* NEIndicatorWindow.m */; };
+		A606A38421199596006D1678 /* NEMonitorViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A606A38321199596006D1678 /* NEMonitorViewManager.m */; };
 		A60FDC121EBB0EFB00E5826C /* AXDSlideAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A60FDC111EBB0EFB00E5826C /* AXDSlideAnimation.m */; };
 		A60FDC1B1EBB114100E5826C /* SlideOneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A60FDC1A1EBB114100E5826C /* SlideOneVC.m */; };
 		A60FDC1E1EBB114F00E5826C /* SlideTwoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A60FDC1D1EBB114F00E5826C /* SlideTwoVC.m */; };
@@ -197,6 +205,12 @@
 		A67C32522018816400BD5FA6 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = A67C32512018816400BD5FA6 /* Reachability.m */; };
 		A68451881F0E1CE100776169 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A68451871F0E1CE100776169 /* UIImage+Extension.m */; };
 		A68E6D0B20A152820045C03F /* AddWaterMarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A68E6D0A20A152820045C03F /* AddWaterMarkViewController.m */; };
+		A6935B50211A8D5E00C1FF3F /* NEMemoryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A6935B4F211A8D5E00C1FF3F /* NEMemoryInfo.m */; };
+		A6935B53211A8DE200C1FF3F /* NECPUInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A6935B52211A8DE200C1FF3F /* NECPUInfo.m */; };
+		A6935B67211ACB8000C1FF3F /* NEPerfomanceMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A6935B66211ACB8000C1FF3F /* NEPerfomanceMonitor.m */; };
+		A6935B6D211ADBD600C1FF3F /* NEFluencyMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A6935B6C211ADBD600C1FF3F /* NEFluencyMonitor.m */; };
+		A6935B77211AE37100C1FF3F /* BSBacktraceLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = A6935B76211AE37100C1FF3F /* BSBacktraceLogger.m */; };
+		A6935B84211AF14800C1FF3F /* NEMonitorFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A6935B83211AF14800C1FF3F /* NEMonitorFileManager.m */; };
 		A698BF98204CE7BE00908130 /* DebugSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = A698BF97204CE7BE00908130 /* DebugSlider.m */; };
 		A69EDB301EA06B3A00DBEE20 /* TableViewHeaderAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A69EDB2F1EA06B3A00DBEE20 /* TableViewHeaderAnimation.m */; };
 		A69EDB4C1EA06BB500DBEE20 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A69EDB341EA06BB500DBEE20 /* MASCompositeConstraint.m */; };
@@ -230,6 +244,7 @@
 		A6E7080320D2474A00E802D3 /* JOPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E7080220D2474A00E802D3 /* JOPlayerManager.m */; };
 		A6E7080620D25EE000E802D3 /* UIView+JOWebVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E7080520D25EE000E802D3 /* UIView+JOWebVideoPlayer.m */; };
 		A6ED67D320B2BD8E009A486C /* PlayAndCacheVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED67D220B2BD8E009A486C /* PlayAndCacheVC.m */; };
+		A6ED7DE6211838DF00F816C4 /* NEAppMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED7DE5211838DF00F816C4 /* NEAppMonitor.m */; };
 		A6F934B01EADABF100BAAD82 /* AnimatorBaseOneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F934AF1EADABF100BAAD82 /* AnimatorBaseOneVC.m */; };
 		A6F934B31EADABFF00BAAD82 /* AnimatorBaseTwoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F934B21EADABFF00BAAD82 /* AnimatorBaseTwoVC.m */; };
 		A6F934BE1EADD4B800BAAD82 /* BasicListController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F934BD1EADD4B800BAAD82 /* BasicListController.m */; };
@@ -255,6 +270,14 @@
 		A603BE3A200DE29000BBA29D /* JOPromise_impl_after.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JOPromise_impl_after.m; sourceTree = "<group>"; };
 		A605F95C201F1E9A00511127 /* PlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
 		A605F95D201F1E9A00511127 /* PlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
+		A6061A78211BD7A500BD42A1 /* NEFilesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NEFilesViewController.h; sourceTree = "<group>"; };
+		A6061A79211BD7A500BD42A1 /* NEFilesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NEFilesViewController.m; sourceTree = "<group>"; };
+		A6061A7B211BD7B700BD42A1 /* NEFilePreviewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NEFilePreviewViewController.h; sourceTree = "<group>"; };
+		A6061A7C211BD7B700BD42A1 /* NEFilePreviewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NEFilePreviewViewController.m; sourceTree = "<group>"; };
+		A6061A7E211BD90600BD42A1 /* NEFileData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NEFileData.h; sourceTree = "<group>"; };
+		A6061A7F211BD90600BD42A1 /* NEFileData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NEFileData.m; sourceTree = "<group>"; };
+		A6061A81211BECAA00BD42A1 /* NEMonitorToast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NEMonitorToast.h; sourceTree = "<group>"; };
+		A6061A82211BECAA00BD42A1 /* NEMonitorToast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NEMonitorToast.m; sourceTree = "<group>"; };
 		A60668BF201ACD280001949C /* UIImage+WebP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WebP.m"; sourceTree = "<group>"; };
 		A60668C0201ACD280001949C /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		A60668C1201ACD280001949C /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -286,6 +309,14 @@
 		A60668DB201ACD280001949C /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MultiFormat.h"; sourceTree = "<group>"; };
 		A60668DC201ACD280001949C /* UIButton+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WebCache.m"; sourceTree = "<group>"; };
 		A60668DD201ACD280001949C /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
+		A606A37321197637006D1678 /* NEMonitorUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NEMonitorUtils.h; sourceTree = "<group>"; };
+		A606A37421197637006D1678 /* NEMonitorUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NEMonitorUtils.m; sourceTree = "<group>"; };
+		A606A376211978B8006D1678 /* NEMonitorDataCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NEMonitorDataCenter.h; sourceTree = "<group>"; };
+		A606A377211978B8006D1678 /* NEMonitorDataCenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NEMonitorDataCenter.m; sourceTree = "<group>"; };
+		A606A37C21199243006D1678 /* NEIndicatorWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NEIndicatorWindow.h; sourceTree = "<group>"; };
+		A606A37D21199243006D1678 /* NEIndicatorWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NEIndicatorWindow.m; sourceTree = "<group>"; };
+		A606A38221199596006D1678 /* NEMonitorViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NEMonitorViewManager.h; sourceTree = "<group>"; };
+		A606A38321199596006D1678 /* NEMonitorViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NEMonitorViewManager.m; sourceTree = "<group>"; };
 		A60FDC101EBB0EFB00E5826C /* AXDSlideAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXDSlideAnimation.h; sourceTree = "<group>"; };
 		A60FDC111EBB0EFB00E5826C /* AXDSlideAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXDSlideAnimation.m; sourceTree = "<group>"; };
 		A60FDC191EBB114100E5826C /* SlideOneVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideOneVC.h; sourceTree = "<group>"; };
@@ -571,6 +602,18 @@
 		A68451871F0E1CE100776169 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
 		A68E6D0920A152820045C03F /* AddWaterMarkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddWaterMarkViewController.h; sourceTree = "<group>"; };
 		A68E6D0A20A152820045C03F /* AddWaterMarkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddWaterMarkViewController.m; sourceTree = "<group>"; };
+		A6935B4E211A8D5E00C1FF3F /* NEMemoryInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NEMemoryInfo.h; sourceTree = "<group>"; };
+		A6935B4F211A8D5E00C1FF3F /* NEMemoryInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NEMemoryInfo.m; sourceTree = "<group>"; };
+		A6935B51211A8DE200C1FF3F /* NECPUInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NECPUInfo.h; sourceTree = "<group>"; };
+		A6935B52211A8DE200C1FF3F /* NECPUInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NECPUInfo.m; sourceTree = "<group>"; };
+		A6935B65211ACB8000C1FF3F /* NEPerfomanceMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NEPerfomanceMonitor.h; sourceTree = "<group>"; };
+		A6935B66211ACB8000C1FF3F /* NEPerfomanceMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NEPerfomanceMonitor.m; sourceTree = "<group>"; };
+		A6935B6B211ADBD600C1FF3F /* NEFluencyMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NEFluencyMonitor.h; sourceTree = "<group>"; };
+		A6935B6C211ADBD600C1FF3F /* NEFluencyMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NEFluencyMonitor.m; sourceTree = "<group>"; };
+		A6935B75211AE37100C1FF3F /* BSBacktraceLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSBacktraceLogger.h; sourceTree = "<group>"; };
+		A6935B76211AE37100C1FF3F /* BSBacktraceLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSBacktraceLogger.m; sourceTree = "<group>"; };
+		A6935B82211AF14800C1FF3F /* NEMonitorFileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NEMonitorFileManager.h; sourceTree = "<group>"; };
+		A6935B83211AF14800C1FF3F /* NEMonitorFileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NEMonitorFileManager.m; sourceTree = "<group>"; };
 		A698BF96204CE7BE00908130 /* DebugSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DebugSlider.h; sourceTree = "<group>"; };
 		A698BF97204CE7BE00908130 /* DebugSlider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DebugSlider.m; sourceTree = "<group>"; };
 		A69EDB2E1EA06B3A00DBEE20 /* TableViewHeaderAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewHeaderAnimation.h; sourceTree = "<group>"; };
@@ -643,6 +686,8 @@
 		A6E7080520D25EE000E802D3 /* UIView+JOWebVideoPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+JOWebVideoPlayer.m"; sourceTree = "<group>"; };
 		A6ED67D120B2BD8E009A486C /* PlayAndCacheVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayAndCacheVC.h; sourceTree = "<group>"; };
 		A6ED67D220B2BD8E009A486C /* PlayAndCacheVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayAndCacheVC.m; sourceTree = "<group>"; };
+		A6ED7DE4211838DF00F816C4 /* NEAppMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NEAppMonitor.h; sourceTree = "<group>"; };
+		A6ED7DE5211838DF00F816C4 /* NEAppMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NEAppMonitor.m; sourceTree = "<group>"; };
 		A6F934AE1EADABF100BAAD82 /* AnimatorBaseOneVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatorBaseOneVC.h; sourceTree = "<group>"; };
 		A6F934AF1EADABF100BAAD82 /* AnimatorBaseOneVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatorBaseOneVC.m; sourceTree = "<group>"; };
 		A6F934B11EADABFF00BAAD82 /* AnimatorBaseTwoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatorBaseTwoVC.h; sourceTree = "<group>"; };
@@ -943,6 +988,7 @@
 				A69EDB2F1EA06B3A00DBEE20 /* TableViewHeaderAnimation.m */,
 				A646CA211EA74FEA00415949 /* TransitionTableVC.h */,
 				A646CA221EA74FEA00415949 /* TransitionTableVC.m */,
+				A6ED7DE3211838C000F816C4 /* performance_Monitor */,
 				A6C0D0322048F44F0022DFD3 /* 相机 */,
 				A65CCB7B202A9C55000A6A4B /* 颜文字 */,
 				A605F95B201F1E6E00511127 /* Player */,
@@ -1406,6 +1452,70 @@
 			path = PlayCache;
 			sourceTree = "<group>";
 		};
+		A6935B71211AE32600C1FF3F /* backtrace */ = {
+			isa = PBXGroup;
+			children = (
+				A6935B75211AE37100C1FF3F /* BSBacktraceLogger.h */,
+				A6935B76211AE37100C1FF3F /* BSBacktraceLogger.m */,
+			);
+			path = backtrace;
+			sourceTree = "<group>";
+		};
+		A6935B7B211AE76E00C1FF3F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A606A37C21199243006D1678 /* NEIndicatorWindow.h */,
+				A606A37D21199243006D1678 /* NEIndicatorWindow.m */,
+				A606A38221199596006D1678 /* NEMonitorViewManager.h */,
+				A606A38321199596006D1678 /* NEMonitorViewManager.m */,
+				A6061A78211BD7A500BD42A1 /* NEFilesViewController.h */,
+				A6061A79211BD7A500BD42A1 /* NEFilesViewController.m */,
+				A6061A7B211BD7B700BD42A1 /* NEFilePreviewViewController.h */,
+				A6061A7C211BD7B700BD42A1 /* NEFilePreviewViewController.m */,
+				A6061A81211BECAA00BD42A1 /* NEMonitorToast.h */,
+				A6061A82211BECAA00BD42A1 /* NEMonitorToast.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		A6935B7C211AE7A400C1FF3F /* Monitor */ = {
+			isa = PBXGroup;
+			children = (
+				A6935B65211ACB8000C1FF3F /* NEPerfomanceMonitor.h */,
+				A6935B66211ACB8000C1FF3F /* NEPerfomanceMonitor.m */,
+				A6935B6B211ADBD600C1FF3F /* NEFluencyMonitor.h */,
+				A6935B6C211ADBD600C1FF3F /* NEFluencyMonitor.m */,
+			);
+			path = Monitor;
+			sourceTree = "<group>";
+		};
+		A6935B7D211AE7B300C1FF3F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A6061A7E211BD90600BD42A1 /* NEFileData.h */,
+				A6061A7F211BD90600BD42A1 /* NEFileData.m */,
+				A606A376211978B8006D1678 /* NEMonitorDataCenter.h */,
+				A606A377211978B8006D1678 /* NEMonitorDataCenter.m */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A6935B7E211AE7C700C1FF3F /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				A6935B71211AE32600C1FF3F /* backtrace */,
+				A6935B4E211A8D5E00C1FF3F /* NEMemoryInfo.h */,
+				A6935B4F211A8D5E00C1FF3F /* NEMemoryInfo.m */,
+				A6935B51211A8DE200C1FF3F /* NECPUInfo.h */,
+				A6935B52211A8DE200C1FF3F /* NECPUInfo.m */,
+				A606A37321197637006D1678 /* NEMonitorUtils.h */,
+				A606A37421197637006D1678 /* NEMonitorUtils.m */,
+				A6935B82211AF14800C1FF3F /* NEMonitorFileManager.h */,
+				A6935B83211AF14800C1FF3F /* NEMonitorFileManager.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		A698BF95204CE7A500908130 /* Debug */ = {
 			isa = PBXGroup;
 			children = (
@@ -1549,6 +1659,19 @@
 				A612D6CF20DB9A4A00267933 /* JOVideoCell.xib */,
 			);
 			path = PlayAndCache;
+			sourceTree = "<group>";
+		};
+		A6ED7DE3211838C000F816C4 /* performance_Monitor */ = {
+			isa = PBXGroup;
+			children = (
+				A6ED7DE4211838DF00F816C4 /* NEAppMonitor.h */,
+				A6ED7DE5211838DF00F816C4 /* NEAppMonitor.m */,
+				A6935B7B211AE76E00C1FF3F /* UI */,
+				A6935B7E211AE7C700C1FF3F /* Helper */,
+				A6935B7D211AE7B300C1FF3F /* Data */,
+				A6935B7C211AE7A400C1FF3F /* Monitor */,
+			);
+			path = performance_Monitor;
 			sourceTree = "<group>";
 		};
 		A6F934BB1EADD48F00BAAD82 /* CoolAnimation */ = {
@@ -1739,16 +1862,19 @@
 				A646CA231EA74FEA00415949 /* TransitionTableVC.m in Sources */,
 				A6B6516C1EC448BA00A9E5A7 /* AXDScrollPageConst.m in Sources */,
 				A677FDD91EB1D286009491D3 /* AXDFilterAnimator+Swipe.m in Sources */,
+				A606A378211978B8006D1678 /* NEMonitorDataCenter.m in Sources */,
 				A6CB64581FC57E5700264F18 /* GCDTimer.m in Sources */,
 				A677FDCD1EB1D286009491D3 /* AXDCoolAnimator+Scanning.m in Sources */,
 				A6E7080620D25EE000E802D3 /* UIView+JOWebVideoPlayer.m in Sources */,
 				A677FDD71EB1D286009491D3 /* AXDFilterAnimator+PageCurl.m in Sources */,
 				A6542FA11E9F2B3400CD0DBD /* NSObject+XPSuperInvoker.m in Sources */,
 				A642C1AA208D793C00A0B5BD /* DBBaseModel.m in Sources */,
+				A6935B67211ACB8000C1FF3F /* NEPerfomanceMonitor.m in Sources */,
 				A623CD0B1F3968BB00B6C355 /* FrontVC.m in Sources */,
 				A677FDDF1EB1D286009491D3 /* AXDBaseTransitionAnimator.m in Sources */,
 				A6C4E93B1EC19F1900402208 /* MainViewNavigator.m in Sources */,
 				A65CCB7E202A9C68000A6A4B /* EmojiViewController.m in Sources */,
+				A6935B53211A8DE200C1FF3F /* NECPUInfo.m in Sources */,
 				A677FDD51EB1D286009491D3 /* AXDFilterAnimator+Mask.m in Sources */,
 				A603BE34200DAA0700BBA29D /* JOPromise.m in Sources */,
 				A677FDD11EB1D286009491D3 /* AXDFilterAnimator+BarSwipe.m in Sources */,
@@ -1756,6 +1882,7 @@
 				A677FDD41EB1D286009491D3 /* AXDFilterAnimator+Flash.m in Sources */,
 				A6542FAE1E9F2B3400CD0DBD /* JS_Tools.m in Sources */,
 				A612D6C220DB811400267933 /* UITableView+JOVideoPlay.m in Sources */,
+				A606A37E21199243006D1678 /* NEIndicatorWindow.m in Sources */,
 				A677FDC91EB1D286009491D3 /* AXDCoolAnimator+Lines.m in Sources */,
 				A64755C820AA7EE7009DFBDC /* JOVideoPlayerResourceLoader.m in Sources */,
 				A612D6D020DB9A4A00267933 /* JOVideoCell.m in Sources */,
@@ -1789,6 +1916,7 @@
 				A65A6AF720D9F29F004DDC6E /* JOVideoBufferingIndicator.m in Sources */,
 				A64755CB20AA7EFD009DFBDC /* JOVideoLoadingRequestTask.m in Sources */,
 				A6B6516D1EC448BA00A9E5A7 /* AXDScrollPageView.m in Sources */,
+				A6061A7A211BD7A500BD42A1 /* NEFilesViewController.m in Sources */,
 				A677FDC71EB1D286009491D3 /* AXDCoolAnimator+Explode.m in Sources */,
 				A6ED67D320B2BD8E009A486C /* PlayAndCacheVC.m in Sources */,
 				A603BE37200DD8A900BBA29D /* JOPromise_impl_then.m in Sources */,
@@ -1800,6 +1928,8 @@
 				A6542FA31E9F2B3400CD0DBD /* NSDictionary+Extension.m in Sources */,
 				A6E7080320D2474A00E802D3 /* JOPlayerManager.m in Sources */,
 				A677FDE71EB1D2CB009491D3 /* UIViewController+AXDTransition.m in Sources */,
+				A6ED7DE6211838DF00F816C4 /* NEAppMonitor.m in Sources */,
+				A6935B77211AE37100C1FF3F /* BSBacktraceLogger.m in Sources */,
 				A6542FA51E9F2B3400CD0DBD /* UIColor+Extension.m in Sources */,
 				A69EDB4E1EA06BB500DBEE20 /* MASConstraintMaker.m in Sources */,
 				A612D6C520DB871E00267933 /* JOVideoPlayerTableViewHelper.m in Sources */,
@@ -1826,6 +1956,7 @@
 				A646CA441EA76CFD00415949 /* CircleSpreadOneVC.m in Sources */,
 				A6542FA91E9F2B3400CD0DBD /* AXDRouter+LoginService.m in Sources */,
 				A6542F231E9F285100CD0DBD /* RootVC.m in Sources */,
+				A6935B84211AF14800C1FF3F /* NEMonitorFileManager.m in Sources */,
 				A61A99DF208DAFCE00293E35 /* DBHelper.m in Sources */,
 				A6542FAA1E9F2B3400CD0DBD /* JOShimmeringLayer.m in Sources */,
 				A6542FC71E9F353B00CD0DBD /* TestDashLine.m in Sources */,
@@ -1842,17 +1973,21 @@
 				A643154B20107388002DD1A7 /* JOPromise_impl_map.m in Sources */,
 				A60668EA201ACD280001949C /* UIImageView+WebCache.m in Sources */,
 				A67BE6B82024381F00508F8C /* SRMenuItemsLabel.m in Sources */,
+				A6935B6D211ADBD600C1FF3F /* NEFluencyMonitor.m in Sources */,
 				A638B5CC1EB20DA900DD1C75 /* AXDPopUpAnimation.m in Sources */,
 				A605F95E201F1E9A00511127 /* PlayerViewController.m in Sources */,
+				A606A38421199596006D1678 /* NEMonitorViewManager.m in Sources */,
 				A677FDD81EB1D286009491D3 /* AXDFilterAnimator+Ripple.m in Sources */,
 				A677FDD61EB1D286009491D3 /* AXDFilterAnimator+Mod.m in Sources */,
 				A646CA381EA7622900415949 /* UIView+Extension.m in Sources */,
 				A623CD1B1F399E4200B6C355 /* MoviesDetailVC.m in Sources */,
+				A6061A80211BD90600BD42A1 /* NEFileData.m in Sources */,
 				A6F934B01EADABF100BAAD82 /* AnimatorBaseOneVC.m in Sources */,
 				A623CD181F399E3600B6C355 /* MoviesVC.m in Sources */,
 				A6F934C71EADD5E800BAAD82 /* AXDCoolTwoVC.m in Sources */,
 				A6542FB31E9F2B3400CD0DBD /* _interface_login.m in Sources */,
 				A677FDCF1EB1D286009491D3 /* AXDCircleSpreadAnimator.m in Sources */,
+				A6061A83211BECAA00BD42A1 /* NEMonitorToast.m in Sources */,
 				A6431547201072B7002DD1A7 /* JOPromise_impl_filter.m in Sources */,
 				A64755BC20AA7E84009DFBDC /* JOVideoPlayerCache.m in Sources */,
 				A6542FB21E9F2B3400CD0DBD /* JSSuperPlugin.m in Sources */,
@@ -1867,6 +2002,7 @@
 				A677FDCB1EB1D286009491D3 /* AXDCoolAnimator+PageFlip.m in Sources */,
 				A677FDE11EB1D286009491D3 /* AXDTransitionConst.m in Sources */,
 				A6431553201077F6002DD1A7 /* JOPromise_impl_reduce.m in Sources */,
+				A6935B50211A8D5E00C1FF3F /* NEMemoryInfo.m in Sources */,
 				A60668E9201ACD280001949C /* NSData+ImageContentType.m in Sources */,
 				A677FDDB1EB1D286009491D3 /* AXDFilterTransitionView.m in Sources */,
 				A6431545201071F2002DD1A7 /* JOPromise_impl_catch.m in Sources */,
@@ -1890,9 +2026,11 @@
 				A677FDE41EB1D2A9009491D3 /* UINavigationController+AXDTransition.m in Sources */,
 				A6F9350C1EADFEAA00BAAD82 /* FilterListVC.m in Sources */,
 				A65CCB89202ADB5A000A6A4B /* Emoji2ViewController.m in Sources */,
+				A606A37521197637006D1678 /* NEMonitorUtils.m in Sources */,
 				A60FDC1B1EBB114100E5826C /* SlideOneVC.m in Sources */,
 				A69EDB4C1EA06BB500DBEE20 /* MASCompositeConstraint.m in Sources */,
 				A60668E2201ACD280001949C /* SDWebImageDownloader.m in Sources */,
+				A6061A7D211BD7B700BD42A1 /* NEFilePreviewViewController.m in Sources */,
 				A677FDE01EB1D286009491D3 /* AXDInteractiveTransition.m in Sources */,
 				A65A6AF420D9F28D004DDC6E /* JOVideoProgressView.m in Sources */,
 				A612D6CB20DB99B100267933 /* JOVideoListViewController.m in Sources */,

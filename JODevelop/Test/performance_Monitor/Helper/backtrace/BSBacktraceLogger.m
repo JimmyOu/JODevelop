@@ -91,6 +91,10 @@ static mach_port_t main_thread_id;
     return [self bs_backtraceOfNSThread:[NSThread mainThread]];
 }
 
+NSString *bs_StackOfThread(thread_t thread) {
+    return _bs_backtraceOfThread(thread);
+}
+
 + (NSString *)bs_backtraceOfAllThread {
     thread_act_array_t threads;
     mach_msg_type_number_t thread_count = 0;

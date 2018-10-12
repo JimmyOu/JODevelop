@@ -1,16 +1,20 @@
 PODS:
+  - FBRetainCycleDetector (0.1.4)
   - FLEX (2.1.1)
 
 DEPENDENCIES:
+  - FBRetainCycleDetector
   - FLEX (~> 2.1.1)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - FBRetainCycleDetector
     - FLEX
 
 SPEC CHECKSUMS:
+  FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   FLEX: 27b768fcae23a313a1eb115076d429180ca9b472
 
-PODFILE CHECKSUM: b88de82b4aa7f87039ce088676ce95c596b73e7d
+PODFILE CHECKSUM: 3446249db4101ce5ab47c5ba710a51cfc3b4b033
 
 COCOAPODS: 1.5.2

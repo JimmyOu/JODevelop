@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface NEPerfomanceMonitor : NSObject
-+ (instancetype)sharedInstance;
 
 - (void)start;
 - (void)stop;

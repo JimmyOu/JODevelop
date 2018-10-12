@@ -8,18 +8,18 @@
 
 #import <Foundation/Foundation.h>
 #import "NEMonitorViewManager.h"
-
+#if defined(DEBUG)||defined(_DEBUG)
 @interface NEAppMonitor : NSObject
 @property (readonly, nullable) NEMonitorViewManager *viewManager;
-@property (assign, nonatomic) BOOL enableMonitor;
+@property (assign, nonatomic) BOOL enablePerformanceMonitor;
 @property (assign, nonatomic) BOOL enableFulencyMonitor;
-@property (assign, nonatomic) BOOL showDebugView;
+@property (assign, nonatomic) BOOL enableNetworkMonitor;
+@property (assign, nonatomic) BOOL enableVoidCrashOnLine;
 
 + (NEAppMonitor *)sharedInstance;
 
 - (void)startMonitor;
-- (void)pause;
-- (void)resnume;
 - (void)endMonitor;
 
 @end
+#endif

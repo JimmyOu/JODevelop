@@ -30,9 +30,6 @@
     //添加fps监听
 
     self.appMonitor = [NEAppMonitor sharedInstance];
-    self.appMonitor.enableMonitor = YES;
-    self.appMonitor.showDebugView = YES;
-    self.appMonitor.enableFulencyMonitor = YES;
     [self.appMonitor startMonitor];
     
 }

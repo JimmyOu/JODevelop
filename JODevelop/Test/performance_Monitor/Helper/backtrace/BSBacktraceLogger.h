@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#include <mach/mach.h>
 
 #define BSLOG NSLog(@"%@",[BSBacktraceLogger bs_backtraceOfCurrentThread]);
 #define BSLOG_MAIN NSLog(@"%@",[BSBacktraceLogger bs_backtraceOfMainThread]);
@@ -18,5 +19,7 @@
 + (NSString *)bs_backtraceOfCurrentThread;
 + (NSString *)bs_backtraceOfMainThread;
 + (NSString *)bs_backtraceOfNSThread:(NSThread *)thread;
+
+extern NSString *bs_StackOfThread(thread_t thread);
 
 @end

@@ -18,5 +18,20 @@
     });
     return center;
 }
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _battery = [[NEAppGraphicModel alloc] init];
+        _battery.title = @"battery";
+        
+        _cpu = [[NEAppGraphicModel alloc] init];
+        _cpu.title = @"cpu";
+        
+        _memory = [[NEAppGraphicModel alloc] init];
+        _memory.title = @"memory";
+    }
+    return self;
+}
 
 @end

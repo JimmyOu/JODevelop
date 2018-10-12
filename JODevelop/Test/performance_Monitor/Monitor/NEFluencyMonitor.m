@@ -25,6 +25,7 @@ dispatch_queue_t ne_fluency_monitor_queue() {
     NSInteger _timeoutCount;
     CFRunLoopObserverRef _runLoopObserver;
     BOOL _isGeneratingReport;
+    CFTimeInterval _timeInterval;
 }
 @property (nonatomic, strong) dispatch_semaphore_t semaphore;
 @property (nonatomic, assign) CFRunLoopActivity runLoopActivity;
@@ -38,6 +39,7 @@ static void runLoopObserverCallBack(CFRunLoopObserverRef observer,
 {
     NEFluencyMonitor *appFluencyMonitor = (__bridge NEFluencyMonitor*)info;
     appFluencyMonitor.runLoopActivity = activity;
+    appFluencyMonitor ->_timeInterval = CACurrentMediaTime();
     dispatch_semaphore_signal(appFluencyMonitor.semaphore);
 }
 - (void)dealloc
@@ -61,6 +63,7 @@ static void runLoopObserverCallBack(CFRunLoopObserverRef observer,
     CFRunLoopRemoveObserver(CFRunLoopGetMain(), _runLoopObserver, kCFRunLoopCommonModes);
     CFRelease(_runLoopObserver);
     _runLoopObserver = NULL;
+    _timeInterval = 0;
 }
 
 - (void)startMonitoring
@@ -69,9 +72,10 @@ static void runLoopObserverCallBack(CFRunLoopObserverRef observer,
     if (_runLoopObserver) {
         return;
     }
-    
+    _timeInterval = 0;
     //  创建信号量
     self.semaphore = dispatch_semaphore_create(0);
+    
     
     // 注册RunLoop的状态监听
     CFRunLoopObserverContext context = {
@@ -95,11 +99,11 @@ static void runLoopObserverCallBack(CFRunLoopObserverRef observer,
     dispatch_async(ne_fluency_monitor_queue(), ^{
         while (YES)
         {
-            // 假定连续5次超时100ms认为卡顿(也包含了单次超时500ms)
+            // 假定连续5次超时50ms认为卡顿(也包含了单次超时250ms)
             long st = dispatch_semaphore_wait(self.semaphore, dispatch_time(DISPATCH_TIME_NOW, 50*NSEC_PER_MSEC));
             if (st != 0) {
-                if (!_runLoopObserver) {
-                    _timeoutCount = 0;
+                if (!self->_runLoopObserver) {
+                    self->_timeoutCount = 0;
                     self.semaphore = 0;
                     self.runLoopActivity = 0;
                     return;
@@ -108,14 +112,16 @@ static void runLoopObserverCallBack(CFRunLoopObserverRef observer,
                 if (self.runLoopActivity == kCFRunLoopBeforeSources ||
                     self.runLoopActivity == kCFRunLoopAfterWaiting)
                 {
-                    if (++_timeoutCount < 5)
+                    if (++self->_timeoutCount < 5)
                         continue;
                     
                     [self handleCallbacksStackForMainThreadStucked];
+                    NSLog(@"卡顿时间为：%f",(CACurrentMediaTime() - self->_timeInterval) * 1000);
+                    //获取当前的vc，获取当前的view，获取当前的响应链
                     
                 }
             }
-            _timeoutCount = 0;
+            self->_timeoutCount = 0;
         }
     });
     
@@ -129,9 +135,11 @@ static void runLoopObserverCallBack(CFRunLoopObserverRef observer,
     }
     _isGeneratingReport = YES;
    NSString *backtraceLogs = [NEMonitorUtils genCallStackReport];
-    [[NEMonitorFileManager shareInstance] saveReportToLocal:backtraceLogs withFileName:[NEMonitorDataCenter sharedInstance].currentVCName];
+    [[NEMonitorFileManager shareInstance] saveReportToLocal:backtraceLogs withFileName:[NEMonitorDataCenter sharedInstance].currentVCName type:NEMonitorFileFluentType];
     _isGeneratingReport = NO;
-    [NEMonitorToast showToast:@"出现卡顿"];
+    dispatch_async(dispatch_get_main_queue(), ^{
+       [NEMonitorToast showToast:@"出现卡顿"];
+    });
 }
 
 

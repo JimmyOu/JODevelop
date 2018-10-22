@@ -141,7 +141,7 @@
     //    }
     //    flowCount=flowCount+self.response.expectedContentLength/(1024.0*1024.0);
     //    [[NSUserDefaults standardUserDefaults] setDouble:flowCount forKey:@"flowCount"];
-    //    [[NSUserDefaults standardUserDefaults] synchronize];//https://github.com/coderyi/NetworkEye/pull/6
+    //    [[NSUserDefaults standardUserDefaults] synchronize];
         [[NEHTTPModelManager sharedInstance] addModel:self];
     
 }

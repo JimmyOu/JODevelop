@@ -14,6 +14,9 @@
 #import "NEFluencyMonitor.h"
 #import "NEHTTPMonitor.h"
 #import "NECrashVoidManager.h"
+#import "NEMonitorFileManager.h"
+#import "NEMonitorToast.h"
+#if defined(DEBUG)||defined(_DEBUG)
 @implementation UIViewController(Monitor)
 + (void)load {
     static dispatch_once_t onceToken;
@@ -55,6 +58,7 @@
     if (self) {
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appDidBecomeActive) name:UIApplicationDidBecomeActiveNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appWillResignActive) name:UIApplicationWillResignActiveNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appWillCrash:) name:NEMonitorExceptionThrowNotifiation object:nil];
     }
     return self;
 }
@@ -65,6 +69,13 @@
 
 - (void)appWillResignActive {
     [self pause];
+}
+- (void)appWillCrash:(NSNotification *)notification {
+   NSString *stack = notification.userInfo[NEMonitorExceptionThrowNotifiationErrorCallStack];
+    [[NEMonitorFileManager shareInstance] saveReportToLocal:stack withFileName:[NEMonitorDataCenter sharedInstance].currentVCName type:NEMonitorFileCrashType];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [NEMonitorToast showToast:@"出现Crash"];
+    });
 }
 - (void)pause {
     [self.performanceMonitor pause];
@@ -83,6 +94,7 @@
     self.enablePerformanceMonitor = YES;
     self.enableFulencyMonitor = YES;
     self.enableNetworkMonitor = YES;
+    self.enableVoidCrashOnLine = YES;
     //debug View
     self.viewManager = [[NEMonitorViewManager alloc] init];
     [self.viewManager show];
@@ -92,8 +104,8 @@
     }
 }
 - (void)setEnableFulencyMonitor:(BOOL)enableFulencyMonitor {
-    _enableFulencyMonitor = enableFulencyMonitor;
     if (_enableFulencyMonitor != enableFulencyMonitor) {
+        _enableFulencyMonitor = enableFulencyMonitor;
         if (enableFulencyMonitor) {
             self.fluencyMonitor = [NEFluencyMonitor sharedInstance];
             [self.fluencyMonitor startMonitoring];
@@ -129,3 +141,4 @@
 
 
 @end
+#endif

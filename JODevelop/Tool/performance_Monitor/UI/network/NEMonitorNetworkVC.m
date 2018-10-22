@@ -40,9 +40,13 @@
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
-
+- (void)back {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(back)];
     // Do any additional setup after loading the view.
     [self.tableView registerClass:[NEMonitorNetworkCell class] forCellReuseIdentifier:kNEMonitorNetworkCellIndentifier];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -200,6 +204,9 @@
 }
 
 #pragma mark - Search display delegate
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-implementations"
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
 {
     [self updateSearchResultsWithSearchString:searchString];
@@ -207,6 +214,7 @@
     // Reload done after the data is filtered asynchronously
     return NO;
 }
+#pragma clang diagnostic pop
 
 - (void)updateSearchResultsWithSearchString:(NSString *)searchString
 {

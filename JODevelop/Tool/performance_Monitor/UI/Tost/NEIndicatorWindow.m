@@ -13,7 +13,6 @@
 #define NE_SCREEN_WIDTH (NE_IOS_VERSION >= 8.0 ? [[UIScreen mainScreen] bounds].size.width : (NE_IS_LANDSCAPE ? [[UIScreen mainScreen] bounds].size.height : [[UIScreen mainScreen] bounds].size.width))
 
 @implementation NEIndicatorWindow
-
 - (instancetype)init {
     if (NE_IOS_VERSION >= 9.0) {
         self = [super init];
@@ -100,6 +99,9 @@
     [stackView addArrangedSubview:_memoryUsageButton];
     
     [_containerView addSubview:stackView];
+    
+    
+    
 }
 - (void)orientationDidChange:(NSNotification *)notification {
     if (!self.hidden) {

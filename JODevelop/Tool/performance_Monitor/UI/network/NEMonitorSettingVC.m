@@ -8,7 +8,10 @@
 
 #import "NEMonitorSettingVC.h"
 #import "NEAppMonitor.h"
-
+#import "NEMonitorDataCenter.h"
+#import "NEMonitorToast.h"
+#import "NEConstConstraints.h"
+#import "NELeaksFinder.h"
 
 @interface NEMonitorSettingVC ()<UITableViewDelegate, UITableViewDataSource>
 @property (strong, nonatomic) UITableView *tableView;
@@ -41,7 +44,16 @@
     [mutableCells addObject:fluentDebuggingCell];
     
     UITableViewCell *performanceDebuggingCell = [self switchCellWithTitle:@"Performance" toggleAction:@selector(performanceDebuggingToggled:) isOn:[NEAppMonitor sharedInstance].enablePerformanceMonitor];
+    
     [mutableCells addObject:performanceDebuggingCell];
+    
+//    UITableViewCell *alertWhenFindingRetainCycle = [self switchCellWithTitle:@"alertWhenFindingRetainCycle" toggleAction:@selector(alertWhenFindingRetainCycle:) isOn:_INTERNAL_MLF_Alert];
+//
+//    [mutableCells addObject:alertWhenFindingRetainCycle];
+    
+    UITableViewCell *clearGraphicDataCell = [self buttonCellWithTitle:@"清理绘图缓存" toggleAction:@selector(clearGraphicData)];
+    [mutableCells addObject:clearGraphicDataCell];
+    
     self.cells = mutableCells;
     [self.tableView reloadData];
 }
@@ -54,6 +66,15 @@
     self.tableView.frame = self.view.bounds;
 }
 #pragma mark - Settings Actions
+//- (void)alertWhenFindingRetainCycle:(UISwitch *)sender {
+//    _INTERNAL_MLF_Alert = sender.isOn;
+//}
+- (void)clearGraphicData {
+    [[NEMonitorDataCenter sharedInstance].battery clearAllData];
+    [[NEMonitorDataCenter sharedInstance].cpu clearAllData];
+    [[NEMonitorDataCenter sharedInstance].memory clearAllData];
+    [NEMonitorToast showToast:@"清理完毕"];
+}
 - (void)networkDebuggingToggled:(UISwitch *)sender
 {
     [NEAppMonitor sharedInstance].enableNetworkMonitor = sender.isOn;
@@ -84,6 +105,32 @@
     theSwitch.frame = CGRectMake(switchOriginX, switchOriginY, theSwitch.frame.size.width, theSwitch.frame.size.height);
     theSwitch.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
     [cell.contentView addSubview:theSwitch];
+    
+    return cell;
+}
+
+- (UITableViewCell *)buttonCellWithTitle:(NSString *)title toggleAction:(SEL)toggleAction
+{
+    UITableViewCell *cell = [[UITableViewCell alloc] init];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.textLabel.text = title;
+    cell.textLabel.font = [[self class] defaultFontOfSize:14];
+    
+    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 31)];
+    btn.layer.cornerRadius = 15;
+    btn.clipsToBounds = YES;
+    btn.backgroundColor = kJBColorLineChartControllerBackground;
+    [btn setTitle:title forState:UIControlStateNormal];
+    btn.titleLabel.font = [UIFont systemFontOfSize:14];
+    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    [btn addTarget:self action:toggleAction forControlEvents:UIControlEventTouchUpInside];
+    
+    CGFloat switchOriginY = round((cell.contentView.frame.size.height - btn.frame.size.height) / 2.0);
+    CGFloat switchOriginX = CGRectGetMaxX(cell.contentView.frame) - btn.frame.size.width - self.tableView.separatorInset.left;
+    btn.frame = CGRectMake(switchOriginX, switchOriginY, btn.frame.size.width, btn.frame.size.height);
+    btn.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
+    [cell.contentView addSubview:btn];
     
     return cell;
 }

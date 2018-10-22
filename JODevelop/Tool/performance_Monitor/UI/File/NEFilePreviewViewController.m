@@ -30,6 +30,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"AirDrop" style:UIBarButtonItemStylePlain target:self action:@selector(handleAirDrop:)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(back)];
     
     _webView = [[UIWebView alloc] init];
     _webView.hidden = YES;
@@ -40,6 +41,9 @@
     [self.view addSubview:_loadingView];
     
     [self reloadData];
+}
+- (void)back {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)viewDidLayoutSubviews {
@@ -89,9 +93,12 @@
     _imageView.frame = self.view.bounds;
     _webView.frame = self.view.bounds;
 }
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-implementations"
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
     [self resizeViews];
 }
+#pragma clang diagnostic pop
 - (NSString *)detectMimeType:(NSString *)type
 {
     NSString *m_MIMEType = nil;

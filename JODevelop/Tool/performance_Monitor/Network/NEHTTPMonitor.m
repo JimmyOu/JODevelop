@@ -95,6 +95,9 @@ static NSString * kOurRecursiveRequestFlagProperty = @"com.CustomHTTPProtocol";
         ![request.URL.scheme isEqualToString:@"https"]) {
         return NO;
     }
+    if ([request.URL.absoluteString containsString:@".mp4"] || [request.URL.absoluteString containsString:@".mp3"]) {
+        return NO;
+    }
     
     if ([NSURLProtocol propertyForKey:kOurRecursiveRequestFlagProperty inRequest:request] ) {
         return NO;

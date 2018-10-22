@@ -135,7 +135,7 @@ static void runLoopObserverCallBack(CFRunLoopObserverRef observer,
     }
     _isGeneratingReport = YES;
    NSString *backtraceLogs = [NEMonitorUtils genCallStackReport];
-    [[NEMonitorFileManager shareInstance] saveReportToLocal:backtraceLogs withFileName:[NEMonitorDataCenter sharedInstance].currentVCName];
+    [[NEMonitorFileManager shareInstance] saveReportToLocal:backtraceLogs withFileName:[NEMonitorDataCenter sharedInstance].currentVCName type:NEMonitorFileFluentType];
     _isGeneratingReport = NO;
     dispatch_async(dispatch_get_main_queue(), ^{
        [NEMonitorToast showToast:@"出现卡顿"];

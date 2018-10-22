@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <mach/mach.h>
 
 extern NSString *const NEMonitorExceptionThrowNotifiation;
 extern NSString *const NEMonitorExceptionThrowNotifiationErrorKey;
@@ -17,8 +18,19 @@ extern NSString *const NEMonitorExceptionThrowNotifiationErrorCallStack;
 + (void)ne_swizzleSEL:(SEL)originalSEL withSEL:(SEL)swizzledSEL forClass:(Class)clz;
 + (void)ne_swizzleClassSEL:(SEL)originalSEL withSEL:(SEL)swizzledSEL forClass:(Class)clz;
 
+
+/**
+ 获取所有堆栈的调用信息
+ */
 + (NSString *)genCallStackReport;
+/**
+  获取当前堆栈的调用信息
+ */
 + (NSString *)genCurrentThreadCallStackReport;
+/**
+ 获取当指定堆栈的调用信息
+ */
++ (NSString *)genThreadCallStackReportWithThread:(thread_t)thread;
 
 //获取requestLength
 + (NSUInteger)getRequestLength:(NSURLRequest *)request;

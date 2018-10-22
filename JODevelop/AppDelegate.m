@@ -10,6 +10,9 @@
 #import <CoreSpotlight/CoreSpotlight.h>
 #import "MoviesService.h"
 #import "Reachability.h"
+#if DEBUG
+#import "NEAppMonitor.h"
+#endif
 
 @interface AppDelegate ()
 
@@ -33,7 +36,10 @@
     self.reach = [Reachability reachabilityForInternetConnection];
     [self.reach startNotifier];
     
-
+#if DEBUG
+    [[NEAppMonitor sharedInstance] startMonitor];
+    
+#endif
     return YES;
 }
 

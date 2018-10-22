@@ -10,8 +10,10 @@
 
 @interface NECrashProxy : NSObject
 
-@property (nonatomic,copy) NSString * _Nullable crashMsg;
+//@property (nonatomic,copy) NSString * _Nullable crashMsg;
+//
+//- (void)getCrashMsg;
 
-- (void)getCrashMsg;
+- (void)proxyMethod;
 
 @end

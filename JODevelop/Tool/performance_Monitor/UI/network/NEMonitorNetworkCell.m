@@ -56,7 +56,6 @@ NSString *const kNEMonitorNetworkCellIndentifier = @"kNEMonitorNetworkCellIndent
     
     const CGFloat kVerticalPadding = 8.0;
     const CGFloat kLeftPadding = 10.0;
-    const CGFloat kImageDimension = 32.0;
     
     CGFloat textOriginX = kLeftPadding;
     CGFloat availableTextWidth = self.contentView.bounds.size.width - textOriginX;

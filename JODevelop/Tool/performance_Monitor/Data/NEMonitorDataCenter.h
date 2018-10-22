@@ -7,11 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "NEAppGraphicModel.h"
 @interface NEMonitorDataCenter : NSObject
 
 @property (strong, nonatomic) NSString *currentVCName;
 @property (assign, nonatomic) NSInteger fps;
+@property (strong, nonatomic) NSDate *startGraphicMonitorTime;
+@property (nonatomic, copy) NSString *startGraphicMonitorTimeStr;
+
+@property (strong, nonatomic) NEAppGraphicModel *battery;
+@property (strong, nonatomic) NEAppGraphicModel *cpu;
+@property (strong, nonatomic) NEAppGraphicModel *memory;
 
 
 + (instancetype)sharedInstance;

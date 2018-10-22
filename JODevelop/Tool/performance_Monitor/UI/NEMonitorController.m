@@ -12,11 +12,13 @@
 #import "NEMonitorFileManager.h"
 #import "NEMonitorSettingVC.h"
 #import "NEMonitorUtils.h"
+#import "NEAppMonitor.h"
+#import "NESystemInfoVC.h"
 
 typedef NS_ENUM(NSInteger, NEMonitorType) {
-    NEMonitorType_network = 0,
+    NEMonitorType_systemInfo = 0,
+    NEMonitorType_network,
     NEMonitorType_fluent,
-    NEMonitorType_sql,
     NEMonitorType_Folder,
     NEMonitorType_all,
 };
@@ -34,7 +36,7 @@ typedef NS_ENUM(NSInteger, NEMonitorType) {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"NEMonitor";
-    _names = @[@"Network history", @"Fluent", @"SQL",@"folder"];
+    _names = @[@"SystemInfo",@"Network history", @"NEMonitor",@"folder"];
     [self setupUI];
 }
 
@@ -53,6 +55,7 @@ typedef NS_ENUM(NSInteger, NEMonitorType) {
 }
 - (void)close
 {
+//    [[NEAppMonitor sharedInstance] resnume];
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 - (void)setting {
@@ -85,6 +88,13 @@ typedef NS_ENUM(NSInteger, NEMonitorType) {
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     switch (indexPath.row) {
+        case NEMonitorType_systemInfo:
+        {
+            NESystemInfoVC *systemInfoVC = [[NESystemInfoVC alloc] init];
+            [self.navigationController pushViewController:systemInfoVC animated:YES];
+            
+        }
+            break;
         case NEMonitorType_network:
         {
             NEMonitorNetworkVC *networkVC = [[NEMonitorNetworkVC alloc] init];
@@ -98,10 +108,6 @@ typedef NS_ENUM(NSInteger, NEMonitorType) {
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
-        case NEMonitorType_sql:
-        {
-            
-        }
         
             break;
         case NEMonitorType_Folder:

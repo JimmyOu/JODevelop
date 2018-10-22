@@ -27,12 +27,25 @@
     if (self) {
         _ioQueue = dispatch_queue_create("com.NEMonitor.ioQueue", DISPATCH_QUEUE_SERIAL);
         [self deleteOutDateFiles:[self fluentDir]];
+        [self deleteOutDateFiles:[self crashDir]];
+//        [self deleteOutDateFiles:[self highCPUDir]];
     }
     return self;
 }
-- (void)saveReportToLocal:(NSString *)report withFileName:(NSString *)fileName {
+- (void)saveReportToLocal:(NSString *)report withFileName:(NSString *)fileName type:(NEMonitorFileManagerType)type{
     dispatch_async(self.ioQueue, ^{
-        NSString *flentDir = [self fluentDir];
+        NSString *flentDir = nil;
+        switch (type) {
+            case NEMonitorFileFluentType:
+                flentDir = [self fluentDir];
+                break;
+            case NEMonitorFileCrashType:
+                flentDir = [self crashDir];
+                break;
+                
+            default:
+                break;
+        }
         NSString *f = [self rename:fileName suffix:REPORT_FILE_SUFFIX inDir:flentDir];
         NSString *filePath = [NSString stringWithFormat:@"%@/%@.%@", flentDir, f, REPORT_FILE_SUFFIX];
         [report writeToFile:filePath atomically:YES encoding:NSUTF8StringEncoding error:nil];
@@ -60,6 +73,22 @@
         filename = [NSString stringWithFormat:@"%@[%@]", filename, @(maxIndex + 1)];
     }
     return filename;
+}
+- (void)addNewRetainCycle:(NSString *)retainStr {
+    NSString *gapString = @"\n--------->retainCycle<----------\n";
+    if(![[NSFileManager defaultManager] fileExistsAtPath:[self cycleFile]]) {
+        [gapString writeToFile:[self cycleFile] atomically:YES encoding:NSUTF8StringEncoding error:nil];
+    }
+     NSFileHandle *outFile = [NSFileHandle fileHandleForWritingAtPath:[self cycleFile]];
+    
+    if (outFile) {
+        NSData *buffer = [retainStr dataUsingEncoding:NSUTF8StringEncoding];
+        [outFile seekToEndOfFile];
+        [outFile writeData:buffer];
+        [outFile seekToEndOfFile];
+        [outFile writeData:[gapString dataUsingEncoding:NSUTF8StringEncoding]];
+        [outFile closeFile];
+    }
 }
 - (void)deleteOutDateFiles:(NSString *)dir {
     dispatch_async(self.ioQueue, ^{
@@ -107,14 +136,28 @@
     }
     return dir;
 }
-//- (NSString *)sqlFile {
-//    NSString *dir = [self monitorDir];
-//    [[NSFileManager defaultManager] createDirectoryAtPath:dir withIntermediateDirectories:YES attributes:nil error:nil];
-//    NSString *path = [NSString stringWithFormat:@"%@/sql", dir];
-//    if(![[NSFileManager defaultManager] fileExistsAtPath:path]) {
-//        [[NSFileManager defaultManager] createFileAtPath:path contents:nil attributes:nil];
+
+- (NSString *)crashDir {
+    NSString *dir = [NSString stringWithFormat:@"%@/crash", [self monitorDir]];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:dir]) {
+        [[NSFileManager defaultManager] createDirectoryAtPath:dir withIntermediateDirectories:YES attributes:nil error:nil];
+    }
+    return dir;
+}
+
+//- (NSString *)highCPUDir {
+//    NSString *dir = [NSString stringWithFormat:@"%@/highCPU", [self monitorDir]];
+//    if (![[NSFileManager defaultManager] fileExistsAtPath:dir]) {
+//        [[NSFileManager defaultManager] createDirectoryAtPath:dir withIntermediateDirectories:YES attributes:nil error:nil];
 //    }
-//    return path;
+//    return dir;
 //}
+
+- (NSString *)cycleFile {
+    NSString *dir = [self monitorDir];
+    [[NSFileManager defaultManager] createDirectoryAtPath:dir withIntermediateDirectories:YES attributes:nil error:nil];
+    NSString *path = [NSString stringWithFormat:@"%@/cycle", dir];
+    return path;
+}
 
 @end

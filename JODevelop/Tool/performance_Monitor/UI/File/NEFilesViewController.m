@@ -46,6 +46,7 @@
 - (void)setupUI {
 
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"关闭" style:UIBarButtonItemStyleDone target:self action:@selector(close)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(back)];
     
     _tableView = [[UITableView alloc] init];
     _tableView.dataSource = self;
@@ -61,6 +62,9 @@
 - (void)close
 {
     [self dismissViewControllerAnimated:YES completion:NULL];
+}
+- (void)back {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -91,10 +95,7 @@
         cell.detailTextLabel.text = dateString;
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         cell.backgroundColor = [UIColor colorWithRed:240/255.0f green:248/255.0f blue:255/255.0f alpha:1.0];
-        if ([item.path.lastPathComponent isEqualToString:@"fluent"]) {
-            cell.textLabel.text = [NSString stringWithFormat:@"%@ -- %ld条记录",item.name,item.subPathCount];
-            
-        }
+        cell.textLabel.text = [NSString stringWithFormat:@"%@ -- %ld条记录",item.name,(long)item.subPathCount];
     } else {
         cell.detailTextLabel.text = [NSString stringWithFormat:@"%@  %@", dateString, [self readableSize:item.size]];
         cell.accessoryType = UITableViewCellAccessoryNone;

@@ -9,7 +9,7 @@
 #import "NEMonitorUtils.h"
 #import <objc/runtime.h>
 #import <mach/mach.h>
-#import "BSBacktraceLogger.h"
+#import "SMCallStack.h"
 
 NSString *const NEMonitorExceptionThrowNotifiation = @"NEMonitorExceptionThrowNotifiation";
 NSString *const NEMonitorExceptionThrowNotifiationErrorKey = @"NEMonitorExceptionThrowNotifiationErrorKey";
@@ -42,7 +42,7 @@ NSString *const NEMonitorExceptionThrowNotifiationErrorCallStack = @"NEMonitorEx
 }
 + (NSString *)genCallStackReport {
     @try {
-      return [BSBacktraceLogger bs_backtraceOfAllThread];
+        return [SMCallStack callStackWithType:SMCallStackTypeAll];
     }
     @catch (NSException * e){
         return @"";
@@ -50,7 +50,15 @@ NSString *const NEMonitorExceptionThrowNotifiationErrorCallStack = @"NEMonitorEx
 }
 + (NSString *)genCurrentThreadCallStackReport {
     @try {
-        return [BSBacktraceLogger bs_backtraceOfCurrentThread];
+        return [SMCallStack callStackWithType:SMCallStackTypeCurrent];
+    }
+    @catch (NSException * e){
+        return @"";
+    }
+}
++ (NSString *)genThreadCallStackReportWithThread:(thread_t)thread {
+    @try {
+        return smStackOfThread(thread);
     }
     @catch (NSException * e){
         return @"";
@@ -66,13 +74,13 @@ NSString *const NEMonitorExceptionThrowNotifiationErrorCallStack = @"NEMonitorEx
     NSError *error = [NSError errorWithDomain:name code:0 userInfo:@{NSLocalizedDescriptionKey:reason}];
     
     dispatch_async(dispatch_get_main_queue(), ^{
-           [[NSNotificationCenter defaultCenter] postNotificationName:NEMonitorExceptionThrowNotifiation object:@{NEMonitorExceptionThrowNotifiationErrorKey:error, NEMonitorExceptionThrowNotifiationErrorCallStack:callbackSymbols}];
+        [[NSNotificationCenter defaultCenter] postNotificationName:NEMonitorExceptionThrowNotifiation object:self userInfo:@{NEMonitorExceptionThrowNotifiationErrorKey:error, NEMonitorExceptionThrowNotifiationErrorCallStack:callbackSymbols}];
     });
 }
 + (void)notifyWithError:(NSError *)error {
     NSString *callbackString = [[self genCurrentThreadCallStackReport] mutableCopy];
     dispatch_async(dispatch_get_main_queue(), ^{
-        [[NSNotificationCenter defaultCenter] postNotificationName:NEMonitorExceptionThrowNotifiation object:@{NEMonitorExceptionThrowNotifiationErrorKey:error, NEMonitorExceptionThrowNotifiationErrorCallStack:callbackString}];
+    [[NSNotificationCenter defaultCenter] postNotificationName:NEMonitorExceptionThrowNotifiation object:self userInfo:@{NEMonitorExceptionThrowNotifiationErrorKey:error, NEMonitorExceptionThrowNotifiationErrorCallStack:callbackString}];
     });
 }
 + (NSUInteger)getResponseLength:(NSHTTPURLResponse *)response withData:(NSData *)data{
@@ -86,7 +94,7 @@ NSString *const NEMonitorExceptionThrowNotifiationErrorCallStack = @"NEMonitorEx
         data.length;
         responseLength = headersLength + contentLength;
     }
-    return responseLength;
+    return (int)responseLength;
 }
 
 + (NSString *)statusCodeStringFromURLResponse:(NSURLResponse *)response

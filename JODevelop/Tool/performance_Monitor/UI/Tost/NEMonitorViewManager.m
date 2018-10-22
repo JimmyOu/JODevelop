@@ -42,9 +42,10 @@
 }
 
 - (void)indicatorWindowTapTipsButton:(NEIndicatorWindow *)window {
-    [[NEAppMonitor sharedInstance] pause];
+//    [[NEAppMonitor sharedInstance] pause];
     NEMonitorController *vc = [[NEMonitorController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    nav.interactivePopGestureRecognizer.enabled = NO;
     UIViewController *hostVC = [NEMonitorUtils currentPresentVC];
     [hostVC presentViewController:nav animated:YES completion:NULL];
 }

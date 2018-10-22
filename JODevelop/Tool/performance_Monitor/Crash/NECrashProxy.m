@@ -10,10 +10,13 @@
 #import "NEMonitorUtils.h"
 @implementation NECrashProxy
 
-- (void)getCrashMsg{
-    NSLog(@"%@",_crashMsg);
-    NSError *error = [NSError errorWithDomain:@"" code:0 userInfo:@{NSLocalizedDescriptionKey:_crashMsg}];
-    [NEMonitorUtils notifyWithError:error];
+//- (void)getCrashMsg{
+//    NSLog(@"%@",_crashMsg);
+//    NSError *error = [NSError errorWithDomain:@"" code:0 userInfo:@{NSLocalizedDescriptionKey:_crashMsg}];
+//    [NEMonitorUtils notifyWithError:error];
+//}
+- (void)proxyMethod {
+    
 }
 
 @end

@@ -7,9 +7,12 @@
 //
 
 #import "NEMonitorFileManager.h"
-#define REPORT_FILE_SUFFIX @"crash"
+#import "NEFMDBManager.h"
+#define REPORT_FILE_SUFFIX @"text"
+static NSString *const kCallTraceTableName = @"callTrace";
 @interface NEMonitorFileManager()
 @property (strong, nonatomic) dispatch_queue_t ioQueue;
+@property (strong, nonatomic) NSMutableArray *arrays;
 @end
 @implementation NEMonitorFileManager
 
@@ -28,7 +31,12 @@
         _ioQueue = dispatch_queue_create("com.NEMonitor.ioQueue", DISPATCH_QUEUE_SERIAL);
         [self deleteOutDateFiles:[self fluentDir]];
         [self deleteOutDateFiles:[self crashDir]];
-//        [self deleteOutDateFiles:[self highCPUDir]];
+        [self deleteOutDateFiles:[self highCPUDir]];
+        
+        NEFMDBManager *dbManager = [NEFMDBManager shareDatabase];
+        [dbManager ne_createTable:kCallTraceTableName
+                       dicOrModel:[SMCallTraceTimeCostModel class]
+                      excludeName:@[@"subCosts"]];
     }
     return self;
 }
@@ -41,6 +49,9 @@
                 break;
             case NEMonitorFileCrashType:
                 flentDir = [self crashDir];
+                break;
+            case NEMonitorFileHighCPUType:
+                flentDir = [self highCPUDir];
                 break;
                 
             default:
@@ -73,6 +84,89 @@
         filename = [NSString stringWithFormat:@"%@[%@]", filename, @(maxIndex + 1)];
     }
     return filename;
+}
+
+- (void)addWithClsCallModel:(SMCallTraceTimeCostModel *)model {
+    
+    if ([model.methodName isEqualToString:@"clsCallInsertToViewWillAppear"] || [model.methodName isEqualToString:@"clsCallInsertToViewWillDisappear"]) {
+        return;
+    }
+    if (!_arrays) {
+        _arrays = [NSMutableArray array];
+    }
+    [self.arrays addObject:model];
+    
+    
+    if (self.arrays.count >= 100) { //每100条插入一次
+        NSArray *page = [self.arrays copy];
+        [[NEFMDBManager shareDatabase] ne_inDatabase:^{
+            
+            NEFMDBManager *dbManager = [NEFMDBManager shareDatabase];
+            for (SMCallTraceTimeCostModel *model in page) {
+                NSArray <SMCallTraceTimeCostModel *>*items = [dbManager ne_lookupTable:kCallTraceTableName dicOrModel:[SMCallTraceTimeCostModel class] whereFormat:@"where path = '%@'", model.path];
+                if (items.count > 0) {
+                    //有相同路径就更新路径访问频率
+                    SMCallTraceTimeCostModel *model = [items firstObject];
+                    model.frequency += 1;
+                    [dbManager ne_updateTable:kCallTraceTableName dicOrModel:@{@"frequency":@(model.frequency)} whereFormat:[NSString stringWithFormat:@"where pkid = %lld",model.pkid]];
+                } else {
+                    //没有就添加一条记录
+                    NSNumber *lastCall = @(0);
+                    if (model.lastCall) {
+                        lastCall = @(1);
+                    }
+                    [dbManager ne_insertTable:kCallTraceTableName dicOrModel:model];
+                }
+            }
+            
+        }];
+        _arrays = nil;
+    }
+}
+
+- (void)saveLastClsCallModels {
+    NSArray *page = [self.arrays copy];
+    [[NEFMDBManager shareDatabase] ne_inDatabase:^{
+        
+        NEFMDBManager *dbManager = [NEFMDBManager shareDatabase];
+        for (SMCallTraceTimeCostModel *model in page) {
+            NSArray <SMCallTraceTimeCostModel *>*items = [dbManager ne_lookupTable:kCallTraceTableName dicOrModel:[SMCallTraceTimeCostModel class] whereFormat:@"where path = '%@'", model.path];
+            if (items.count > 0) {
+                //有相同路径就更新路径访问频率
+                SMCallTraceTimeCostModel *model = [items firstObject];
+                model.frequency += 1;
+                [dbManager ne_updateTable:kCallTraceTableName dicOrModel:@{@"frequency":@(model.frequency)} whereFormat:[NSString stringWithFormat:@"where pkid = %lld",model.pkid]];
+            } else {
+                //没有就添加一条记录
+                NSNumber *lastCall = @(0);
+                if (model.lastCall) {
+                    lastCall = @(1);
+                }
+                [dbManager ne_insertTable:kCallTraceTableName dicOrModel:model];
+            }
+        }
+        
+    }];
+    _arrays = nil;
+}
+
+- (void)fetchCostModels:(void(^)(NSArray <SMCallTraceTimeCostModel *> *))block{
+    [[NEFMDBManager shareDatabase] ne_inDatabase:^{
+        NEFMDBManager *dbManager = [NEFMDBManager shareDatabase];
+        NSArray *items = [dbManager ne_lookupTable:kCallTraceTableName dicOrModel:[SMCallTraceTimeCostModel class] whereFormat:@"order by frequency desc"];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            block(items);
+        });
+    }];
+}
++ (void)clearTraceDB:(void(^)(BOOL))block {
+    [[NEFMDBManager shareDatabase] ne_inDatabase:^{
+        NEFMDBManager *dbManager = [NEFMDBManager shareDatabase];
+       BOOL success = [dbManager ne_deleteAllDataFromTable:kCallTraceTableName];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            block(success);
+        });
+    }];
 }
 - (void)addNewRetainCycle:(NSString *)retainStr {
     NSString *gapString = @"\n--------->retainCycle<----------\n";
@@ -145,13 +239,13 @@
     return dir;
 }
 
-//- (NSString *)highCPUDir {
-//    NSString *dir = [NSString stringWithFormat:@"%@/highCPU", [self monitorDir]];
-//    if (![[NSFileManager defaultManager] fileExistsAtPath:dir]) {
-//        [[NSFileManager defaultManager] createDirectoryAtPath:dir withIntermediateDirectories:YES attributes:nil error:nil];
-//    }
-//    return dir;
-//}
+- (NSString *)highCPUDir {
+    NSString *dir = [NSString stringWithFormat:@"%@/highCPU", [self monitorDir]];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:dir]) {
+        [[NSFileManager defaultManager] createDirectoryAtPath:dir withIntermediateDirectories:YES attributes:nil error:nil];
+    }
+    return dir;
+}
 
 - (NSString *)cycleFile {
     NSString *dir = [self monitorDir];
@@ -159,5 +253,6 @@
     NSString *path = [NSString stringWithFormat:@"%@/cycle", dir];
     return path;
 }
+
 
 @end

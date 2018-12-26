@@ -9,7 +9,7 @@
 #import "JOVideoListViewController.h"
 #import "JOVideoCell.h"
 #import "JOWebVideoPlayer.h"
-
+#import "UIColor+Extension.h"
 @interface JOVideoListViewController ()<JOTableViewVideoPlayDelegate, UITableViewDelegate, UITableViewDataSource>
 
 /**

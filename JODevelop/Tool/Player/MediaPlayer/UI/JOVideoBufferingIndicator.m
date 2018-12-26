@@ -7,6 +7,7 @@
 //
 
 #import "JOVideoBufferingIndicator.h"
+#import "Masonry.h"
 
 @interface JOVideoBufferingIndicator()
 

@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NEHTTPMonitor : NSURLProtocol
-
-+ (void)networkMonitor:(BOOL)enable;
-+ (BOOL)networkMonitorEnable;
+@interface NEHTTPMonitor : NSObject
++ (instancetype)sharedInstance;
+- (void)networkMonitor:(BOOL)enable;
+//+ (BOOL)networkMonitorEnable;
 
 @end

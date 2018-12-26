@@ -16,22 +16,44 @@
 #import "NECrashVoidManager.h"
 #import "NEMonitorFileManager.h"
 #import "NEMonitorToast.h"
-#if defined(DEBUG)||defined(_DEBUG)
+#import "NEMonitorUtils.h"
+#import "SMCallTrace.h"
+
+//#if defined(DEBUG)||defined(_DEBUG)
 @implementation UIViewController(Monitor)
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         [NEMonitorUtils ne_swizzleSEL:@selector(viewWillAppear:) withSEL:@selector(ne_viewWillAppear:) forClass:[UIViewController class]];
+
     });
 }
 - (void)ne_viewWillAppear:(BOOL)animated {
     NSString *name = NSStringFromClass([self class]);
-    if (![name isEqualToString:@"UIInputWindowController"]) {
+    BOOL exist = [self classExistInAllVCClass];
+    if (exist ) {
         [NEMonitorDataCenter sharedInstance].currentVCName = name;
         NSLog(@"currentVCName = %@", [NEMonitorDataCenter sharedInstance].currentVCName);
     }
+    
     [self ne_viewWillAppear:animated];
 
+}
+
+- (BOOL)classExistInAllVCClass {
+    NSArray *classNames = [NEMonitorDataCenter sharedInstance].vcNames;
+    __block BOOL exisit = NO;
+    if (classNames && classNames.count>0) {
+        [classNames enumerateObjectsUsingBlock:^(NSString *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            BOOL equal = [obj isEqualToString:NSStringFromClass([self class])];
+            if (equal) {
+                exisit = equal;
+                *stop = YES;
+            }
+            
+        }];
+    }
+    return exisit;
 }
 
 @end
@@ -40,8 +62,21 @@
 @property (strong, nonatomic) NEPerfomanceMonitor *performanceMonitor;
 @property (strong, nonatomic) NEMonitorViewManager *viewManager;
 @property (strong, nonatomic) NEFluencyMonitor *fluencyMonitor;
+
+@property (strong, nonatomic) NSArray <NSString *> *classNames;
 @end
 @implementation NEAppMonitor
+
++ (void)initialize
+{
+    if (self == [NEAppMonitor class]) {
+        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+            NEMonitorDataCenter *center = [NEMonitorDataCenter sharedInstance];
+            center.classNames = [NEMonitorUtils fetchAllAppClassName];
+            center.vcNames = [NEMonitorUtils filterViewControllerClassFromClasses:center.classNames];
+        });
+    }
+}
 
 + (instancetype)sharedInstance {
     static dispatch_once_t onceToken;
@@ -59,6 +94,7 @@
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appDidBecomeActive) name:UIApplicationDidBecomeActiveNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appWillResignActive) name:UIApplicationWillResignActiveNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appWillCrash:) name:NEMonitorExceptionThrowNotifiation object:nil];
+        self.depth = 1;
     }
     return self;
 }
@@ -95,6 +131,7 @@
     self.enableFulencyMonitor = YES;
     self.enableNetworkMonitor = YES;
     self.enableVoidCrashOnLine = YES;
+    
     //debug View
     self.viewManager = [[NEMonitorViewManager alloc] init];
     [self.viewManager show];
@@ -128,7 +165,7 @@
 - (void)setEnableNetworkMonitor:(BOOL)enableNetworkMonitor {
     if (_enableNetworkMonitor != enableNetworkMonitor) {
         _enableNetworkMonitor = enableNetworkMonitor;
-        [NEHTTPMonitor networkMonitor:enableNetworkMonitor];
+        [[NEHTTPMonitor sharedInstance] networkMonitor:enableNetworkMonitor];
     }
 }
 
@@ -136,9 +173,9 @@
     [self.performanceMonitor stop];
     [self.fluencyMonitor stopMonitoring];
     [self.viewManager hide];
-    [NEHTTPMonitor networkMonitor:NO];
+    [[NEHTTPMonitor sharedInstance] networkMonitor:NO];
 }
 
 
 @end
-#endif
+//#endif

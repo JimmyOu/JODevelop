@@ -34,7 +34,7 @@
 - (void)prepare {
     self.window = [[NEIndicatorWindow alloc] init];
     self.window.delegate = self;
-    self.window.hidden = YES;
+    self.window.hidden = NO;
     
     self.goodColor = [UIColor greenColor];
     self.badColor = [UIColor redColor];

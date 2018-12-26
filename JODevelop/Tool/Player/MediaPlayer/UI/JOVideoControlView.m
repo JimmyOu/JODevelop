@@ -8,6 +8,7 @@
 
 #import "JOVideoControlView.h"
 #import "JOVideoControlBar.h"
+#import "Masonry.h"
 
 @interface JOVideoControlView()
 @property (nonatomic, strong) UIView<JOVideoPlayerProtocol> *controlBar;

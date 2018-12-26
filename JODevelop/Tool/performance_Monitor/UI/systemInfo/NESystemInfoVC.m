@@ -136,11 +136,15 @@
             vc.titleText = dataCenter.memory.title;
             [self.navigationController pushViewController:vc animated:YES];
         } else if (indexPath.row == 3) {
+#if TARGET_IPHONE_SIMULATOR
+            
+#else
             NESystemInfoChartViewVC *vc = [[NESystemInfoChartViewVC alloc] initWithData:dataCenter.battery.values time:dataCenter.battery.times];
             vc.startDate = dataCenter.startGraphicMonitorTime;
             vc.type = NESystemInfoChartTypeBattery;
             vc.titleText = dataCenter.battery.title;
             [self.navigationController pushViewController:vc animated:YES];
+#endif
         }
     }
 }

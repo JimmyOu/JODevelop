@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "AXDTransitionConst.h"
+#import <UIKit/UIKit.h>
 @protocol AXDInteractiveTransitionDelegate;
 
 @interface AXDInteractiveTransition : UIPercentDrivenInteractiveTransition

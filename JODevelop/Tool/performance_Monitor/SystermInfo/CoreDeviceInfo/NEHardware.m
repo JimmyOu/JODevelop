@@ -9,6 +9,7 @@
 #import "NEHardware.h"
 #import <sys/utsname.h>
 #import <sys/sysctl.h>
+#import <UIKit/UIKit.h>
 
 @implementation NEHardware
 

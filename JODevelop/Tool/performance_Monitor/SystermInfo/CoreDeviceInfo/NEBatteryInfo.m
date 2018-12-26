@@ -7,6 +7,7 @@
 //
 
 #import "NEBatteryInfo.h"
+#import <UIKit/UIKit.h>
 
 @implementation NEBatteryInfo
 

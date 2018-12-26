@@ -8,6 +8,7 @@
 
 #import "NEChartTooltipTipView.h"
 #import "NEConstConstraints.h"
+#import "Masonry.h"
 
 // Numerics
 CGFloat const kJBChartTooltipTipViewDefaultWidth = 8.0f;

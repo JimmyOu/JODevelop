@@ -19,6 +19,11 @@
 @property (strong, nonatomic) NEAppGraphicModel *cpu;
 @property (strong, nonatomic) NEAppGraphicModel *memory;
 
+@property (strong, nonatomic) NSArray <NSString *> *classNames;
+@property (strong, nonatomic) NSArray <NSString *> *vcNames;
+
+
+
 
 + (instancetype)sharedInstance;
 

@@ -8,9 +8,15 @@
 
 #import "NEIndicatorWindow.h"
 #import "NEAppMonitor.h"
+#import "SMCallTrace.h"
 #define NE_IOS_VERSION ([[[UIDevice currentDevice] systemVersion] floatValue])
 #define NE_IS_LANDSCAPE UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation])
 #define NE_SCREEN_WIDTH (NE_IOS_VERSION >= 8.0 ? [[UIScreen mainScreen] bounds].size.width : (NE_IS_LANDSCAPE ? [[UIScreen mainScreen] bounds].size.height : [[UIScreen mainScreen] bounds].size.width))
+
+@interface NEIndicatorWindow()
+@property (strong, nonatomic) UIButton *startTrace;
+
+@end
 
 @implementation NEIndicatorWindow
 - (instancetype)init {
@@ -100,9 +106,42 @@
     
     [_containerView addSubview:stackView];
     
+#if TARGET_IPHONE_SIMULATOR
+
+#else
+    _startTrace = [[UIButton alloc] init];
+    _startTrace.layer.borderWidth = 1;
+    _startTrace.layer.borderColor = [UIColor redColor].CGColor;
+    _startTrace.backgroundColor = [UIColor lightGrayColor];
+    _startTrace.titleLabel.font = [UIFont boldSystemFontOfSize:11.0];
+    [_startTrace setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    _startTrace.titleLabel.textAlignment = NSTextAlignmentCenter;
+    [_startTrace setTitle:@"开始追踪" forState:UIControlStateNormal];
+    [_startTrace setTitle:@"停止追踪" forState:UIControlStateSelected];
+    [_startTrace addTarget:self action:@selector(startTraceClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [_containerView addSubview:_startTrace];
+#endif
     
     
+
+    
+
 }
+
+- (void)startTraceClick:(UIButton *)btn {
+    btn.selected = !btn.selected;
+    if (btn.selected) {
+        btn.backgroundColor = [UIColor greenColor];
+        [SMCallTrace startWithMaxDepth:[NEAppMonitor sharedInstance].depth];
+    } else {
+        btn.backgroundColor = [UIColor lightGrayColor];
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+            [SMCallTrace stopSaveAndClean];
+        });
+    }
+}
+
 - (void)orientationDidChange:(NSNotification *)notification {
     if (!self.hidden) {
         [self render];
@@ -114,15 +153,22 @@
     CGFloat statusBarHeight = 20;
     CGFloat statusBarWidth = screenWidth;
     CGFloat orignX = 0.0;
+    
+    CGFloat top = 5;
+    CGFloat height = 50;
     if (@available(iOS 11.0, *)) {
         orignX = self.safeAreaInsets.top;
     }
     
     if (NE_IS_LANDSCAPE) {
-        _containerView.frame = CGRectMake(screenWidth - containerWidth * 1.5, orignX, containerWidth, statusBarHeight * 3);
+        _containerView.frame = CGRectMake(screenWidth - containerWidth * 1.5, orignX, containerWidth, statusBarHeight * 3 + top + height);
     } else {
-        _containerView.frame = CGRectMake(statusBarWidth - containerWidth * 1.5, orignX, containerWidth, statusBarHeight * 3);
+        _containerView.frame = CGRectMake(statusBarWidth - containerWidth * 1.5, orignX, containerWidth, statusBarHeight * 3 + top + height);
     }
+    _startTrace.frame = CGRectMake(10, top + statusBarHeight * 3, height, height);
+    
+    _startTrace.layer.cornerRadius = height * 0.5;
+    _startTrace.clipsToBounds = YES;
 }
 
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
@@ -130,7 +176,12 @@
         return nil;
     }
     if (event.type == UIEventTypeTouches && CGRectContainsPoint(_containerView.frame, point)) {
-        return _fpsButton;
+        CGPoint target = [self convertPoint:point toView:_containerView];
+        if (CGRectContainsPoint(_startTrace.frame, target)) {
+            return _startTrace;
+        } else {
+           return _fpsButton;
+        }
     }
     return nil;
     

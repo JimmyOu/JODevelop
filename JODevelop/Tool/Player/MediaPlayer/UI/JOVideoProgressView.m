@@ -7,6 +7,7 @@
 //
 
 #import "JOVideoProgressView.h"
+#import "Masonry.h"
 
 @interface JOVideoProgressView()
 

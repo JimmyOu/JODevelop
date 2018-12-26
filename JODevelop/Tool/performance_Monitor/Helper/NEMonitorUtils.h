@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <mach/mach.h>
+#import "UIView+Extension.h"
+#import "UIColor+Extension.h"
 
 extern NSString *const NEMonitorExceptionThrowNotifiation;
 extern NSString *const NEMonitorExceptionThrowNotifiationErrorKey;
@@ -28,6 +30,10 @@ extern NSString *const NEMonitorExceptionThrowNotifiationErrorCallStack;
  */
 + (NSString *)genCurrentThreadCallStackReport;
 /**
+ 获取Main thread堆栈的调用信息
+ */
++ (NSString *)genMainCallStackReport;
+/**
  获取当指定堆栈的调用信息
  */
 + (NSString *)genThreadCallStackReportWithThread:(thread_t)thread;
@@ -47,5 +53,26 @@ extern NSString *const NEMonitorExceptionThrowNotifiationErrorCallStack;
 
 + (void)notifyWithException:(NSException *)exception;
 + (void)notifyWithError:(NSError *)error;
+
+
+/**
+ 获取app生成的所有类的名字
+ */
++ (NSArray<NSString *> *)fetchAllAppClassName;
+
++ (NSArray<NSString *> *)filterViewControllerClassFromClasses:(NSArray<NSString *> *)allClass;
+
+
+
+#pragma mark - Utils
++ (id)responseJSONFromData:(NSData *)data;
+
++ (NSString *)stringWithDate:(NSDate *)date;
+
++ (NSDate *)dateFromString:(NSString *)dateStr;
+
++ (NSTimeInterval)timeIntervalFrom:(NSDate *)from toDate:(NSDate *)to;
+
++ (NSString *)nextRequestID;
 
 @end

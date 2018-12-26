@@ -1,20 +1,26 @@
 PODS:
   - FBRetainCycleDetector (0.1.4)
   - FLEX (2.1.1)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
 
 DEPENDENCIES:
   - FBRetainCycleDetector
   - FLEX (~> 2.1.1)
+  - FMDB
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - FBRetainCycleDetector
     - FLEX
+    - FMDB
 
 SPEC CHECKSUMS:
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   FLEX: 27b768fcae23a313a1eb115076d429180ca9b472
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
 
-PODFILE CHECKSUM: 3446249db4101ce5ab47c5ba710a51cfc3b4b033
+PODFILE CHECKSUM: 95e4709a01455ef78b5352502fe6de27de492674
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.6.0.beta.1

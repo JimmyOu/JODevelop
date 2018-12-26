@@ -10,6 +10,8 @@
 #import <objc/runtime.h>
 #import <mach/mach.h>
 #import "SMCallStack.h"
+#import <dlfcn.h>
+#import <mach-o/ldsyms.h>
 
 NSString *const NEMonitorExceptionThrowNotifiation = @"NEMonitorExceptionThrowNotifiation";
 NSString *const NEMonitorExceptionThrowNotifiationErrorKey = @"NEMonitorExceptionThrowNotifiationErrorKey";
@@ -43,6 +45,14 @@ NSString *const NEMonitorExceptionThrowNotifiationErrorCallStack = @"NEMonitorEx
 + (NSString *)genCallStackReport {
     @try {
         return [SMCallStack callStackWithType:SMCallStackTypeAll];
+    }
+    @catch (NSException * e){
+        return @"";
+    }
+}
++ (NSString *)genMainCallStackReport {
+    @try {
+        return [SMCallStack callStackWithType:SMCallStackTypeMain];
     }
     @catch (NSException * e){
         return @"";
@@ -192,6 +202,90 @@ NSString *const NEMonitorExceptionThrowNotifiationErrorCallStack = @"NEMonitorEx
     }
     hostVC = hostVC ?: rootVC;
     return hostVC;
+}
+
++ (NSArray<NSString *> *)fetchAllAppClassName {
+    
+    unsigned int count;
+    const char **classes;
+    Dl_info info;
+    
+    //1.获取app的路径
+    dladdr(&_mh_execute_header, &info);
+    
+    //2.返回当前运行的app的所有类的名字，并传出个数
+    //classes：二维数组 存放所有类的列表名称
+    //count：所有的类的个数
+    classes = objc_copyClassNamesForImage(info.dli_fname, &count);
+    NSMutableArray *classList = [NSMutableArray arrayWithCapacity:count];
+    for (int i = 0; i < count; i++) {
+        NSString *className = [NSString stringWithCString:classes[i] encoding:NSUTF8StringEncoding];
+        if (![className isEqualToString:@""] && className) {
+            [classList addObject:className];
+        }
+    }
+    return [classList copy];
+}
+
++ (NSArray<NSString *> *)filterViewControllerClassFromClasses:(NSArray<NSString *> *)allClass {
+    NSMutableArray *array = [NSMutableArray arrayWithCapacity:allClass.count];
+    for (NSString *cls in allClass) {
+        Class class = NSClassFromString(cls);
+        if ([class isSubclassOfClass:[UIViewController class]]) {
+            [array addObject:cls];
+        }
+    }
+    return [array copy];
+    
+}
+
+
++ (id)responseJSONFromData:(NSData *)data {
+    if(data == nil) return nil;
+    NSError *error = nil;
+    id returnValue = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+    if(error) {
+        NSLog(@"JSON Parsing Error: %@", error);
+        //https://github.com/coderyi/NetworkEye/issues/3
+        return nil;
+    }
+    //https://github.com/coderyi/NetworkEye/issues/1
+    if (!returnValue || returnValue == [NSNull null]) {
+        return nil;
+    }
+    
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:returnValue options:NSJSONWritingPrettyPrinted error:nil];
+    NSString *jsonString = [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
+    return jsonString;
+}
+
++ (NSString *)stringWithDate:(NSDate *)date {
+    NSString *destDateString = [[self defaultDateFormatter] stringFromDate:date];
+    return destDateString;
+}
+
++ (NSDate *)dateFromString:(NSString *)dateStr {
+    return [[self defaultDateFormatter] dateFromString:dateStr];
+}
+
++ (NSTimeInterval)timeIntervalFrom:(NSDate *)from toDate:(NSDate *)to {
+    NSTimeInterval fromTime = [from timeIntervalSinceReferenceDate];
+    NSTimeInterval toTime = [to timeIntervalSinceReferenceDate];
+    return (toTime - fromTime);
+}
+
++ (NSString *)nextRequestID {
+    return [[NSUUID UUID] UUIDString];
+}
+
++ (NSDateFormatter *)defaultDateFormatter {
+    static NSDateFormatter *staticDateFormatter;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        staticDateFormatter=[[NSDateFormatter alloc] init];
+        [staticDateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss zzz"];
+    });
+    return staticDateFormatter;
 }
 
 @end

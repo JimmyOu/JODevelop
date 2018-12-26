@@ -14,12 +14,14 @@
 #import "NEMonitorUtils.h"
 #import "NEAppMonitor.h"
 #import "NESystemInfoVC.h"
+#import "NECallTraceViewController.h"
 
 typedef NS_ENUM(NSInteger, NEMonitorType) {
     NEMonitorType_systemInfo = 0,
     NEMonitorType_network,
     NEMonitorType_fluent,
     NEMonitorType_Folder,
+    NEMonitorType_CallTrace,
     NEMonitorType_all,
 };
 @interface NEMonitorController ()<UITableViewDelegate, UITableViewDataSource>
@@ -36,7 +38,7 @@ typedef NS_ENUM(NSInteger, NEMonitorType) {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"NEMonitor";
-    _names = @[@"SystemInfo",@"Network history", @"NEMonitor",@"folder"];
+    _names = @[@"SystemInfo",@"Network history", @"NEMonitor",@"folder",@"callTrace"];
     [self setupUI];
 }
 
@@ -113,6 +115,11 @@ typedef NS_ENUM(NSInteger, NEMonitorType) {
         case NEMonitorType_Folder:
         {
             NEFilesViewController *vc = [[NEFilesViewController alloc] initWithDir:NSHomeDirectory()];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+        case NEMonitorType_CallTrace:
+        {
+            NECallTraceViewController *vc = [[NECallTraceViewController alloc] initWithStyle:UITableViewStylePlain];
             [self.navigationController pushViewController:vc animated:YES];
         }
             

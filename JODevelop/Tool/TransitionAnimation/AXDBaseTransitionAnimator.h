@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "AXDTransitionConst.h"
 #import "AXDInteractiveTransition.h"
+#import <UIKit/UIKit.h>
 
 @interface AXDBaseTransitionAnimator : NSObject<UIViewControllerTransitioningDelegate, UINavigationControllerDelegate, UITabBarControllerDelegate, AXDInteractiveTransitionDelegate>
 

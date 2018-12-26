@@ -7,9 +7,11 @@
 //
 
 #import "JOVideoControlBar.h"
+
 #import "UIView+JOWebVideoPlayer.h"
 #import "JOVideoControlProgressView.h"
 #import "UIView+JOWebVideoPlayer.h"
+#import "Masonry.h"
 
 @interface JOVideoControlBar()
 

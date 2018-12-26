@@ -12,6 +12,10 @@
 #import "NEMonitorToast.h"
 #import "NEConstConstraints.h"
 #import "NELeaksFinder.h"
+#import "SMCallTrace.h"
+#import "NEMonitorSettingTraceCell.h"
+#import "NEMonitorFileManager.h"
+
 
 @interface NEMonitorSettingVC ()<UITableViewDelegate, UITableViewDataSource>
 @property (strong, nonatomic) UITableView *tableView;
@@ -47,16 +51,17 @@
     
     [mutableCells addObject:performanceDebuggingCell];
     
-//    UITableViewCell *alertWhenFindingRetainCycle = [self switchCellWithTitle:@"alertWhenFindingRetainCycle" toggleAction:@selector(alertWhenFindingRetainCycle:) isOn:_INTERNAL_MLF_Alert];
-//
-//    [mutableCells addObject:alertWhenFindingRetainCycle];
     
     UITableViewCell *clearGraphicDataCell = [self buttonCellWithTitle:@"清理绘图缓存" toggleAction:@selector(clearGraphicData)];
     [mutableCells addObject:clearGraphicDataCell];
     
+    UITableViewCell *clearDBCell = [self buttonCellWithTitle:@"清理数据库" toggleAction:@selector(clearDB)];
+    [mutableCells addObject:clearDBCell];
+    
     self.cells = mutableCells;
     [self.tableView reloadData];
 }
+
 - (void)close
 {
     [self dismissViewControllerAnimated:YES completion:NULL];
@@ -66,15 +71,20 @@
     self.tableView.frame = self.view.bounds;
 }
 #pragma mark - Settings Actions
-//- (void)alertWhenFindingRetainCycle:(UISwitch *)sender {
-//    _INTERNAL_MLF_Alert = sender.isOn;
-//}
+
 - (void)clearGraphicData {
     [[NEMonitorDataCenter sharedInstance].battery clearAllData];
     [[NEMonitorDataCenter sharedInstance].cpu clearAllData];
     [[NEMonitorDataCenter sharedInstance].memory clearAllData];
     [NEMonitorToast showToast:@"清理完毕"];
 }
+- (void)clearDB {
+    [NEMonitorFileManager clearTraceDB:^(BOOL success) {
+        success? [NEMonitorToast showToast:@"清理成功"]:[NEMonitorToast showToast:@"清理失败"];
+    }];
+    
+}
+
 - (void)networkDebuggingToggled:(UISwitch *)sender
 {
     [NEAppMonitor sharedInstance].enableNetworkMonitor = sender.isOn;

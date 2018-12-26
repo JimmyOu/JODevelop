@@ -7,6 +7,7 @@
 //
 
 #import "TableViewHeaderAnimation.h"
+#import "Masonry.h"
 
 #define expandedFont 30
 #define collapsedFont 20

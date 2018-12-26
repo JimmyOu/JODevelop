@@ -14,6 +14,7 @@
 #import "JOVideoControlView.h"
 #import "JOVideoProgressView.h"
 #import "JOVideoBufferingIndicator.h"
+#import "Masonry.h"
 @interface JOVideoPlayerHelper: NSObject
 @property (strong, nonatomic) JOVideoPlayerView *videoPlayerView;
 @property (strong, nonatomic) UIView<JOVideoPlayerProtocol> *progressView;

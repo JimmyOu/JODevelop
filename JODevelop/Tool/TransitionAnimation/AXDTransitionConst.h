@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 /**手势转场方向*/
 typedef NS_ENUM(NSUInteger, AXDInteractiveTransitionGestureDirection) {

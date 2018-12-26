@@ -5,4 +5,5 @@ inhibit_all_warnings!
 target "JODevelop" do
 pod 'FLEX', '~> 2.1.1', :configurations => ['Debug']
 pod 'FBRetainCycleDetector'
+pod 'FMDB'
 end

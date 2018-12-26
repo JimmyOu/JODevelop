@@ -8,6 +8,7 @@
 
 #import "JOVideoPlayerView.h"
 #import "JOVideoPlayerCompat.h"
+#import "Masonry.h"
 
 @interface JOVideoPlayerView()
 

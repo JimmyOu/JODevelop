@@ -7,6 +7,7 @@
 //
 
 #import "Emoji2ViewController.h"
+#import "Masonry.h"
 
 @interface Emoji2ViewController ()
 

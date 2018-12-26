@@ -11,6 +11,8 @@
 //#import "SREmojiContainer.h"
 #import "SRInputView.h"
 #import "Emoji2ViewController.h"
+#import "UIView+Extension.h"
+#import "UIColor+Extension.h"
 
 //static const CGFloat kHeightOfEmojiView = 200;
 

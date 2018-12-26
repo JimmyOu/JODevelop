@@ -19,6 +19,7 @@
 #import "NEMonitorDataCenter.h"
 #import "NEMonitorToast.h"
 #import "NEMonitorDataCenter.h"
+//#define CPUMONITORRATE 80
 
 
 @interface NEPerfomanceMonitor()
@@ -26,7 +27,7 @@
 @property (strong, nonatomic) NSTimer *timer;
 @property (assign, nonatomic) BOOL isPause;
 @property (assign, nonatomic) BOOL isGeneratingReport;
-//@property (strong, nonatomic) NSDate *startDate;
+//@property (nonatomic, strong) NSTimer *cpuMonitorTimer;
 
 @end
 
@@ -76,6 +77,13 @@ static inline NSTimeInterval MachTimeToSeconds(uint64_t machTime) {
         
         self.timer = [NSTimer timerWithTimeInterval:5 target:self selector:@selector(updateGraphicInfo) userInfo:nil repeats:YES];
         [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+        
+////        //监测 CPU 消耗
+//        self.cpuMonitorTimer = [NSTimer scheduledTimerWithTimeInterval:0.02
+//                                                                target:self
+//                                                              selector:@selector(updateCPUInfo)
+//                                                              userInfo:nil
+//                                                               repeats:YES];
     }
     return self;
 }
@@ -83,6 +91,7 @@ static inline NSTimeInterval MachTimeToSeconds(uint64_t machTime) {
 - (void)dealloc {
     [_displayLink invalidate];
     [_timer invalidate];
+//    [_cpuMonitorTimer invalidate];
 }
 
 - (void)start {
@@ -162,12 +171,16 @@ static inline NSTimeInterval MachTimeToSeconds(uint64_t machTime) {
 //    if (_isGeneratingReport) {
 //        return;
 //    }
-//    _isGeneratingReport = YES;
 //    NSString *backtraceLogs =  [NEMonitorUtils genThreadCallStackReportWithThread:thread];
+//
+//    if (!backtraceLogs || [backtraceLogs containsString:@"[NEPerfomanceMonitor generateCallStackIfNeeded:]"]) {
+//        return;
+//    }
+//    _isGeneratingReport = YES;
 //    [[NEMonitorFileManager shareInstance] saveReportToLocal:backtraceLogs withFileName:[NEMonitorDataCenter sharedInstance].currentVCName type:NEMonitorFileHighCPUType];
 //    _isGeneratingReport = NO;
 //    dispatch_async(dispatch_get_main_queue(), ^{
-//        [NEMonitorToast showToast:@"出现高CPU运行情况"];
+//        [NEMonitorToast showToast:@"高CPU"];
 //    });
 //}
 - (void)calculateFPS {
@@ -184,7 +197,7 @@ static inline NSTimeInterval MachTimeToSeconds(uint64_t machTime) {
         _lastUpdateTimestamp = self.displayLink.timestamp;
         NSInteger currentFPS = _historyCount / interval;
         _historyCount = 0;
-         [[NEAppMonitor sharedInstance].viewManager setFPS:currentFPS];
+         [[NEAppMonitor sharedInstance].viewManager setFPS:currentFPS];
     }
 }
 - (void)calculateCPU {

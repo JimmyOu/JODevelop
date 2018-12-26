@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSInteger, AXDPageCachePolicy) {
     AXDPageCachePolicyNoLimit    = 0,   // No limit
@@ -26,10 +27,10 @@ typedef NS_ENUM(NSUInteger, AXDPagePreloadPolicy) {
 
 
 // 常量
-UIKIT_EXTERN const CGFloat kAXDSegmentHeight;
-UIKIT_EXTERN const CGFloat kAXDSegmentTitleFontSize;
-UIKIT_EXTERN const CGFloat kAXDSegmentTitleFontMargin;
-UIKIT_EXTERN const CGFloat kAXDSegmentScrollLineHeight;
+extern const CGFloat kAXDSegmentHeight;
+extern const CGFloat kAXDSegmentTitleFontSize;
+extern const CGFloat kAXDSegmentTitleFontMargin;
+extern const CGFloat kAXDSegmentScrollLineHeight;
 
 
 

@@ -29,11 +29,12 @@ const void *const kHasBeenPoppedKey = &kHasBeenPoppedKey;
     if ([objc_getAssociatedObject(self, kHasBeenPoppedKey) boolValue]) {
         [self willDealloc];
     }
+    
+
 }
 
 - (void)swizzled_viewWillAppear:(BOOL)animated {
     [self swizzled_viewWillAppear:animated];
-    
     objc_setAssociatedObject(self, kHasBeenPoppedKey, @(NO), OBJC_ASSOCIATION_RETAIN);
 }
 

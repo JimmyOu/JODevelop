@@ -9,6 +9,7 @@
 #import "AXDScrollSegmentView.h"
 #import "AXDTitleView.h"
 #import "AXDScrollPageConst.h"
+#import "UIView+Extension.h"
 
 @interface AXDScrollSegmentView ()<UIScrollViewDelegate> {
     CGFloat _currentWidth;
